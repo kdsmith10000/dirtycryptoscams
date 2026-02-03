@@ -203,10 +203,116 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Impersonation Comparison */}
+      <section className="py-12 px-4 border-b border-gray-800">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-2xl font-bold text-center mb-2">Impersonation Exposed</h2>
+          <p className="text-center text-gray-400 mb-8">The scammer copies a real Discord admin&apos;s profile to trick victims</p>
+          
+          {/* Username Comparison Highlight */}
+          <div className="card p-6 rounded-xl mb-8 text-center">
+            <p className="text-gray-400 mb-4">Spot the difference in the usernames:</p>
+            <div className="flex justify-center items-center gap-8 flex-wrap">
+              <div>
+                <p className="text-xs text-gray-500 mb-1">REAL ADMIN</p>
+                <p className="text-3xl font-mono font-bold text-green-400">sa<span className="text-green-300 underline decoration-4">l</span>maogs</p>
+              </div>
+              <div className="text-4xl text-gray-600">vs</div>
+              <div>
+                <p className="text-xs text-gray-500 mb-1">SCAMMER</p>
+                <p className="text-3xl font-mono font-bold text-red-400">sa<span className="text-red-300 underline decoration-4">j</span>maogs</p>
+              </div>
+            </div>
+            <p className="text-yellow-400 mt-4 text-sm">The scammer changed just ONE letter: &quot;l&quot; → &quot;j&quot; to impersonate the real admin!</p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="card rounded-xl overflow-hidden border-2 border-green-600">
+              <div className="bg-green-900/30 p-3 text-center">
+                <span className="text-green-400 font-bold uppercase text-sm">Real Admin - salmaogs</span>
+              </div>
+              <img src="/evidence/real discord admin.jpg" alt="Real Discord Admin - salmaogs" className="w-full evidence-img" />
+              <div className="p-4">
+                <p className="text-gray-400 text-sm">The legitimate Discord administrator</p>
+              </div>
+            </div>
+            
+            <div className="card rounded-xl overflow-hidden border-2 border-red-600">
+              <div className="bg-red-900/30 p-3 text-center">
+                <span className="text-red-400 font-bold uppercase text-sm">Scammer - sajmaogs</span>
+              </div>
+              <img src="/evidence/fake account impersonating discord admin.jpg" alt="Fake Discord Account - sajmaogs" className="w-full evidence-img" />
+              <div className="p-4">
+                <p className="text-gray-400 text-sm">Scammer impersonating with similar username</p>
+              </div>
+            </div>
+          </div>
+          
+          <div className="mt-6 card p-4 rounded-xl bg-yellow-900/20 border border-yellow-700">
+            <p className="text-yellow-400 text-center text-sm">
+              <strong>Warning:</strong> Scammers use &quot;typosquatting&quot; - changing one letter in a username to impersonate trusted people. Always double-check usernames character by character!
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Scammer Conversations */}
+      <section className="py-12 px-4 border-b border-gray-800 bg-gray-900/30">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-2xl font-bold text-center mb-2">Scammer Conversation Evidence</h2>
+          <p className="text-center text-gray-400 mb-8">Actual messages from the scammer trying to steal money</p>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+            <div className="card rounded-xl overflow-hidden">
+              <img src="/evidence/scammer conversation.jpg" alt="Scammer Conversation 1" className="w-full evidence-img" />
+              <div className="p-3">
+                <p className="text-gray-400 text-xs">Conversation 1</p>
+              </div>
+            </div>
+            <div className="card rounded-xl overflow-hidden">
+              <img src="/evidence/scammer conversation 2.jpg" alt="Scammer Conversation 2" className="w-full evidence-img" />
+              <div className="p-3">
+                <p className="text-gray-400 text-xs">Conversation 2</p>
+              </div>
+            </div>
+            <div className="card rounded-xl overflow-hidden">
+              <img src="/evidence/scammer conversation 3.jpg" alt="Scammer Conversation 3" className="w-full evidence-img" />
+              <div className="p-3">
+                <p className="text-gray-400 text-xs">Conversation 3</p>
+              </div>
+            </div>
+            <div className="card rounded-xl overflow-hidden">
+              <img src="/evidence/scammer conversation 4.jpg" alt="Scammer Conversation 4" className="w-full evidence-img" />
+              <div className="p-3">
+                <p className="text-gray-400 text-xs">Conversation 4</p>
+              </div>
+            </div>
+            <div className="card rounded-xl overflow-hidden">
+              <img src="/evidence/scammer conversation 5.jpg" alt="Scammer Conversation 5" className="w-full evidence-img" />
+              <div className="p-3">
+                <p className="text-gray-400 text-xs">Conversation 5</p>
+              </div>
+            </div>
+            <div className="card rounded-xl overflow-hidden">
+              <img src="/evidence/scammer conversation 6.jpg" alt="Scammer Conversation 6" className="w-full evidence-img" />
+              <div className="p-3">
+                <p className="text-gray-400 text-xs">Conversation 6</p>
+              </div>
+            </div>
+            <div className="card rounded-xl overflow-hidden">
+              <img src="/evidence/scammer conversation 7.jpg" alt="Scammer Conversation 7" className="w-full evidence-img" />
+              <div className="p-3">
+                <p className="text-gray-400 text-xs">Conversation 7</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Evidence Gallery */}
       <section className="py-12 px-4 border-b border-gray-800">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl font-bold text-center mb-2">Evidence Gallery</h2>
+          <h2 className="text-2xl font-bold text-center mb-2">Platform & Technical Evidence</h2>
           <p className="text-center text-gray-400 mb-8">Screenshots of the scam operation</p>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -215,14 +321,6 @@ export default function Home() {
               <div className="p-4">
                 <h4 className="font-semibold text-red-400">Scam Homepage</h4>
                 <p className="text-gray-400 text-sm">The fake OxyCapitals trading platform</p>
-              </div>
-            </div>
-            
-            <div className="card rounded-xl overflow-hidden">
-              <img src="/evidence/fake account impersonating discord admin.jpg" alt="Fake Discord Account" className="w-full evidence-img" />
-              <div className="p-4">
-                <h4 className="font-semibold text-red-400">Impersonator Account</h4>
-                <p className="text-gray-400 text-sm">Scammer impersonating a Discord admin</p>
               </div>
             </div>
             
@@ -255,6 +353,14 @@ export default function Home() {
               <div className="p-4">
                 <h4 className="font-semibold text-red-400">DNS Records</h4>
                 <p className="text-gray-400 text-sm">Technical evidence of the scam domain</p>
+              </div>
+            </div>
+            
+            <div className="card rounded-xl overflow-hidden">
+              <img src="/evidence/1.jpg" alt="Additional Evidence" className="w-full evidence-img" />
+              <div className="p-4">
+                <h4 className="font-semibold text-red-400">Additional Evidence</h4>
+                <p className="text-gray-400 text-sm">Supporting documentation</p>
               </div>
             </div>
           </div>
