@@ -406,6 +406,28 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Warning Banner */}
+      <section className="py-8 px-4 border-b border-gray-800 bg-red-950/40">
+        <div className="max-w-4xl mx-auto">
+          <div className="card p-6 rounded-xl bg-red-900/30 border-2 border-red-600">
+            <h3 className="text-xl font-bold text-red-400 mb-3 text-center">Important Warning</h3>
+            <p className="text-gray-300 text-center mb-4">
+              <strong>Never send money to strangers online.</strong> OxyCapitals is <strong>not a registered business</strong> and there is <strong>no real identity behind the company</strong>.
+            </p>
+            <ul className="text-gray-400 space-y-2 max-w-2xl mx-auto">
+              <li>• No legitimate company registration or business license</li>
+              <li>• No verifiable team members or leadership</li>
+              <li>• Fake address (likely a virtual office or nonexistent)</li>
+              <li>• No regulatory oversight or investor protection</li>
+              <li>• Anonymous operators hiding behind a fake website</li>
+            </ul>
+            <p className="text-yellow-400 text-center mt-4 font-semibold">
+              If someone you don&apos;t know asks you to send crypto, it&apos;s almost always a scam.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* What To Do */}
       <section className="py-12 px-4 border-b border-gray-800 bg-gray-900/30">
         <div className="max-w-4xl mx-auto">
