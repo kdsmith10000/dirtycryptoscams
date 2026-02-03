@@ -1,6 +1,36 @@
+'use client'
+
+import { useState } from 'react'
+
 export default function Home() {
+  const [lightboxImage, setLightboxImage] = useState<string | null>(null)
+
+  const openLightbox = (src: string) => setLightboxImage(src)
+  const closeLightbox = () => setLightboxImage(null)
+
   return (
     <main className="min-h-screen">
+      {/* Lightbox Modal */}
+      {lightboxImage && (
+        <div 
+          className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-4 cursor-zoom-out"
+          onClick={closeLightbox}
+        >
+          <button 
+            className="absolute top-4 right-4 text-white text-4xl font-light hover:text-gray-300 z-50"
+            onClick={closeLightbox}
+          >
+            &times;
+          </button>
+          <img 
+            src={lightboxImage} 
+            alt="Expanded view" 
+            className="max-w-full max-h-full object-contain"
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
+      )}
+
       {/* Hero Warning Section */}
       <section className="relative py-16 px-4 text-center border-b border-red-900/50 bg-gradient-to-b from-red-950/30 to-transparent">
         <div className="max-w-4xl mx-auto">
@@ -231,22 +261,28 @@ export default function Home() {
               <div className="bg-green-900/30 p-3 text-center">
                 <span className="text-green-400 font-bold uppercase text-sm">Real Admin - salmaogs</span>
               </div>
-              <img src="/evidence/real discord admin.jpg" alt="Real Discord Admin - salmaogs" className="w-full evidence-img" />
-              <div className="p-4">
-                <p className="text-gray-400 text-sm">The legitimate Discord administrator</p>
-              </div>
+              <img 
+                src="/evidence/real discord admin.jpg" 
+                alt="Real Discord Admin - salmaogs" 
+                className="w-full evidence-img cursor-zoom-in" 
+                onClick={() => openLightbox('/evidence/real discord admin.jpg')}
+              />
             </div>
             
             <div className="card rounded-xl overflow-hidden border-2 border-red-600">
               <div className="bg-red-900/30 p-3 text-center">
                 <span className="text-red-400 font-bold uppercase text-sm">Scammer - sajmaogs</span>
               </div>
-              <img src="/evidence/fake account impersonating discord admin.jpg" alt="Fake Discord Account - sajmaogs" className="w-full evidence-img" />
-              <div className="p-4">
-                <p className="text-gray-400 text-sm">Scammer impersonating with similar username</p>
-              </div>
+              <img 
+                src="/evidence/fake account impersonating discord admin.jpg" 
+                alt="Fake Discord Account - sajmaogs" 
+                className="w-full evidence-img cursor-zoom-in" 
+                onClick={() => openLightbox('/evidence/fake account impersonating discord admin.jpg')}
+              />
             </div>
           </div>
+          
+          <p className="text-center text-gray-500 text-xs mt-4">Click images to expand</p>
           
           <div className="mt-6 card p-4 rounded-xl bg-yellow-900/20 border border-yellow-700">
             <p className="text-yellow-400 text-center text-sm">
@@ -260,34 +296,35 @@ export default function Home() {
       <section className="py-12 px-4 border-b border-gray-800 bg-gray-900/30">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-2xl font-bold text-center mb-2">Scammer Conversation Evidence</h2>
-          <p className="text-center text-gray-400 mb-8">Actual messages from the scammer trying to steal money</p>
+          <p className="text-center text-gray-400 mb-2">Actual messages from the scammer trying to steal money</p>
+          <p className="text-center text-gray-500 text-xs mb-8">Click any image to expand</p>
           
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
-            <div className="card evidence-card rounded-lg overflow-hidden">
+            <div className="card evidence-card rounded-lg overflow-hidden cursor-zoom-in" onClick={() => openLightbox('/evidence/scammer conversation.jpg')}>
               <img src="/evidence/scammer conversation.jpg" alt="Scammer Conversation 1" className="w-full evidence-img" />
               <div className="caption"><span className="text-gray-500 text-xs">1</span></div>
             </div>
-            <div className="card evidence-card rounded-lg overflow-hidden">
+            <div className="card evidence-card rounded-lg overflow-hidden cursor-zoom-in" onClick={() => openLightbox('/evidence/scammer conversation 2.jpg')}>
               <img src="/evidence/scammer conversation 2.jpg" alt="Scammer Conversation 2" className="w-full evidence-img" />
               <div className="caption"><span className="text-gray-500 text-xs">2</span></div>
             </div>
-            <div className="card evidence-card rounded-lg overflow-hidden">
+            <div className="card evidence-card rounded-lg overflow-hidden cursor-zoom-in" onClick={() => openLightbox('/evidence/scammer conversation 3.jpg')}>
               <img src="/evidence/scammer conversation 3.jpg" alt="Scammer Conversation 3" className="w-full evidence-img" />
               <div className="caption"><span className="text-gray-500 text-xs">3</span></div>
             </div>
-            <div className="card evidence-card rounded-lg overflow-hidden">
+            <div className="card evidence-card rounded-lg overflow-hidden cursor-zoom-in" onClick={() => openLightbox('/evidence/scammer conversation 4.jpg')}>
               <img src="/evidence/scammer conversation 4.jpg" alt="Scammer Conversation 4" className="w-full evidence-img" />
               <div className="caption"><span className="text-gray-500 text-xs">4</span></div>
             </div>
-            <div className="card evidence-card rounded-lg overflow-hidden">
+            <div className="card evidence-card rounded-lg overflow-hidden cursor-zoom-in" onClick={() => openLightbox('/evidence/scammer conversation 5.jpg')}>
               <img src="/evidence/scammer conversation 5.jpg" alt="Scammer Conversation 5" className="w-full evidence-img" />
               <div className="caption"><span className="text-gray-500 text-xs">5</span></div>
             </div>
-            <div className="card evidence-card rounded-lg overflow-hidden">
+            <div className="card evidence-card rounded-lg overflow-hidden cursor-zoom-in" onClick={() => openLightbox('/evidence/scammer conversation 6.jpg')}>
               <img src="/evidence/scammer conversation 6.jpg" alt="Scammer Conversation 6" className="w-full evidence-img" />
               <div className="caption"><span className="text-gray-500 text-xs">6</span></div>
             </div>
-            <div className="card evidence-card rounded-lg overflow-hidden">
+            <div className="card evidence-card rounded-lg overflow-hidden cursor-zoom-in" onClick={() => openLightbox('/evidence/scammer conversation 7.jpg')}>
               <img src="/evidence/scammer conversation 7.jpg" alt="Scammer Conversation 7" className="w-full evidence-img" />
               <div className="caption"><span className="text-gray-500 text-xs">7</span></div>
             </div>
@@ -299,45 +336,46 @@ export default function Home() {
       <section className="py-12 px-4 border-b border-gray-800">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-2xl font-bold text-center mb-2">Platform & Technical Evidence</h2>
-          <p className="text-center text-gray-400 mb-8">Screenshots of the scam operation</p>
+          <p className="text-center text-gray-400 mb-2">Screenshots of the scam operation</p>
+          <p className="text-center text-gray-500 text-xs mb-8">Click any image to expand</p>
           
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
-            <div className="card evidence-card rounded-lg overflow-hidden">
+            <div className="card evidence-card rounded-lg overflow-hidden cursor-zoom-in" onClick={() => openLightbox('/evidence/scam homepage.jpg')}>
               <img src="/evidence/scam homepage.jpg" alt="Scam Homepage" className="w-full evidence-img" />
               <div className="caption">
                 <h4 className="font-semibold text-red-400 text-sm">Scam Homepage</h4>
               </div>
             </div>
             
-            <div className="card evidence-card rounded-lg overflow-hidden">
+            <div className="card evidence-card rounded-lg overflow-hidden cursor-zoom-in" onClick={() => openLightbox('/evidence/deposit page.jpg')}>
               <img src="/evidence/deposit page.jpg" alt="Deposit Page" className="w-full evidence-img" />
               <div className="caption">
                 <h4 className="font-semibold text-red-400 text-sm">Deposit Page</h4>
               </div>
             </div>
             
-            <div className="card evidence-card rounded-lg overflow-hidden">
+            <div className="card evidence-card rounded-lg overflow-hidden cursor-zoom-in" onClick={() => openLightbox('/evidence/btc address scam page.jpg')}>
               <img src="/evidence/btc address scam page.jpg" alt="BTC Address Page" className="w-full evidence-img" />
               <div className="caption">
                 <h4 className="font-semibold text-red-400 text-sm">BTC Address Display</h4>
               </div>
             </div>
             
-            <div className="card evidence-card rounded-lg overflow-hidden">
+            <div className="card evidence-card rounded-lg overflow-hidden cursor-zoom-in" onClick={() => openLightbox('/evidence/scammers personal wallet.jpg')}>
               <img src="/evidence/scammers personal wallet.jpg" alt="Scammer's Wallet" className="w-full evidence-img" />
               <div className="caption">
                 <h4 className="font-semibold text-red-400 text-sm">Scammer&apos;s Wallet</h4>
               </div>
             </div>
             
-            <div className="card evidence-card rounded-lg overflow-hidden">
+            <div className="card evidence-card rounded-lg overflow-hidden cursor-zoom-in" onClick={() => openLightbox('/evidence/dns.jpg')}>
               <img src="/evidence/dns.jpg" alt="DNS Records" className="w-full evidence-img" />
               <div className="caption">
                 <h4 className="font-semibold text-red-400 text-sm">DNS Records</h4>
               </div>
             </div>
             
-            <div className="card evidence-card rounded-lg overflow-hidden">
+            <div className="card evidence-card rounded-lg overflow-hidden cursor-zoom-in" onClick={() => openLightbox('/evidence/1.jpg')}>
               <img src="/evidence/1.jpg" alt="Additional Evidence" className="w-full evidence-img" />
               <div className="caption">
                 <h4 className="font-semibold text-red-400 text-sm">Additional Evidence</h4>
@@ -346,19 +384,19 @@ export default function Home() {
           </div>
 
           <div className="mt-6 grid grid-cols-3 gap-4">
-            <div className="card evidence-card rounded-lg overflow-hidden">
+            <div className="card evidence-card rounded-lg overflow-hidden cursor-zoom-in" onClick={() => openLightbox('/evidence/rdap.jpg')}>
               <img src="/evidence/rdap.jpg" alt="RDAP Record 1" className="w-full evidence-img" />
               <div className="caption">
                 <span className="text-gray-500 text-xs">RDAP 1</span>
               </div>
             </div>
-            <div className="card evidence-card rounded-lg overflow-hidden">
+            <div className="card evidence-card rounded-lg overflow-hidden cursor-zoom-in" onClick={() => openLightbox('/evidence/rdap2.jpg')}>
               <img src="/evidence/rdap2.jpg" alt="RDAP Record 2" className="w-full evidence-img" />
               <div className="caption">
                 <span className="text-gray-500 text-xs">RDAP 2</span>
               </div>
             </div>
-            <div className="card evidence-card rounded-lg overflow-hidden">
+            <div className="card evidence-card rounded-lg overflow-hidden cursor-zoom-in" onClick={() => openLightbox('/evidence/rdap3.jpg')}>
               <img src="/evidence/rdap3.jpg" alt="RDAP Record 3" className="w-full evidence-img" />
               <div className="caption">
                 <span className="text-gray-500 text-xs">RDAP 3</span>
