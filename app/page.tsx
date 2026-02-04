@@ -350,6 +350,69 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Related Scam Operations */}
+      <section className="py-12 px-4 border-b border-gray-800">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-2xl font-bold text-center mb-2">Related Scam Operations</h2>
+          <p className="text-center text-gray-400 mb-8">The same scammers have operated multiple fraudulent domains</p>
+          
+          <div className="card p-6 rounded-xl border-2 border-orange-600 bg-orange-950/20">
+            <div className="flex items-center gap-4 mb-4">
+              <div className="w-12 h-12 bg-orange-600 rounded-full flex items-center justify-center flex-shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                </svg>
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-orange-400">BridgeStocks.com</h3>
+                <p className="text-gray-400 text-sm">Previous scam domain by the same operators</p>
+              </div>
+              <div className="ml-auto">
+                <span className="px-3 py-1 bg-green-600/30 text-green-400 text-xs font-semibold rounded-full border border-green-600">
+                  TAKEN DOWN
+                </span>
+              </div>
+            </div>
+            
+            <div className="bg-black/30 rounded-lg p-4 mb-4">
+              <div className="grid md:grid-cols-2 gap-4 text-sm">
+                <div>
+                  <span className="text-gray-500">Domain:</span>
+                  <p className="text-red-400 font-mono line-through">www.bridgestocks.com</p>
+                </div>
+                <div>
+                  <span className="text-gray-500">Status:</span>
+                  <p className="text-green-400 font-semibold">Removed from Internet</p>
+                </div>
+                <div>
+                  <span className="text-gray-500">Discord Username:</span>
+                  <p className="text-red-400 font-mono">sajmaogs</p>
+                  <p className="text-gray-500 text-xs">(Same impersonation account)</p>
+                </div>
+                <div>
+                  <span className="text-gray-500">Scam Type:</span>
+                  <p className="text-yellow-400">Identical fake trading platform</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="text-center">
+              <p className="text-gray-400 text-sm">
+                This demonstrates a <strong className="text-orange-300">pattern of behavior</strong> — when one scam domain is exposed or taken down, 
+                these operators create new domains to continue their fraud. The same Discord username and impersonation tactics were used.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-6 card p-4 rounded-xl bg-yellow-950/20 border border-yellow-700/50">
+            <p className="text-yellow-400 text-sm text-center">
+              <strong>Warning:</strong> If you encounter other domains promoted by the username &quot;sajmaogs&quot; or similar impersonation accounts, 
+              they are likely operated by the same scammers. Report them immediately.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Impersonation Comparison */}
       <section className="py-12 px-4 border-b border-gray-800">
         <div className="max-w-4xl mx-auto">
