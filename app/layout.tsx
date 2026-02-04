@@ -137,7 +137,7 @@ const jsonLd = {
           name: 'What are the OxyCapitals scam wallet addresses?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'The known scam wallet addresses include: Bitcoin (1NTXSjeydYLhWuXS8cVWx57VqyRFqz4gaC, 1GC4fSsmgJMCtMh643WBCi5pBnTpqqCXP2), Ethereum (0x5f9ce0dA56c867D1BD06185D6d21744daC83cb09), and USDT Tron (TCgcYUD74LoeMoKRb7X6WcYPVD3VgZccZR). Do NOT send any cryptocurrency to these addresses.',
+            text: 'The known scam wallet addresses include: Bitcoin Collection (1NTXSjeydYLhWuXS8cVWx57VqyRFqz4gaC), Bitcoin Personal (1GC4fSsmgJMCtMh643WBCi5pBnTpqqCXP2), Bitcoin ByBit (192UAp4TEGApNdxPbSN5veQZ8ynyixjqvB), Bitcoin SegWit (bc1qz5xlayxpa3dk4u8vduwvx0r4f3v2sf0eejpd46), Ethereum (0x5f9ce0dA56c867D1BD06185D6d21744daC83cb09), and USDT Tron (TCgcYUD74LoeMoKRb7X6WcYPVD3VgZccZR). Over $38,000 has been stolen through these wallets. Do NOT send any cryptocurrency to these addresses.',
           },
         },
         {

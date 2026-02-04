@@ -84,26 +84,49 @@ export default function Home() {
           
           <div className="card p-8 rounded-2xl border-2 border-red-600 bg-red-950/20 text-center mb-8">
             <p className="text-gray-400 text-sm uppercase tracking-wider mb-2">Confirmed Stolen Amount</p>
-            <p className="text-5xl md:text-7xl font-black text-red-500 mb-2">$14,575+</p>
+            <p className="text-5xl md:text-7xl font-black text-red-500 mb-2">$38,076+</p>
             <p className="text-gray-400">USD equivalent in cryptocurrency</p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-4 mb-4">
+          <div className="grid md:grid-cols-3 gap-4 mb-4">
             <div className="card p-5 rounded-xl text-center border border-orange-700/50">
               <p className="text-3xl font-bold text-orange-400 mb-1">$4,918</p>
-              <p className="text-gray-400 text-sm">Scam Platform Collection Wallet</p>
-              <p className="text-gray-500 text-xs mt-1">43 victim deposits to fake trading site</p>
+              <p className="text-gray-400 text-sm">Collection Wallet</p>
+              <p className="text-gray-500 text-xs mt-1">43 victim deposits</p>
             </div>
             <div className="card p-5 rounded-xl text-center border border-yellow-700/50">
               <p className="text-3xl font-bold text-yellow-400 mb-1">$9,657</p>
-              <p className="text-gray-400 text-sm">Scammer&apos;s Personal Wallet</p>
-              <p className="text-gray-500 text-xs mt-1">67 transactions from additional victims</p>
+              <p className="text-gray-400 text-sm">Personal Wallet</p>
+              <p className="text-gray-500 text-xs mt-1">67 transactions</p>
+            </div>
+            <div className="card p-5 rounded-xl text-center border border-purple-700/50">
+              <p className="text-3xl font-bold text-purple-400 mb-1">$23,501</p>
+              <p className="text-gray-400 text-sm">ByBit Wallet</p>
+              <p className="text-gray-500 text-xs mt-1">6 high-value transactions</p>
+            </div>
+          </div>
+
+          <div className="card p-4 rounded-xl mb-4 bg-purple-950/20 border border-purple-700/50">
+            <h4 className="text-purple-400 font-semibold text-sm mb-2 text-center">ByBit Wallet Major Transactions</h4>
+            <div className="grid md:grid-cols-3 gap-3 text-center text-sm">
+              <div>
+                <p className="text-red-400 font-bold">$20,144</p>
+                <p className="text-gray-500 text-xs">Sep 24, 2025</p>
+              </div>
+              <div>
+                <p className="text-red-400 font-bold">$3,272</p>
+                <p className="text-gray-500 text-xs">Jan 23, 2026</p>
+              </div>
+              <div>
+                <p className="text-red-400 font-bold">$86</p>
+                <p className="text-gray-500 text-xs">Jan 24, 2026</p>
+              </div>
             </div>
           </div>
 
           <div className="card p-4 rounded-xl text-center bg-blue-950/30 border border-blue-700/50">
             <p className="text-blue-400 text-sm">
-              <span className="font-semibold">110+ transactions</span> across multiple wallets &bull; 
+              <span className="font-semibold">116+ transactions</span> across 4 tracked Bitcoin wallets &bull; 
               All funds transferred to exchanges for cash-out
             </p>
           </div>
