@@ -10,16 +10,22 @@ const baseUrl = 'https://dirtycrypto.org'
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: 'Dirty Crypto Scams Exposed | OxyCapitals & MirrorExp Fraud Alert',
-    template: '%s | Dirty Crypto Scams',
+    default: 'Dirty Crypto - Exposing Crypto Scams Through Blockchain Analysis',
+    template: '%s | Dirty Crypto',
   },
-  description: 'Exposing cryptocurrency scams with blockchain evidence. OxyCapitals, MirrorExp, and other crypto frauds documented with wallet addresses, transaction analysis, and impersonation tactics. $62,400+ stolen. Protect yourself from Bitcoin, Ethereum, and USDT scams.',
+  description: 'Dirty Crypto investigates cryptocurrency fraud through blockchain analysis, exposing scams and helping victims get justice. OxyCapitals, MirrorExp, and other crypto frauds documented with wallet addresses, transaction tracing, and evidence for law enforcement. $62,400+ in documented losses.',
   keywords: [
     // Brand/Domain keywords
+    'dirty crypto',
     'dirty crypto scams',
     'dirtycrypto',
     'crypto scam database',
     'cryptocurrency fraud database',
+    'blockchain analysis',
+    'blockchain forensics',
+    'crypto scam investigation',
+    'trace stolen crypto',
+    'crypto fraud investigation',
     // Specific scam names
     'oxycapitals scam',
     'oxycapitalsltd scam',
@@ -102,9 +108,9 @@ export const metadata: Metadata = {
     '0x5f9ce0dA56c867D1BD06185D6d21744daC83cb09',
     'bc1qy28j32l0ntncyuqczzeau2k9yslh76djy0nh5v',
   ].join(', '),
-  authors: [{ name: 'Dirty Crypto Scams' }, { name: 'Crypto Scam Awareness' }],
-  creator: 'Dirty Crypto Scams',
-  publisher: 'Dirty Crypto Scams',
+  authors: [{ name: 'Dirty Crypto' }, { name: 'Blockchain Forensics' }],
+  creator: 'Dirty Crypto',
+  publisher: 'Dirty Crypto',
   robots: {
     index: true,
     follow: true,
@@ -117,27 +123,27 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Dirty Crypto Scams - Exposing Cryptocurrency Fraud with Blockchain Evidence',
-    description: '$62,400+ stolen by OxyCapitals & MirrorExp scams. Full blockchain analysis, wallet addresses, and evidence exposed. Protect yourself from crypto fraud.',
+    title: 'Dirty Crypto - Exposing Crypto Scams Through Blockchain Analysis',
+    description: 'We investigate cryptocurrency fraud by tracing stolen funds across blockchains. $62,400+ documented losses from OxyCapitals & MirrorExp scams. Fighting for justice for scam victims.',
     type: 'website',
     locale: 'en_US',
     url: baseUrl,
-    siteName: 'Dirty Crypto Scams',
+    siteName: 'Dirty Crypto',
     images: [
       {
         url: `${baseUrl}/evidence/scam homepage.jpg`,
         width: 1200,
         height: 630,
-        alt: 'Dirty Crypto Scams - Exposing OxyCapitals and MirrorExp Cryptocurrency Fraud',
+        alt: 'Dirty Crypto - Exposing Cryptocurrency Fraud Through Blockchain Analysis',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Dirty Crypto Scams - $62,400+ Stolen Exposed',
-    description: 'Exposing cryptocurrency scams with blockchain evidence. OxyCapitals, MirrorExp, and other crypto frauds documented.',
+    title: 'Dirty Crypto - Exposing Crypto Scams Through Blockchain Analysis',
+    description: 'Investigating cryptocurrency fraud through blockchain analysis. $62,400+ in documented losses. Fighting for justice.',
     images: [`${baseUrl}/evidence/scam homepage.jpg`],
-    creator: '@dirtycryptoscam',
+    creator: '@dirtycrypto',
   },
   alternates: {
     canonical: baseUrl,
@@ -151,7 +157,7 @@ export const metadata: Metadata = {
     'msvalidate.01': '',
     'yandex-verification': '',
     'apple-mobile-web-app-title': 'Dirty Crypto',
-    'application-name': 'Dirty Crypto Scams',
+    'application-name': 'Dirty Crypto',
   },
 }
 
@@ -163,8 +169,8 @@ const jsonLd = {
       '@type': 'WebSite',
       '@id': 'https://dirtycrypto.org/#website',
       url: 'https://dirtycrypto.org',
-      name: 'Dirty Crypto Scams',
-      description: 'Exposing cryptocurrency scams with blockchain evidence. Documenting crypto fraud, scam wallet addresses, and impersonation tactics.',
+      name: 'Dirty Crypto',
+      description: 'Exposing cryptocurrency scams through blockchain analysis. Investigating fraud, tracing stolen funds, and fighting for justice for scam victims.',
       publisher: { '@id': 'https://dirtycrypto.org/#organization' },
       potentialAction: {
         '@type': 'SearchAction',
@@ -175,8 +181,9 @@ const jsonLd = {
     {
       '@type': 'Organization',
       '@id': 'https://dirtycrypto.org/#organization',
-      name: 'Dirty Crypto Scams',
+      name: 'Dirty Crypto',
       url: 'https://dirtycrypto.org',
+      description: 'Blockchain forensics organization dedicated to exposing cryptocurrency scams and helping victims get justice.',
       logo: {
         '@type': 'ImageObject',
         url: 'https://dirtycrypto.org/logo.png',
@@ -187,13 +194,13 @@ const jsonLd = {
       '@type': 'WebPage',
       '@id': 'https://dirtycrypto.org/#webpage',
       url: 'https://dirtycrypto.org',
-      name: 'Dirty Crypto Scams - Exposing Cryptocurrency Fraud',
-      description: 'Exposing cryptocurrency scams including OxyCapitals and MirrorExp with full blockchain evidence, wallet addresses, and $62,400+ in documented losses.',
+      name: 'Dirty Crypto - Exposing Crypto Scams Through Blockchain Analysis',
+      description: 'We investigate cryptocurrency fraud by tracing stolen funds across blockchains. OxyCapitals, MirrorExp, and other scams documented with $62,400+ in losses.',
       isPartOf: { '@id': 'https://dirtycrypto.org/#website' },
       about: {
         '@type': 'Thing',
         name: 'Cryptocurrency Scam Investigation',
-        description: 'Investigation and documentation of cryptocurrency fraud schemes including phishing, impersonation, and typosquatting attacks',
+        description: 'Blockchain forensics and investigation of cryptocurrency fraud schemes including phishing, impersonation, and typosquatting attacks',
       },
       breadcrumb: { '@id': 'https://dirtycrypto.org/#breadcrumb' },
     },
@@ -202,7 +209,7 @@ const jsonLd = {
       '@id': 'https://dirtycrypto.org/#breadcrumb',
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://dirtycrypto.org' },
-        { '@type': 'ListItem', position: 2, name: 'OxyCapitals Scam', item: 'https://dirtycrypto.org' },
+        { '@type': 'ListItem', position: 2, name: 'OxyCapitals Scam', item: 'https://dirtycrypto.org/oxycapitals' },
         { '@type': 'ListItem', position: 3, name: 'MirrorExp Scam', item: 'https://dirtycrypto.org/mirrorexp' },
       ],
     },
@@ -237,7 +244,7 @@ const jsonLd = {
           position: 1,
           name: 'OxyCapitals Scam',
           description: 'Fake crypto trading platform stealing $40,400+ via Discord impersonation',
-          url: 'https://dirtycrypto.org',
+          url: 'https://dirtycrypto.org/oxycapitals',
         },
         {
           '@type': 'ListItem',

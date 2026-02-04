@@ -39,7 +39,7 @@ export default function MirrorExpPage() {
             <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
             </svg>
-            Back to OxyCapitals
+            Back to Dirty Crypto
           </Link>
           
           {/* Total Loss Counter */}
@@ -797,7 +797,7 @@ export default function MirrorExpPage() {
             
             <div className="text-center">
               <Link 
-                href="/"
+                href="/oxycapitals"
                 className="inline-flex items-center gap-2 bg-orange-600 hover:bg-orange-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -920,9 +920,13 @@ export default function MirrorExpPage() {
         <p className="mb-2">This site was created to expose cryptocurrency fraud and protect potential victims.</p>
         <p className="text-sm">All information is based on publicly available blockchain data and documented evidence.</p>
         <p className="text-sm mt-4">Last updated: February 2026</p>
-        <div className="mt-6">
+        <div className="mt-6 flex justify-center gap-4">
           <Link href="/" className="text-blue-400 hover:underline text-sm">
-            ← Back to OxyCapitals Scam Exposure
+            ← Back to Dirty Crypto
+          </Link>
+          <span className="text-gray-700">|</span>
+          <Link href="/oxycapitals" className="text-red-400 hover:underline text-sm">
+            View OxyCapitals Investigation
           </Link>
         </div>
         <nav className="mt-6 text-xs text-gray-600 space-x-4">
