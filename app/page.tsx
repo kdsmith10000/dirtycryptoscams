@@ -11,6 +11,26 @@ export default function Home() {
 
   return (
     <main className="min-h-screen" itemScope itemType="https://schema.org/Article">
+      {/* Top Navigation Bar */}
+      <nav className="bg-gradient-to-r from-red-950 to-purple-950 border-b border-red-800 sticky top-0 z-40">
+        <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+          <span className="text-red-400 font-bold text-sm uppercase tracking-wider">Scam Exposure Network</span>
+          <div className="flex items-center gap-4">
+            <span className="text-gray-400 text-sm hidden sm:inline">Also Exposed:</span>
+            <Link 
+              href="/mirrorexp"
+              className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-semibold px-4 py-2 rounded-lg transition-colors text-sm"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+              </svg>
+              MirrorExp.com Scam
+              <span className="hidden sm:inline px-2 py-0.5 bg-red-800 rounded text-xs">NEW</span>
+            </Link>
+          </div>
+        </div>
+      </nav>
+
       {/* Lightbox Modal */}
       {lightboxImage && (
         <div 
