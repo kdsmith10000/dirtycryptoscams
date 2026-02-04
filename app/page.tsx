@@ -76,6 +76,47 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Total Victim Losses */}
+      <section className="py-12 px-4 border-b border-gray-800 bg-gradient-to-b from-red-950/40 to-transparent">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-2xl font-bold text-center mb-2">Total Documented Victim Losses</h2>
+          <p className="text-center text-gray-400 mb-8">Based on blockchain transaction analysis of known scam wallets</p>
+          
+          <div className="card p-8 rounded-2xl border-2 border-red-600 bg-red-950/20 text-center mb-8">
+            <p className="text-gray-400 text-sm uppercase tracking-wider mb-2">Confirmed Stolen Amount</p>
+            <p className="text-5xl md:text-7xl font-black text-red-500 mb-2">$14,575+</p>
+            <p className="text-gray-400">USD equivalent in cryptocurrency</p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-4 mb-4">
+            <div className="card p-5 rounded-xl text-center border border-orange-700/50">
+              <p className="text-3xl font-bold text-orange-400 mb-1">$4,918</p>
+              <p className="text-gray-400 text-sm">Scam Platform Collection Wallet</p>
+              <p className="text-gray-500 text-xs mt-1">43 victim deposits to fake trading site</p>
+            </div>
+            <div className="card p-5 rounded-xl text-center border border-yellow-700/50">
+              <p className="text-3xl font-bold text-yellow-400 mb-1">$9,657</p>
+              <p className="text-gray-400 text-sm">Scammer&apos;s Personal Wallet</p>
+              <p className="text-gray-500 text-xs mt-1">67 transactions from additional victims</p>
+            </div>
+          </div>
+
+          <div className="card p-4 rounded-xl text-center bg-blue-950/30 border border-blue-700/50">
+            <p className="text-blue-400 text-sm">
+              <span className="font-semibold">110+ transactions</span> across multiple wallets &bull; 
+              All funds transferred to exchanges for cash-out
+            </p>
+          </div>
+
+          <div className="mt-6 text-center">
+            <p className="text-gray-500 text-sm">
+              These figures represent only the <strong className="text-gray-300">Bitcoin wallets we&apos;ve traced</strong>. 
+              Actual losses are likely <strong className="text-red-400">significantly higher</strong> when accounting for Ethereum, USDT (Tron), and unreported victims.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Scam Wallet Addresses */}
       <section className="py-12 px-4 border-b border-gray-800 bg-gray-900/30">
         <div className="max-w-4xl mx-auto">
