@@ -8,6 +8,12 @@
   --background-end-rgb: 25, 25, 35;
 }
 
+/* Improve text rendering and prevent zoom on input focus */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -17,6 +23,8 @@ body {
     )
     rgb(var(--background-start-rgb));
   min-height: 100vh;
+  /* Prevent horizontal overflow on mobile */
+  overflow-x: hidden;
 }
 
 .gradient-text {
@@ -51,8 +59,11 @@ body {
   object-fit: cover;
 }
 
-.evidence-img:hover {
-  transform: scale(1.02);
+/* Disable hover effects on touch devices */
+@media (hover: hover) {
+  .evidence-img:hover {
+    transform: scale(1.02);
+  }
 }
 
 .evidence-card {
@@ -68,4 +79,129 @@ body {
 .evidence-card .caption {
   padding: 0.5rem 0.75rem;
   margin-top: auto;
+}
+
+/* Mobile-specific utilities */
+
+/* Wallet address handling - allow horizontal scroll on mobile */
+.wallet-address {
+  word-break: break-all;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 640px) {
+  .wallet-address-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    padding-bottom: 4px;
+  }
+  
+  .wallet-address-scroll::-webkit-scrollbar {
+    height: 4px;
+  }
+  
+  .wallet-address-scroll::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+  }
+  
+  .wallet-address-scroll::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 2px;
+  }
+}
+
+/* Improved touch targets */
+@media (max-width: 768px) {
+  button, a, [role="button"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Stack flex items vertically on mobile for better readability */
+  .mobile-stack {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0.75rem !important;
+  }
+  
+  /* Full width buttons on mobile */
+  .mobile-full-width {
+    width: 100%;
+  }
+}
+
+/* Typography adjustments for mobile */
+@media (max-width: 640px) {
+  /* Reduce large font sizes on very small screens */
+  .text-5xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+  
+  .text-7xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+  
+  /* Reduce section padding on mobile */
+  section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* Lightbox mobile improvements */
+@media (max-width: 768px) {
+  .lightbox-close {
+    top: 0.5rem !important;
+    right: 0.5rem !important;
+    font-size: 2.5rem !important;
+    padding: 0.5rem;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* Prevent content from overflowing on mobile */
+main {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+/* Code blocks should scroll horizontally on mobile */
+code {
+  word-break: break-all;
+}
+
+/* Improve nav on mobile */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+}
+
+/* Better spacing for mobile nav */
+@media (max-width: 640px) {
+  nav > div {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+}
+
+/* Grid improvements for mobile */
+@media (max-width: 640px) {
+  .grid-cols-2 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  
+  .grid-cols-3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }

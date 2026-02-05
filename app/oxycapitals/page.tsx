@@ -13,35 +13,37 @@ export default function OxyCapitalsPage() {
     <main className="min-h-screen" itemScope itemType="https://schema.org/Article">
       {/* Navigation */}
       <nav className="bg-gradient-to-r from-red-950 to-purple-950 border-b border-red-800 sticky top-0 z-40 backdrop-blur-sm">
-        <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-          <Link href="/" className="text-gray-400 hover:text-white text-sm flex items-center gap-2">
+        <div className="max-w-6xl mx-auto px-3 sm:px-4 py-2 sm:py-3 flex items-center justify-between gap-2">
+          <Link href="/" className="text-gray-400 hover:text-white text-xs sm:text-sm flex items-center gap-1 sm:gap-2 flex-shrink-0">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
             </svg>
-            Back to Dirty Crypto
+            <span className="hidden sm:inline">Back to Dirty Crypto</span>
+            <span className="sm:hidden">Back</span>
           </Link>
           
-          {/* Total Loss Counter */}
+          {/* Total Loss Counter - Desktop */}
           <div className="hidden md:flex items-center gap-2 bg-black/40 px-4 py-2 rounded-lg border border-red-700/50">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
             <div className="text-center">
               <p className="text-gray-400 text-xs uppercase tracking-wider leading-none">Total Documented Losses</p>
-              <p className="text-red-500 font-black text-lg leading-tight">$62,400+</p>
+              <p className="text-red-500 font-black text-lg leading-tight">$84,000+</p>
             </div>
           </div>
 
-          <div className="flex items-center gap-4">
-            <span className="text-gray-400 text-sm hidden sm:inline">Also Exposed:</span>
+          <div className="flex items-center gap-2 sm:gap-4">
+            <span className="text-gray-400 text-xs sm:text-sm hidden sm:inline">Also Exposed:</span>
             <Link 
               href="/mirrorexp"
-              className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-semibold px-4 py-2 rounded-lg transition-colors text-sm"
+              className="inline-flex items-center gap-1 sm:gap-2 bg-red-600 hover:bg-red-700 text-white font-semibold px-2 sm:px-4 py-1.5 sm:py-2 rounded-lg transition-colors text-xs sm:text-sm"
             >
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-3.5 w-3.5 sm:h-4 sm:w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
               </svg>
-              MirrorExp.com Scam
+              <span className="hidden sm:inline">MirrorExp.com Scam</span>
+              <span className="sm:hidden">MirrorExp</span>
             </Link>
           </div>
         </div>
@@ -69,88 +71,88 @@ export default function OxyCapitalsPage() {
       )}
 
       {/* Hero Warning Section */}
-      <section className="relative py-16 px-4 text-center border-b border-red-900/50 bg-gradient-to-b from-red-950/30 to-transparent">
+      <section className="relative py-10 sm:py-16 px-4 text-center border-b border-red-900/50 bg-gradient-to-b from-red-950/30 to-transparent">
         <div className="max-w-4xl mx-auto">
-          <div className="warning-pulse inline-block mb-6 px-6 py-2 bg-red-600 text-white font-bold rounded-full text-sm uppercase tracking-wider" role="alert">
+          <div className="warning-pulse inline-block mb-4 sm:mb-6 px-4 sm:px-6 py-2 bg-red-600 text-white font-bold rounded-full text-xs sm:text-sm uppercase tracking-wider" role="alert">
             Scam Alert - Do Not Send Money
           </div>
-          <h1 className="text-4xl md:text-6xl font-black mb-6" itemProp="headline">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-black mb-4 sm:mb-6" itemProp="headline">
             <span className="gradient-text">OxyCapitals</span> is a{' '}
             <span className="text-red-500">SCAM</span>
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto" itemProp="description">
+          <p className="text-base sm:text-xl text-gray-300 mb-6 sm:mb-8 max-w-2xl mx-auto px-2" itemProp="description">
             OxyCapitalsLtd.com is a cryptocurrency phishing scam that impersonates Discord admins to steal Bitcoin. 
             This site documents the fraud with blockchain evidence and exposes their wallet addresses.
           </p>
-          <div className="card inline-block p-4 rounded-lg">
-            <p className="text-gray-400 text-sm">Fraudulent Crypto Scam Website</p>
-            <p className="text-red-400 font-mono text-lg">oxycapitalsltd.com</p>
+          <div className="card inline-block p-3 sm:p-4 rounded-lg">
+            <p className="text-gray-400 text-xs sm:text-sm">Fraudulent Crypto Scam Website</p>
+            <p className="text-red-400 font-mono text-base sm:text-lg break-all">oxycapitalsltd.com</p>
           </div>
         </div>
       </section>
 
       {/* Quick Facts */}
-      <section className="py-12 px-4 border-b border-gray-800">
+      <section className="py-8 sm:py-12 px-4 border-b border-gray-800">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl font-bold text-center mb-8">How This Scam Works</h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="card p-6 rounded-xl">
-              <div className="text-3xl mb-4">1</div>
-              <h3 className="text-lg font-semibold mb-2 text-red-400">Impersonation</h3>
-              <p className="text-gray-400">Scammers impersonate trusted Discord admins and crypto traders, building fake credibility.</p>
+          <h2 className="text-xl sm:text-2xl font-bold text-center mb-6 sm:mb-8">How This Scam Works</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
+            <div className="card p-4 sm:p-6 rounded-xl">
+              <div className="text-2xl sm:text-3xl mb-3 sm:mb-4">1</div>
+              <h3 className="text-base sm:text-lg font-semibold mb-2 text-red-400">Impersonation</h3>
+              <p className="text-gray-400 text-sm sm:text-base">Scammers impersonate trusted Discord admins and crypto traders, building fake credibility.</p>
             </div>
-            <div className="card p-6 rounded-xl">
-              <div className="text-3xl mb-4">2</div>
-              <h3 className="text-lg font-semibold mb-2 text-yellow-400">Fake Platform</h3>
-              <p className="text-gray-400">They direct victims to a fake trading platform (oxycapitalsltd.com) to deposit crypto.</p>
+            <div className="card p-4 sm:p-6 rounded-xl">
+              <div className="text-2xl sm:text-3xl mb-3 sm:mb-4">2</div>
+              <h3 className="text-base sm:text-lg font-semibold mb-2 text-yellow-400">Fake Platform</h3>
+              <p className="text-gray-400 text-sm sm:text-base">They direct victims to a fake trading platform (oxycapitalsltd.com) to deposit crypto.</p>
             </div>
-            <div className="card p-6 rounded-xl">
-              <div className="text-3xl mb-4">3</div>
-              <h3 className="text-lg font-semibold mb-2 text-green-400">Theft</h3>
-              <p className="text-gray-400">Deposits go straight to the scammer&apos;s personal wallet, then to an exchange to cash out.</p>
+            <div className="card p-4 sm:p-6 rounded-xl">
+              <div className="text-2xl sm:text-3xl mb-3 sm:mb-4">3</div>
+              <h3 className="text-base sm:text-lg font-semibold mb-2 text-green-400">Theft</h3>
+              <p className="text-gray-400 text-sm sm:text-base">Deposits go straight to the scammer&apos;s personal wallet, then to an exchange to cash out.</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Total Victim Losses */}
-      <section className="py-12 px-4 border-b border-gray-800 bg-gradient-to-b from-red-950/40 to-transparent">
+      <section className="py-8 sm:py-12 px-4 border-b border-gray-800 bg-gradient-to-b from-red-950/40 to-transparent">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl font-bold text-center mb-2">Total Documented Victim Losses</h2>
-          <p className="text-center text-gray-400 mb-8">Based on blockchain transaction analysis of known scam wallets</p>
+          <h2 className="text-xl sm:text-2xl font-bold text-center mb-2">Total Documented Victim Losses</h2>
+          <p className="text-center text-gray-400 mb-6 sm:mb-8 text-sm sm:text-base">Based on blockchain transaction analysis of known scam wallets</p>
           
-          <div className="card p-8 rounded-2xl border-2 border-red-600 bg-red-950/20 text-center mb-8">
-            <p className="text-gray-400 text-sm uppercase tracking-wider mb-2">Confirmed Stolen Amount</p>
-            <p className="text-5xl md:text-7xl font-black text-red-500 mb-2">$40,400+</p>
-            <p className="text-gray-400">USD equivalent across Bitcoin, Ethereum &amp; Tron</p>
+          <div className="card p-5 sm:p-8 rounded-2xl border-2 border-red-600 bg-red-950/20 text-center mb-6 sm:mb-8">
+            <p className="text-gray-400 text-xs sm:text-sm uppercase tracking-wider mb-2">Confirmed Stolen Amount</p>
+            <p className="text-4xl sm:text-5xl md:text-7xl font-black text-red-500 mb-2">$54,000+</p>
+            <p className="text-gray-400 text-sm sm:text-base">USD equivalent across Bitcoin, Ethereum &amp; Tron</p>
           </div>
 
           {/* Bitcoin Wallets */}
-          <h3 className="text-lg font-semibold text-orange-400 mb-3 flex items-center gap-2">
-            <span className="w-3 h-3 bg-orange-400 rounded-full"></span>
+          <h3 className="text-base sm:text-lg font-semibold text-orange-400 mb-3 flex items-center gap-2">
+            <span className="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-orange-400 rounded-full flex-shrink-0"></span>
             Bitcoin Wallets — $38,076
           </h3>
-          <div className="grid md:grid-cols-3 gap-4 mb-6">
-            <div className="card p-5 rounded-xl text-center border border-orange-700/50">
-              <p className="text-2xl font-bold text-orange-400 mb-1">$4,918</p>
-              <p className="text-gray-400 text-sm">Collection Wallet</p>
-              <p className="text-gray-500 text-xs mt-1">43 victim deposits</p>
+          <div className="grid grid-cols-3 gap-2 sm:gap-4 mb-6">
+            <div className="card p-3 sm:p-5 rounded-xl text-center border border-orange-700/50">
+              <p className="text-lg sm:text-2xl font-bold text-orange-400 mb-1">$4,918</p>
+              <p className="text-gray-400 text-xs sm:text-sm">Collection Wallet</p>
+              <p className="text-gray-500 text-xs mt-1 hidden sm:block">43 victim deposits</p>
             </div>
-            <div className="card p-5 rounded-xl text-center border border-yellow-700/50">
-              <p className="text-2xl font-bold text-yellow-400 mb-1">$9,657</p>
-              <p className="text-gray-400 text-sm">Personal Wallet</p>
-              <p className="text-gray-500 text-xs mt-1">67 transactions</p>
+            <div className="card p-3 sm:p-5 rounded-xl text-center border border-yellow-700/50">
+              <p className="text-lg sm:text-2xl font-bold text-yellow-400 mb-1">$9,657</p>
+              <p className="text-gray-400 text-xs sm:text-sm">Personal Wallet</p>
+              <p className="text-gray-500 text-xs mt-1 hidden sm:block">67 transactions</p>
             </div>
-            <div className="card p-5 rounded-xl text-center border border-purple-700/50">
-              <p className="text-2xl font-bold text-purple-400 mb-1">$23,501</p>
-              <p className="text-gray-400 text-sm">ByBit Wallet</p>
-              <p className="text-gray-500 text-xs mt-1">6 high-value transactions</p>
+            <div className="card p-3 sm:p-5 rounded-xl text-center border border-purple-700/50">
+              <p className="text-lg sm:text-2xl font-bold text-purple-400 mb-1">$23,501</p>
+              <p className="text-gray-400 text-xs sm:text-sm">ByBit Wallet</p>
+              <p className="text-gray-500 text-xs mt-1 hidden sm:block">6 high-value txns</p>
             </div>
           </div>
 
-          <div className="card p-4 rounded-xl mb-6 bg-purple-950/20 border border-purple-700/50">
-            <h4 className="text-purple-400 font-semibold text-sm mb-2 text-center">ByBit Wallet Major Transactions</h4>
-            <div className="grid md:grid-cols-3 gap-3 text-center text-sm">
+          <div className="card p-3 sm:p-4 rounded-xl mb-6 bg-purple-950/20 border border-purple-700/50">
+            <h4 className="text-purple-400 font-semibold text-xs sm:text-sm mb-2 text-center">ByBit Wallet Major Transactions</h4>
+            <div className="grid grid-cols-3 gap-2 sm:gap-3 text-center text-xs sm:text-sm">
               <div>
                 <p className="text-red-400 font-bold">$20,144</p>
                 <p className="text-gray-500 text-xs">Sep 24, 2025</p>
@@ -167,11 +169,11 @@ export default function OxyCapitalsPage() {
           </div>
 
           {/* SegWit Routing Wallet */}
-          <div className="card p-4 rounded-xl mb-6 bg-orange-950/20 border border-orange-700/30">
-            <h4 className="text-orange-300 font-semibold text-sm mb-2">SegWit Routing Wallet</h4>
-            <p className="text-gray-400 text-sm mb-2">
-              <code className="text-xs bg-black/50 px-2 py-1 rounded">bc1qz5xlayxpa3dk4u8vduwvx0r4f3v2sf0eejpd46</code>
-            </p>
+          <div className="card p-3 sm:p-4 rounded-xl mb-6 bg-orange-950/20 border border-orange-700/30">
+            <h4 className="text-orange-300 font-semibold text-xs sm:text-sm mb-2">SegWit Routing Wallet</h4>
+            <div className="overflow-x-auto mb-2">
+              <code className="text-xs bg-black/50 px-2 py-1 rounded whitespace-nowrap">bc1qz5xlayxpa3dk4u8vduwvx0r4f3v2sf0eejpd46</code>
+            </div>
             <p className="text-gray-500 text-xs">
               Intermediate wallet receiving $868 from victims, forwarding to Personal &amp; ByBit wallets. 
               Amounts included in wallet totals above.
@@ -179,36 +181,40 @@ export default function OxyCapitalsPage() {
           </div>
 
           {/* Ethereum */}
-          <h3 className="text-lg font-semibold text-blue-400 mb-3 flex items-center gap-2">
-            <span className="w-3 h-3 bg-blue-400 rounded-full"></span>
+          <h3 className="text-base sm:text-lg font-semibold text-blue-400 mb-3 flex items-center gap-2">
+            <span className="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-blue-400 rounded-full flex-shrink-0"></span>
             Ethereum — $2,252
           </h3>
-          <div className="card p-4 rounded-xl mb-6 bg-blue-950/20 border border-blue-700/50">
-            <div className="flex flex-wrap items-center justify-between gap-4">
-              <div>
-                <p className="text-gray-400 text-sm">Wallet</p>
-                <code className="text-xs text-blue-300 bg-black/50 px-2 py-1 rounded">0x5f9ce0dA56c867D1BD06185D6d21744daC83cb09</code>
+          <div className="card p-3 sm:p-4 rounded-xl mb-6 bg-blue-950/20 border border-blue-700/50">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-4">
+              <div className="min-w-0">
+                <p className="text-gray-400 text-xs sm:text-sm mb-1">Wallet</p>
+                <div className="overflow-x-auto">
+                  <code className="text-xs text-blue-300 bg-black/50 px-2 py-1 rounded whitespace-nowrap">0x5f9ce0dA56c867D1BD06185D6d21744daC83cb09</code>
+                </div>
               </div>
-              <div className="text-right">
-                <p className="text-2xl font-bold text-blue-400">0.994 ETH</p>
+              <div className="text-left sm:text-right flex-shrink-0">
+                <p className="text-xl sm:text-2xl font-bold text-blue-400">0.994 ETH</p>
                 <p className="text-gray-500 text-xs">Received Jul 14, 2025 • Cashed out Jul 15</p>
               </div>
             </div>
           </div>
 
           {/* Tron */}
-          <h3 className="text-lg font-semibold text-red-400 mb-3 flex items-center gap-2">
-            <span className="w-3 h-3 bg-red-400 rounded-full"></span>
+          <h3 className="text-base sm:text-lg font-semibold text-red-400 mb-3 flex items-center gap-2">
+            <span className="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-red-400 rounded-full flex-shrink-0"></span>
             Tron (TRX/USDT) — $75+
           </h3>
-          <div className="card p-4 rounded-xl mb-6 bg-red-950/20 border border-red-700/50">
-            <div className="flex flex-wrap items-center justify-between gap-4">
-              <div>
-                <p className="text-gray-400 text-sm">Wallet</p>
-                <code className="text-xs text-red-300 bg-black/50 px-2 py-1 rounded">TCgcYUD74LoeMoKRb7X6WcYPVD3VgZccZR</code>
+          <div className="card p-3 sm:p-4 rounded-xl mb-6 bg-red-950/20 border border-red-700/50">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-4">
+              <div className="min-w-0">
+                <p className="text-gray-400 text-xs sm:text-sm mb-1">Wallet</p>
+                <div className="overflow-x-auto">
+                  <code className="text-xs text-red-300 bg-black/50 px-2 py-1 rounded whitespace-nowrap">TCgcYUD74LoeMoKRb7X6WcYPVD3VgZccZR</code>
+                </div>
               </div>
-              <div className="text-right">
-                <p className="text-2xl font-bold text-red-400">~500 TRX</p>
+              <div className="text-left sm:text-right flex-shrink-0">
+                <p className="text-xl sm:text-2xl font-bold text-red-400">~500 TRX</p>
                 <p className="text-gray-500 text-xs">Aug 2023 - Apr 2024 • Multiple USDT transfers</p>
               </div>
             </div>
@@ -231,46 +237,58 @@ export default function OxyCapitalsPage() {
       </section>
 
       {/* Scam Wallet Addresses */}
-      <section className="py-12 px-4 border-b border-gray-800 bg-gray-900/30">
+      <section className="py-8 sm:py-12 px-4 border-b border-gray-800 bg-gray-900/30">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl font-bold text-center mb-2">Known Scam Wallet Addresses</h2>
-          <p className="text-center text-gray-400 mb-8">Do NOT send cryptocurrency to any of these addresses</p>
+          <h2 className="text-xl sm:text-2xl font-bold text-center mb-2">Known Scam Wallet Addresses</h2>
+          <p className="text-center text-gray-400 mb-6 sm:mb-8 text-sm sm:text-base">Do NOT send cryptocurrency to any of these addresses</p>
           
-          <div className="space-y-4">
-            <div className="card p-4 rounded-lg">
-              <div className="flex items-center justify-between flex-wrap gap-2">
-                <span className="text-orange-400 font-semibold">Bitcoin (Collection)</span>
-                <code className="text-sm bg-black/50 px-3 py-1 rounded break-all">1NTXSjeydYLhWuXS8cVWx57VqyRFqz4gaC</code>
+          <div className="space-y-3 sm:space-y-4">
+            <div className="card p-3 sm:p-4 rounded-lg">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                <span className="text-orange-400 font-semibold text-sm sm:text-base">Bitcoin (Collection)</span>
+                <div className="overflow-x-auto">
+                  <code className="text-xs sm:text-sm bg-black/50 px-2 sm:px-3 py-1 rounded whitespace-nowrap">1NTXSjeydYLhWuXS8cVWx57VqyRFqz4gaC</code>
+                </div>
               </div>
             </div>
-            <div className="card p-4 rounded-lg">
-              <div className="flex items-center justify-between flex-wrap gap-2">
-                <span className="text-orange-400 font-semibold">Bitcoin (Personal)</span>
-                <code className="text-sm bg-black/50 px-3 py-1 rounded break-all">1GC4fSsmgJMCtMh643WBCi5pBnTpqqCXP2</code>
+            <div className="card p-3 sm:p-4 rounded-lg">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                <span className="text-orange-400 font-semibold text-sm sm:text-base">Bitcoin (Personal)</span>
+                <div className="overflow-x-auto">
+                  <code className="text-xs sm:text-sm bg-black/50 px-2 sm:px-3 py-1 rounded whitespace-nowrap">1GC4fSsmgJMCtMh643WBCi5pBnTpqqCXP2</code>
+                </div>
               </div>
             </div>
-            <div className="card p-4 rounded-lg">
-              <div className="flex items-center justify-between flex-wrap gap-2">
-                <span className="text-blue-400 font-semibold">Ethereum</span>
-                <code className="text-sm bg-black/50 px-3 py-1 rounded break-all">0x5f9ce0dA56c867D1BD06185D6d21744daC83cb09</code>
+            <div className="card p-3 sm:p-4 rounded-lg">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                <span className="text-blue-400 font-semibold text-sm sm:text-base">Ethereum</span>
+                <div className="overflow-x-auto">
+                  <code className="text-xs sm:text-sm bg-black/50 px-2 sm:px-3 py-1 rounded whitespace-nowrap">0x5f9ce0dA56c867D1BD06185D6d21744daC83cb09</code>
+                </div>
               </div>
             </div>
-            <div className="card p-4 rounded-lg">
-              <div className="flex items-center justify-between flex-wrap gap-2">
-                <span className="text-green-400 font-semibold">USDT (Tron)</span>
-                <code className="text-sm bg-black/50 px-3 py-1 rounded break-all">TCgcYUD74LoeMoKRb7X6WcYPVD3VgZccZR</code>
+            <div className="card p-3 sm:p-4 rounded-lg">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                <span className="text-green-400 font-semibold text-sm sm:text-base">USDT (Tron)</span>
+                <div className="overflow-x-auto">
+                  <code className="text-xs sm:text-sm bg-black/50 px-2 sm:px-3 py-1 rounded whitespace-nowrap">TCgcYUD74LoeMoKRb7X6WcYPVD3VgZccZR</code>
+                </div>
               </div>
             </div>
-            <div className="card p-4 rounded-lg">
-              <div className="flex items-center justify-between flex-wrap gap-2">
-                <span className="text-orange-400 font-semibold">Bitcoin (ByBit)</span>
-                <code className="text-sm bg-black/50 px-3 py-1 rounded break-all">192UAp4TEGApNdxPbSN5veQZ8ynyixjqvB</code>
+            <div className="card p-3 sm:p-4 rounded-lg">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                <span className="text-orange-400 font-semibold text-sm sm:text-base">Bitcoin (ByBit)</span>
+                <div className="overflow-x-auto">
+                  <code className="text-xs sm:text-sm bg-black/50 px-2 sm:px-3 py-1 rounded whitespace-nowrap">192UAp4TEGApNdxPbSN5veQZ8ynyixjqvB</code>
+                </div>
               </div>
             </div>
-            <div className="card p-4 rounded-lg">
-              <div className="flex items-center justify-between flex-wrap gap-2">
-                <span className="text-orange-400 font-semibold">Bitcoin (SegWit)</span>
-                <code className="text-sm bg-black/50 px-3 py-1 rounded break-all">bc1qz5xlayxpa3dk4u8vduwvx0r4f3v2sf0eejpd46</code>
+            <div className="card p-3 sm:p-4 rounded-lg">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                <span className="text-orange-400 font-semibold text-sm sm:text-base">Bitcoin (SegWit)</span>
+                <div className="overflow-x-auto">
+                  <code className="text-xs sm:text-sm bg-black/50 px-2 sm:px-3 py-1 rounded whitespace-nowrap">bc1qz5xlayxpa3dk4u8vduwvx0r4f3v2sf0eejpd46</code>
+                </div>
               </div>
             </div>
           </div>
@@ -420,7 +438,7 @@ export default function OxyCapitalsPage() {
                 </div>
                 <div>
                   <span className="text-gray-500">Total Stolen:</span>
-                  <p className="text-red-400 font-semibold">$22,000+ (BTC, ETH, USDT, USDC)</p>
+                  <p className="text-red-400 font-semibold">$30,000+ (BTC, ETH, USDT, USDC)</p>
                 </div>
                 <div>
                   <span className="text-gray-500">Method:</span>
@@ -506,32 +524,32 @@ export default function OxyCapitalsPage() {
       </section>
 
       {/* Impersonation Comparison */}
-      <section className="py-12 px-4 border-b border-gray-800">
+      <section className="py-8 sm:py-12 px-4 border-b border-gray-800">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl font-bold text-center mb-2">Impersonation Exposed</h2>
-          <p className="text-center text-gray-400 mb-8">The scammer copies a real Discord admin&apos;s profile to trick victims</p>
+          <h2 className="text-xl sm:text-2xl font-bold text-center mb-2">Impersonation Exposed</h2>
+          <p className="text-center text-gray-400 mb-6 sm:mb-8 text-sm sm:text-base">The scammer copies a real Discord admin&apos;s profile to trick victims</p>
           
           {/* Username Comparison Highlight */}
-          <div className="card p-6 rounded-xl mb-8 text-center">
-            <p className="text-gray-400 mb-4">Spot the difference in the usernames:</p>
-            <div className="flex justify-center items-center gap-8 flex-wrap">
+          <div className="card p-4 sm:p-6 rounded-xl mb-6 sm:mb-8 text-center">
+            <p className="text-gray-400 mb-4 text-sm sm:text-base">Spot the difference in the usernames:</p>
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-8">
               <div>
                 <p className="text-xs text-gray-500 mb-1">REAL ADMIN</p>
-                <p className="text-3xl font-mono font-bold text-green-400">sa<span className="text-green-300 underline decoration-4">l</span>maogs</p>
+                <p className="text-2xl sm:text-3xl font-mono font-bold text-green-400">sa<span className="text-green-300 underline decoration-4">l</span>maogs</p>
               </div>
-              <div className="text-4xl text-gray-600">vs</div>
+              <div className="text-2xl sm:text-4xl text-gray-600">vs</div>
               <div>
                 <p className="text-xs text-gray-500 mb-1">SCAMMER</p>
-                <p className="text-3xl font-mono font-bold text-red-400">sa<span className="text-red-300 underline decoration-4">j</span>maogs</p>
+                <p className="text-2xl sm:text-3xl font-mono font-bold text-red-400">sa<span className="text-red-300 underline decoration-4">j</span>maogs</p>
               </div>
             </div>
-            <p className="text-yellow-400 mt-4 text-sm">The scammer changed just ONE letter: &quot;l&quot; → &quot;j&quot; to impersonate the real admin!</p>
+            <p className="text-yellow-400 mt-4 text-xs sm:text-sm">The scammer changed just ONE letter: &quot;l&quot; → &quot;j&quot; to impersonate the real admin!</p>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
             <div className="card rounded-xl overflow-hidden border-2 border-green-600">
-              <div className="bg-green-900/30 p-3 text-center">
-                <span className="text-green-400 font-bold uppercase text-sm">Real Admin - salmaogs</span>
+              <div className="bg-green-900/30 p-2 sm:p-3 text-center">
+                <span className="text-green-400 font-bold uppercase text-xs sm:text-sm">Real Admin - salmaogs</span>
               </div>
               <img 
                 src="/evidence/real discord admin.jpg" 
@@ -542,8 +560,8 @@ export default function OxyCapitalsPage() {
             </div>
             
             <div className="card rounded-xl overflow-hidden border-2 border-red-600">
-              <div className="bg-red-900/30 p-3 text-center">
-                <span className="text-red-400 font-bold uppercase text-sm">Scammer - sajmaogs</span>
+              <div className="bg-red-900/30 p-2 sm:p-3 text-center">
+                <span className="text-red-400 font-bold uppercase text-xs sm:text-sm">Scammer - sajmaogs</span>
               </div>
               <img 
                 src="/evidence/fake account impersonating discord admin.jpg" 
@@ -556,8 +574,8 @@ export default function OxyCapitalsPage() {
           
           <p className="text-center text-gray-500 text-xs mt-4">Click images to expand</p>
           
-          <div className="mt-6 card p-4 rounded-xl bg-yellow-900/20 border border-yellow-700">
-            <p className="text-yellow-400 text-center text-sm">
+          <div className="mt-4 sm:mt-6 card p-3 sm:p-4 rounded-xl bg-yellow-900/20 border border-yellow-700">
+            <p className="text-yellow-400 text-center text-xs sm:text-sm">
               <strong>Warning:</strong> Scammers use &quot;typosquatting&quot; - changing one letter in a username to impersonate trusted people. Always double-check usernames character by character!
             </p>
           </div>
@@ -565,13 +583,13 @@ export default function OxyCapitalsPage() {
       </section>
 
       {/* Scammer Conversations */}
-      <section className="py-12 px-4 border-b border-gray-800 bg-gray-900/30">
+      <section className="py-8 sm:py-12 px-4 border-b border-gray-800 bg-gray-900/30">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl font-bold text-center mb-2">Scammer Conversation Evidence</h2>
-          <p className="text-center text-gray-400 mb-2">Actual messages from the scammer trying to steal money</p>
-          <p className="text-center text-gray-500 text-xs mb-8">Click any image to expand</p>
+          <h2 className="text-xl sm:text-2xl font-bold text-center mb-2">Scammer Conversation Evidence</h2>
+          <p className="text-center text-gray-400 mb-2 text-sm sm:text-base">Actual messages from the scammer trying to steal money</p>
+          <p className="text-center text-gray-500 text-xs mb-6 sm:mb-8">Click any image to expand</p>
           
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-3">
             <div className="card evidence-card rounded-lg overflow-hidden cursor-zoom-in" onClick={() => openLightbox('/evidence/scammer conversation.jpg')}>
               <img src="/evidence/scammer conversation.jpg" alt="OxyCapitals scammer Discord DM conversation - crypto phishing message evidence" className="w-full evidence-img" />
               <div className="caption"><span className="text-gray-500 text-xs">1</span></div>
@@ -605,13 +623,13 @@ export default function OxyCapitalsPage() {
       </section>
 
       {/* Evidence Gallery */}
-      <section className="py-12 px-4 border-b border-gray-800">
+      <section className="py-8 sm:py-12 px-4 border-b border-gray-800">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl font-bold text-center mb-2">Platform & Technical Evidence</h2>
-          <p className="text-center text-gray-400 mb-2">Screenshots of the scam operation</p>
-          <p className="text-center text-gray-500 text-xs mb-8">Click any image to expand</p>
+          <h2 className="text-xl sm:text-2xl font-bold text-center mb-2">Platform & Technical Evidence</h2>
+          <p className="text-center text-gray-400 mb-2 text-sm sm:text-base">Screenshots of the scam operation</p>
+          <p className="text-center text-gray-500 text-xs mb-6 sm:mb-8">Click any image to expand</p>
           
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-4">
             <div className="card evidence-card rounded-lg overflow-hidden cursor-zoom-in" onClick={() => openLightbox('/evidence/scam homepage.jpg')}>
               <img src="/evidence/scam homepage.jpg" alt="OxyCapitals scam website homepage - fake crypto trading platform screenshot" className="w-full evidence-img" />
               <div className="caption">
@@ -655,7 +673,7 @@ export default function OxyCapitalsPage() {
             </div>
           </div>
 
-          <div className="mt-6 grid grid-cols-3 gap-4">
+          <div className="mt-4 sm:mt-6 grid grid-cols-3 gap-2 sm:gap-4">
             <div className="card evidence-card rounded-lg overflow-hidden cursor-zoom-in" onClick={() => openLightbox('/evidence/rdap.jpg')}>
               <img src="/evidence/rdap.jpg" alt="RDAP Record 1" className="w-full evidence-img" />
               <div className="caption">
@@ -985,22 +1003,22 @@ export default function OxyCapitalsPage() {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 px-4 text-center text-gray-500">
-        <p className="mb-2">This site was created to expose cryptocurrency fraud and protect potential victims.</p>
-        <p className="text-sm">All information is based on publicly available blockchain data and documented evidence.</p>
-        <p className="text-sm mt-4" itemProp="dateModified">Last updated: February 2026</p>
-        <div className="mt-6">
+      <footer className="py-6 sm:py-8 px-4 text-center text-gray-500">
+        <p className="mb-2 text-sm sm:text-base">This site was created to expose cryptocurrency fraud and protect potential victims.</p>
+        <p className="text-xs sm:text-sm">All information is based on publicly available blockchain data and documented evidence.</p>
+        <p className="text-xs sm:text-sm mt-4" itemProp="dateModified">Last updated: February 2026</p>
+        <div className="mt-4 sm:mt-6">
           <Link href="/" className="text-blue-400 hover:underline text-sm">
             ← Back to Dirty Crypto Home
           </Link>
         </div>
-        <nav className="mt-6 text-xs text-gray-600 space-x-4">
+        <nav className="mt-4 sm:mt-6 text-xs text-gray-600 flex flex-wrap justify-center gap-2 sm:gap-4">
           <span>Crypto Scam Alert</span>
-          <span>•</span>
+          <span className="hidden sm:inline">•</span>
           <span>Phishing Warning</span>
-          <span>•</span>
+          <span className="hidden sm:inline">•</span>
           <span>Impersonation Fraud</span>
-          <span>•</span>
+          <span className="hidden sm:inline">•</span>
           <span>Bitcoin Scam Awareness</span>
         </nav>
       </footer>

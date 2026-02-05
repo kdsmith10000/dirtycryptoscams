@@ -7,10 +7,10 @@ export default function Home() {
     <main className="min-h-screen" itemScope itemType="https://schema.org/Organization">
       {/* Top Navigation Bar */}
       <nav className="bg-gradient-to-r from-red-950 to-purple-950 border-b border-red-800 sticky top-0 z-40">
-        <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-          <span className="text-red-400 font-bold text-sm uppercase tracking-wider">Dirty Crypto</span>
+        <div className="max-w-6xl mx-auto px-3 sm:px-4 py-2 sm:py-3 flex items-center justify-between gap-2">
+          <span className="text-red-400 font-bold text-xs sm:text-sm uppercase tracking-wider whitespace-nowrap">Dirty Crypto</span>
           
-          {/* Total Loss Counter */}
+          {/* Total Loss Counter - Hidden on mobile, shown on tablet+ */}
           <div className="hidden md:flex items-center gap-2 bg-black/40 px-4 py-2 rounded-lg border border-red-700/50">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -21,56 +21,70 @@ export default function Home() {
             </div>
           </div>
 
-          <span className="text-red-500 font-bold text-sm uppercase tracking-wider">Scam Exposure Network</span>
+          <span className="text-red-500 font-bold text-xs sm:text-sm uppercase tracking-wider whitespace-nowrap hidden sm:inline">Scam Exposure Network</span>
+          <span className="text-red-500 font-bold text-xs uppercase tracking-wider sm:hidden">Scam Alert</span>
         </div>
       </nav>
 
+      {/* Mobile Loss Counter Banner - Shown only on mobile */}
+      <div className="md:hidden bg-gradient-to-r from-red-950/80 to-purple-950/80 border-b border-red-700/50 py-3 px-4">
+        <div className="flex items-center justify-center gap-3">
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-red-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <div className="text-center">
+            <p className="text-gray-300 text-xs uppercase tracking-wider leading-none">Total Documented Losses</p>
+            <p className="text-red-500 font-black text-xl leading-tight">$62,400+</p>
+          </div>
+        </div>
+      </div>
+
       {/* Hero Section - About Dirty Crypto */}
-      <section className="relative py-20 px-4 text-center border-b border-red-900/50 bg-gradient-to-b from-red-950/30 to-transparent">
+      <section className="relative py-12 sm:py-20 px-4 text-center border-b border-red-900/50 bg-gradient-to-b from-red-950/30 to-transparent">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-7xl font-black mb-6" itemProp="name">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-black mb-4 sm:mb-6" itemProp="name">
             <span className="gradient-text">Dirty Crypto</span>
           </h1>
-          <p className="text-2xl text-gray-300 mb-6 font-semibold" itemProp="description">
+          <p className="text-xl sm:text-2xl text-gray-300 mb-4 sm:mb-6 font-semibold" itemProp="description">
             Exposing Crypto Scams Through Blockchain Analysis
           </p>
-          <p className="text-lg text-gray-400 mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg text-gray-400 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed px-2">
             We investigate cryptocurrency fraud by tracing stolen funds across blockchains, documenting scam operations, 
             and providing evidence that helps victims and law enforcement pursue justice. Our mission is to expose scammers, 
             protect the crypto community, and ensure criminals are held accountable.
           </p>
           
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
-            <div className="card px-6 py-4 rounded-xl border border-blue-700/50 bg-blue-950/20">
-              <div className="flex items-center gap-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 mb-8 sm:mb-12 max-w-3xl mx-auto">
+            <div className="card px-4 sm:px-6 py-3 sm:py-4 rounded-xl border border-blue-700/50 bg-blue-950/20">
+              <div className="flex items-center gap-3 sm:flex-col sm:text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 sm:h-8 sm:w-8 text-blue-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
                 </svg>
-                <div className="text-left">
-                  <p className="text-blue-400 font-semibold">Blockchain Analysis</p>
-                  <p className="text-gray-500 text-sm">Tracing stolen funds</p>
+                <div className="text-left sm:text-center">
+                  <p className="text-blue-400 font-semibold text-sm sm:text-base">Blockchain Analysis</p>
+                  <p className="text-gray-500 text-xs sm:text-sm">Tracing stolen funds</p>
                 </div>
               </div>
             </div>
-            <div className="card px-6 py-4 rounded-xl border border-green-700/50 bg-green-950/20">
-              <div className="flex items-center gap-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <div className="card px-4 sm:px-6 py-3 sm:py-4 rounded-xl border border-green-700/50 bg-green-950/20">
+              <div className="flex items-center gap-3 sm:flex-col sm:text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 sm:h-8 sm:w-8 text-green-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                 </svg>
-                <div className="text-left">
-                  <p className="text-green-400 font-semibold">Evidence Documentation</p>
-                  <p className="text-gray-500 text-sm">Building cases for justice</p>
+                <div className="text-left sm:text-center">
+                  <p className="text-green-400 font-semibold text-sm sm:text-base">Evidence Documentation</p>
+                  <p className="text-gray-500 text-xs sm:text-sm">Building cases for justice</p>
                 </div>
               </div>
             </div>
-            <div className="card px-6 py-4 rounded-xl border border-yellow-700/50 bg-yellow-950/20">
-              <div className="flex items-center gap-3">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <div className="card px-4 sm:px-6 py-3 sm:py-4 rounded-xl border border-yellow-700/50 bg-yellow-950/20">
+              <div className="flex items-center gap-3 sm:flex-col sm:text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 sm:h-8 sm:w-8 text-yellow-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
                 </svg>
-                <div className="text-left">
-                  <p className="text-yellow-400 font-semibold">Public Awareness</p>
-                  <p className="text-gray-500 text-sm">Warning potential victims</p>
+                <div className="text-left sm:text-center">
+                  <p className="text-yellow-400 font-semibold text-sm sm:text-base">Public Awareness</p>
+                  <p className="text-gray-500 text-xs sm:text-sm">Warning potential victims</p>
                 </div>
               </div>
             </div>
@@ -79,20 +93,20 @@ export default function Home() {
       </section>
 
       {/* Our Mission */}
-      <section className="py-16 px-4 border-b border-gray-800">
+      <section className="py-10 sm:py-16 px-4 border-b border-gray-800">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-8">Our Mission</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6 sm:mb-8">Our Mission</h2>
           
-          <div className="card p-8 rounded-2xl border border-purple-700/50 bg-purple-950/10 mb-8">
-            <div className="flex items-start gap-4">
-              <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center flex-shrink-0">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <div className="card p-5 sm:p-8 rounded-2xl border border-purple-700/50 bg-purple-950/10 mb-6 sm:mb-8">
+            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4">
+              <div className="w-14 h-14 sm:w-16 sm:h-16 bg-purple-600 rounded-full flex items-center justify-center flex-shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 sm:h-8 sm:w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <div>
-                <h3 className="text-xl font-bold text-purple-400 mb-3">Justice Through Transparency</h3>
-                <p className="text-gray-300 leading-relaxed">
+              <div className="text-center sm:text-left">
+                <h3 className="text-lg sm:text-xl font-bold text-purple-400 mb-2 sm:mb-3">Justice Through Transparency</h3>
+                <p className="text-gray-300 leading-relaxed text-sm sm:text-base">
                   Cryptocurrency scammers rely on anonymity and the complexity of blockchain technology to evade accountability. 
                   At Dirty Crypto, we turn their tools against them. By analyzing transaction patterns, tracing fund flows across 
                   multiple chains, and documenting evidence publicly, we create a permanent record that supports victims seeking 
@@ -102,59 +116,59 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="card p-6 rounded-xl text-center">
-              <div className="text-4xl font-black text-red-500 mb-2">$62K+</div>
-              <p className="text-gray-400">Documented stolen funds</p>
+          <div className="grid grid-cols-3 gap-3 sm:gap-6">
+            <div className="card p-4 sm:p-6 rounded-xl text-center">
+              <div className="text-2xl sm:text-4xl font-black text-red-500 mb-1 sm:mb-2">$62K+</div>
+              <p className="text-gray-400 text-xs sm:text-base">Documented stolen funds</p>
             </div>
-            <div className="card p-6 rounded-xl text-center">
-              <div className="text-4xl font-black text-orange-500 mb-2">2</div>
-              <p className="text-gray-400">Scam operations exposed</p>
+            <div className="card p-4 sm:p-6 rounded-xl text-center">
+              <div className="text-2xl sm:text-4xl font-black text-orange-500 mb-1 sm:mb-2">2</div>
+              <p className="text-gray-400 text-xs sm:text-base">Scam operations exposed</p>
             </div>
-            <div className="card p-6 rounded-xl text-center">
-              <div className="text-4xl font-black text-yellow-500 mb-2">150+</div>
-              <p className="text-gray-400">Transactions traced</p>
+            <div className="card p-4 sm:p-6 rounded-xl text-center">
+              <div className="text-2xl sm:text-4xl font-black text-yellow-500 mb-1 sm:mb-2">150+</div>
+              <p className="text-gray-400 text-xs sm:text-base">Transactions traced</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* What We Do */}
-      <section className="py-16 px-4 border-b border-gray-800 bg-gray-900/30">
+      <section className="py-10 sm:py-16 px-4 border-b border-gray-800 bg-gray-900/30">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-4">What We Do</h2>
-          <p className="text-center text-gray-400 mb-12 max-w-2xl mx-auto">
+          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-3 sm:mb-4">What We Do</h2>
+          <p className="text-center text-gray-400 mb-8 sm:mb-12 max-w-2xl mx-auto text-sm sm:text-base">
             We use blockchain forensics and open-source intelligence to investigate crypto scams and document evidence
           </p>
           
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="card p-6 rounded-xl border-l-4 border-blue-500">
-              <h3 className="text-xl font-bold text-blue-400 mb-3">Blockchain Transaction Tracing</h3>
-              <p className="text-gray-400">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8">
+            <div className="card p-4 sm:p-6 rounded-xl border-l-4 border-blue-500">
+              <h3 className="text-lg sm:text-xl font-bold text-blue-400 mb-2 sm:mb-3">Blockchain Transaction Tracing</h3>
+              <p className="text-gray-400 text-sm sm:text-base">
                 We follow the money. By analyzing on-chain transactions across Bitcoin, Ethereum, Tron, and other networks, 
                 we trace stolen funds from victim wallets through staging addresses to exchange cash-out points.
               </p>
             </div>
             
-            <div className="card p-6 rounded-xl border-l-4 border-green-500">
-              <h3 className="text-xl font-bold text-green-400 mb-3">Exchange Cash-Out Identification</h3>
-              <p className="text-gray-400">
+            <div className="card p-4 sm:p-6 rounded-xl border-l-4 border-green-500">
+              <h3 className="text-lg sm:text-xl font-bold text-green-400 mb-2 sm:mb-3">Exchange Cash-Out Identification</h3>
+              <p className="text-gray-400 text-sm sm:text-base">
                 Scammers must eventually convert crypto to fiat. We identify exchange deposit addresses that can be 
                 subpoenaed for KYC records, providing law enforcement with actionable leads to identify perpetrators.
               </p>
             </div>
             
-            <div className="card p-6 rounded-xl border-l-4 border-yellow-500">
-              <h3 className="text-xl font-bold text-yellow-400 mb-3">Scam Pattern Documentation</h3>
-              <p className="text-gray-400">
+            <div className="card p-4 sm:p-6 rounded-xl border-l-4 border-yellow-500">
+              <h3 className="text-lg sm:text-xl font-bold text-yellow-400 mb-2 sm:mb-3">Scam Pattern Documentation</h3>
+              <p className="text-gray-400 text-sm sm:text-base">
                 We document the tactics, techniques, and procedures used by scammers—from Discord impersonation and 
                 typosquatting to fake trading platforms—so potential victims can recognize and avoid these schemes.
               </p>
             </div>
             
-            <div className="card p-6 rounded-xl border-l-4 border-red-500">
-              <h3 className="text-xl font-bold text-red-400 mb-3">Public Evidence Archives</h3>
-              <p className="text-gray-400">
+            <div className="card p-4 sm:p-6 rounded-xl border-l-4 border-red-500">
+              <h3 className="text-lg sm:text-xl font-bold text-red-400 mb-2 sm:mb-3">Public Evidence Archives</h3>
+              <p className="text-gray-400 text-sm sm:text-base">
                 All our investigations are published publicly with full documentation—wallet addresses, transaction hashes, 
                 screenshots, and analysis. This creates a permanent record that helps victims and supports legal action.
               </p>
@@ -164,39 +178,39 @@ export default function Home() {
       </section>
 
       {/* Exposed Scams */}
-      <section className="py-16 px-4 border-b border-gray-800">
+      <section className="py-10 sm:py-16 px-4 border-b border-gray-800">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-4">Exposed Scam Operations</h2>
-          <p className="text-center text-gray-400 mb-12 max-w-2xl mx-auto">
+          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-3 sm:mb-4">Exposed Scam Operations</h2>
+          <p className="text-center text-gray-400 mb-8 sm:mb-12 max-w-2xl mx-auto text-sm sm:text-base">
             Click on any investigation to view full blockchain analysis, evidence, and documentation
           </p>
           
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8">
             {/* OxyCapitals Card */}
             <Link href="/oxycapitals" className="block">
-              <div className="card p-6 rounded-xl border-2 border-red-600 bg-red-950/20 hover:bg-red-950/30 transition-colors h-full">
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="w-14 h-14 bg-red-600 rounded-full flex items-center justify-center flex-shrink-0">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <div className="card p-4 sm:p-6 rounded-xl border-2 border-red-600 bg-red-950/20 hover:bg-red-950/30 transition-colors h-full">
+                <div className="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
+                  <div className="w-11 h-11 sm:w-14 sm:h-14 bg-red-600 rounded-full flex items-center justify-center flex-shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 sm:h-7 sm:w-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
                     </svg>
                   </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-red-400">OxyCapitals</h3>
-                    <p className="text-gray-400 text-sm">oxycapitalsltd.com</p>
+                  <div className="min-w-0 flex-1">
+                    <h3 className="text-xl sm:text-2xl font-bold text-red-400">OxyCapitals</h3>
+                    <p className="text-gray-400 text-xs sm:text-sm truncate">oxycapitalsltd.com</p>
                   </div>
-                  <div className="ml-auto">
-                    <span className="px-3 py-1 bg-red-600/30 text-red-400 text-xs font-semibold rounded-full border border-red-600">
+                  <div className="flex-shrink-0">
+                    <span className="px-2 sm:px-3 py-1 bg-red-600/30 text-red-400 text-xs font-semibold rounded-full border border-red-600">
                       ACTIVE
                     </span>
                   </div>
                 </div>
                 
-                <div className="bg-black/30 rounded-lg p-4 mb-4">
-                  <div className="grid grid-cols-2 gap-4 text-sm">
+                <div className="bg-black/30 rounded-lg p-3 sm:p-4 mb-3 sm:mb-4">
+                  <div className="grid grid-cols-2 gap-3 sm:gap-4 text-xs sm:text-sm">
                     <div>
                       <span className="text-gray-500">Total Stolen:</span>
-                      <p className="text-red-400 font-bold text-lg">$40,400+</p>
+                      <p className="text-red-400 font-bold text-base sm:text-lg">$40,400+</p>
                     </div>
                     <div>
                       <span className="text-gray-500">Chains:</span>
@@ -213,9 +227,9 @@ export default function Home() {
                   </div>
                 </div>
                 
-                <div className="flex items-center justify-between">
-                  <p className="text-gray-500 text-sm">Fake trading platform stealing crypto deposits</p>
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div className="flex items-center justify-between gap-2">
+                  <p className="text-gray-500 text-xs sm:text-sm">Fake trading platform stealing crypto deposits</p>
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-red-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                   </svg>
                 </div>
@@ -224,29 +238,29 @@ export default function Home() {
 
             {/* MirrorExp Card */}
             <Link href="/mirrorexp" className="block">
-              <div className="card p-6 rounded-xl border-2 border-orange-600 bg-orange-950/20 hover:bg-orange-950/30 transition-colors h-full">
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="w-14 h-14 bg-orange-600 rounded-full flex items-center justify-center flex-shrink-0">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <div className="card p-4 sm:p-6 rounded-xl border-2 border-orange-600 bg-orange-950/20 hover:bg-orange-950/30 transition-colors h-full">
+                <div className="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
+                  <div className="w-11 h-11 sm:w-14 sm:h-14 bg-orange-600 rounded-full flex items-center justify-center flex-shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 sm:h-7 sm:w-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
                     </svg>
                   </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-orange-400">MirrorExp</h3>
-                    <p className="text-gray-400 text-sm">mirrorexp.com</p>
+                  <div className="min-w-0 flex-1">
+                    <h3 className="text-xl sm:text-2xl font-bold text-orange-400">MirrorExp</h3>
+                    <p className="text-gray-400 text-xs sm:text-sm truncate">mirrorexp.com</p>
                   </div>
-                  <div className="ml-auto">
-                    <span className="px-3 py-1 bg-red-600/30 text-red-400 text-xs font-semibold rounded-full border border-red-600">
+                  <div className="flex-shrink-0">
+                    <span className="px-2 sm:px-3 py-1 bg-red-600/30 text-red-400 text-xs font-semibold rounded-full border border-red-600">
                       ACTIVE
                     </span>
                   </div>
                 </div>
                 
-                <div className="bg-black/30 rounded-lg p-4 mb-4">
-                  <div className="grid grid-cols-2 gap-4 text-sm">
+                <div className="bg-black/30 rounded-lg p-3 sm:p-4 mb-3 sm:mb-4">
+                  <div className="grid grid-cols-2 gap-3 sm:gap-4 text-xs sm:text-sm">
                     <div>
                       <span className="text-gray-500">Total Stolen:</span>
-                      <p className="text-red-400 font-bold text-lg">$22,000+</p>
+                      <p className="text-red-400 font-bold text-base sm:text-lg">$22,000+</p>
                     </div>
                     <div>
                       <span className="text-gray-500">Chains:</span>
@@ -263,9 +277,9 @@ export default function Home() {
                   </div>
                 </div>
                 
-                <div className="flex items-center justify-between">
-                  <p className="text-gray-500 text-sm">Username typosquatting + fake investment platform</p>
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-orange-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div className="flex items-center justify-between gap-2">
+                  <p className="text-gray-500 text-xs sm:text-sm">Username typosquatting + fake investment platform</p>
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-orange-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                   </svg>
                 </div>
@@ -276,20 +290,20 @@ export default function Home() {
       </section>
 
       {/* How Blockchain Analysis Helps */}
-      <section className="py-16 px-4 border-b border-gray-800 bg-gradient-to-b from-blue-950/20 to-transparent">
+      <section className="py-10 sm:py-16 px-4 border-b border-gray-800 bg-gradient-to-b from-blue-950/20 to-transparent">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-4">How Blockchain Analysis Delivers Justice</h2>
-          <p className="text-center text-gray-400 mb-12 max-w-2xl mx-auto">
+          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-3 sm:mb-4">How Blockchain Analysis Delivers Justice</h2>
+          <p className="text-center text-gray-400 mb-8 sm:mb-12 max-w-2xl mx-auto text-sm sm:text-base">
             The blockchain never forgets. Every transaction creates a permanent trail that leads to the scammer.
           </p>
           
-          <div className="space-y-6">
-            <div className="card p-6 rounded-xl">
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0 text-white font-bold">1</div>
+          <div className="space-y-4 sm:space-y-6">
+            <div className="card p-4 sm:p-6 rounded-xl">
+              <div className="flex items-start gap-3 sm:gap-4">
+                <div className="w-9 h-9 sm:w-10 sm:h-10 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0 text-white font-bold text-sm sm:text-base">1</div>
                 <div>
-                  <h3 className="text-lg font-bold text-blue-400 mb-2">Transaction Tracing</h3>
-                  <p className="text-gray-400">
+                  <h3 className="text-base sm:text-lg font-bold text-blue-400 mb-1 sm:mb-2">Transaction Tracing</h3>
+                  <p className="text-gray-400 text-sm sm:text-base">
                     Every cryptocurrency transaction is recorded permanently on the blockchain. We analyze these records to 
                     follow stolen funds from victim deposits through multiple intermediate wallets to final destinations.
                   </p>
@@ -297,12 +311,12 @@ export default function Home() {
               </div>
             </div>
             
-            <div className="card p-6 rounded-xl">
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center flex-shrink-0 text-white font-bold">2</div>
+            <div className="card p-4 sm:p-6 rounded-xl">
+              <div className="flex items-start gap-3 sm:gap-4">
+                <div className="w-9 h-9 sm:w-10 sm:h-10 bg-green-600 rounded-full flex items-center justify-center flex-shrink-0 text-white font-bold text-sm sm:text-base">2</div>
                 <div>
-                  <h3 className="text-lg font-bold text-green-400 mb-2">Pattern Recognition</h3>
-                  <p className="text-gray-400">
+                  <h3 className="text-base sm:text-lg font-bold text-green-400 mb-1 sm:mb-2">Pattern Recognition</h3>
+                  <p className="text-gray-400 text-sm sm:text-base">
                     Scammers leave behavioral fingerprints—round number withdrawals, rapid cash-outs, disposable staging wallets. 
                     These patterns prove intentional fraud and connect multiple scam operations to the same operators.
                   </p>
@@ -310,12 +324,12 @@ export default function Home() {
               </div>
             </div>
             
-            <div className="card p-6 rounded-xl">
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 bg-yellow-600 rounded-full flex items-center justify-center flex-shrink-0 text-white font-bold">3</div>
+            <div className="card p-4 sm:p-6 rounded-xl">
+              <div className="flex items-start gap-3 sm:gap-4">
+                <div className="w-9 h-9 sm:w-10 sm:h-10 bg-yellow-600 rounded-full flex items-center justify-center flex-shrink-0 text-white font-bold text-sm sm:text-base">3</div>
                 <div>
-                  <h3 className="text-lg font-bold text-yellow-400 mb-2">Exchange Identification</h3>
-                  <p className="text-gray-400">
+                  <h3 className="text-base sm:text-lg font-bold text-yellow-400 mb-1 sm:mb-2">Exchange Identification</h3>
+                  <p className="text-gray-400 text-sm sm:text-base">
                     Scammers must convert crypto to cash through regulated exchanges that require identity verification. 
                     When we identify these cash-out addresses, law enforcement can subpoena exchanges for KYC records.
                   </p>
@@ -323,12 +337,12 @@ export default function Home() {
               </div>
             </div>
             
-            <div className="card p-6 rounded-xl">
-              <div className="flex items-start gap-4">
-                <div className="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center flex-shrink-0 text-white font-bold">4</div>
+            <div className="card p-4 sm:p-6 rounded-xl">
+              <div className="flex items-start gap-3 sm:gap-4">
+                <div className="w-9 h-9 sm:w-10 sm:h-10 bg-red-600 rounded-full flex items-center justify-center flex-shrink-0 text-white font-bold text-sm sm:text-base">4</div>
                 <div>
-                  <h3 className="text-lg font-bold text-red-400 mb-2">Evidence for Prosecution</h3>
-                  <p className="text-gray-400">
+                  <h3 className="text-base sm:text-lg font-bold text-red-400 mb-1 sm:mb-2">Evidence for Prosecution</h3>
+                  <p className="text-gray-400 text-sm sm:text-base">
                     Our documented investigations provide the evidence victims need to file police reports and civil lawsuits. 
                     Blockchain evidence is increasingly accepted in courts worldwide as proof of financial crimes.
                   </p>
@@ -340,36 +354,36 @@ export default function Home() {
       </section>
 
       {/* Warning Section */}
-      <section className="py-12 px-4 border-b border-gray-800 bg-red-950/30">
+      <section className="py-8 sm:py-12 px-4 border-b border-gray-800 bg-red-950/30">
         <div className="max-w-4xl mx-auto">
-          <div className="card p-8 rounded-2xl bg-red-900/30 border-2 border-red-600">
-            <h2 className="text-2xl font-bold text-red-400 mb-4 text-center">Protect Yourself From Crypto Scams</h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              <ul className="text-gray-300 space-y-3">
+          <div className="card p-4 sm:p-8 rounded-2xl bg-red-900/30 border-2 border-red-600">
+            <h2 className="text-xl sm:text-2xl font-bold text-red-400 mb-4 text-center">Protect Yourself From Crypto Scams</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+              <ul className="text-gray-300 space-y-2 sm:space-y-3 text-sm sm:text-base">
                 <li className="flex items-start gap-2">
-                  <span className="text-red-400 mt-1">•</span>
+                  <span className="text-red-400 mt-0.5 sm:mt-1 flex-shrink-0">•</span>
                   <span><strong>Never send crypto to strangers</strong> — no matter how convincing they seem</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-red-400 mt-1">•</span>
+                  <span className="text-red-400 mt-0.5 sm:mt-1 flex-shrink-0">•</span>
                   <span><strong>Verify usernames character-by-character</strong> — typosquatting is extremely common</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-red-400 mt-1">•</span>
+                  <span className="text-red-400 mt-0.5 sm:mt-1 flex-shrink-0">•</span>
                   <span><strong>Be skeptical of &quot;guaranteed returns&quot;</strong> — legitimate investments carry risk</span>
                 </li>
               </ul>
-              <ul className="text-gray-300 space-y-3">
+              <ul className="text-gray-300 space-y-2 sm:space-y-3 text-sm sm:text-base">
                 <li className="flex items-start gap-2">
-                  <span className="text-red-400 mt-1">•</span>
+                  <span className="text-red-400 mt-0.5 sm:mt-1 flex-shrink-0">•</span>
                   <span><strong>Research any platform</strong> — check reviews, registration, and regulatory status</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-red-400 mt-1">•</span>
+                  <span className="text-red-400 mt-0.5 sm:mt-1 flex-shrink-0">•</span>
                   <span><strong>Don&apos;t click unsolicited links</strong> — especially wallet connection requests</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-red-400 mt-1">•</span>
+                  <span className="text-red-400 mt-0.5 sm:mt-1 flex-shrink-0">•</span>
                   <span><strong>If it sounds too good to be true</strong> — it&apos;s definitely a scam</span>
                 </li>
               </ul>
@@ -379,22 +393,22 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 px-4 text-center text-gray-500">
+      <footer className="py-8 sm:py-12 px-4 text-center text-gray-500">
         <div className="max-w-4xl mx-auto">
-          <h3 className="text-xl font-bold text-gray-300 mb-4">Dirty Crypto</h3>
-          <p className="mb-4 text-gray-400">
+          <h3 className="text-lg sm:text-xl font-bold text-gray-300 mb-3 sm:mb-4">Dirty Crypto</h3>
+          <p className="mb-3 sm:mb-4 text-gray-400 text-sm sm:text-base">
             Exposing cryptocurrency fraud through blockchain analysis. 
             Fighting for justice for scam victims.
           </p>
-          <p className="text-sm mb-6">
+          <p className="text-xs sm:text-sm mb-4 sm:mb-6">
             All investigations are based on publicly available blockchain data and documented evidence.
           </p>
           
-          <div className="flex justify-center gap-6 mb-8">
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-6 mb-6 sm:mb-8">
             <Link href="/oxycapitals" className="text-red-400 hover:text-red-300 text-sm">
               OxyCapitals Investigation
             </Link>
-            <span className="text-gray-700">|</span>
+            <span className="text-gray-700 hidden sm:inline">|</span>
             <Link href="/mirrorexp" className="text-orange-400 hover:text-orange-300 text-sm">
               MirrorExp Investigation
             </Link>

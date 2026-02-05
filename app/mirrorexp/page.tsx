@@ -34,46 +34,56 @@ export default function MirrorExpPage() {
 
       {/* Navigation */}
       <nav className="bg-gradient-to-r from-red-950 to-purple-950 border-b border-red-800 sticky top-0 z-40 backdrop-blur-sm">
-        <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-          <Link href="/" className="text-gray-400 hover:text-white text-sm flex items-center gap-2">
+        <div className="max-w-6xl mx-auto px-3 sm:px-4 py-2 sm:py-3 flex items-center justify-between gap-2">
+          <Link href="/" className="text-gray-400 hover:text-white text-xs sm:text-sm flex items-center gap-1 sm:gap-2 flex-shrink-0">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
             </svg>
-            Back to Dirty Crypto
+            <span className="hidden sm:inline">Back to Dirty Crypto</span>
+            <span className="sm:hidden">Back</span>
           </Link>
           
-          {/* Total Loss Counter */}
+          {/* Total Loss Counter - Desktop */}
           <div className="hidden md:flex items-center gap-2 bg-black/40 px-4 py-2 rounded-lg border border-red-700/50">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
             <div className="text-center">
               <p className="text-gray-400 text-xs uppercase tracking-wider leading-none">Total Documented Losses</p>
-              <p className="text-red-500 font-black text-lg leading-tight">$62,400+</p>
+              <p className="text-red-500 font-black text-lg leading-tight">$84,000+</p>
             </div>
           </div>
 
-          <span className="text-red-500 font-bold text-sm uppercase tracking-wider">Scam Exposure Network</span>
+          {/* Mobile Loss Counter */}
+          <div className="flex md:hidden items-center gap-1.5 bg-black/40 px-2 py-1.5 rounded-lg border border-red-700/50">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-red-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <p className="text-red-500 font-black text-sm leading-tight">$84K+</p>
+          </div>
+
+          <span className="text-red-500 font-bold text-xs sm:text-sm uppercase tracking-wider whitespace-nowrap hidden sm:inline">Scam Exposure Network</span>
+          <span className="text-red-500 font-bold text-xs uppercase tracking-wider sm:hidden">Scam Alert</span>
         </div>
       </nav>
 
       {/* Hero Warning Section */}
-      <section className="relative py-16 px-4 text-center border-b border-red-900/50 bg-gradient-to-b from-red-950/30 to-transparent">
+      <section className="relative py-10 sm:py-16 px-4 text-center border-b border-red-900/50 bg-gradient-to-b from-red-950/30 to-transparent">
         <div className="max-w-4xl mx-auto">
-          <div className="warning-pulse inline-block mb-6 px-6 py-2 bg-red-600 text-white font-bold rounded-full text-sm uppercase tracking-wider" role="alert">
+          <div className="warning-pulse inline-block mb-4 sm:mb-6 px-4 sm:px-6 py-2 bg-red-600 text-white font-bold rounded-full text-xs sm:text-sm uppercase tracking-wider" role="alert">
             Scam Alert - Do Not Send Money
           </div>
-          <h1 className="text-4xl md:text-6xl font-black mb-6" itemProp="headline">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-black mb-4 sm:mb-6" itemProp="headline">
             <span className="gradient-text">MirrorExp</span> is a{' '}
             <span className="text-red-500">SCAM</span>
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto" itemProp="description">
+          <p className="text-base sm:text-xl text-gray-300 mb-6 sm:mb-8 max-w-2xl mx-auto px-2" itemProp="description">
             MirrorExp.com is a cryptocurrency phishing scam that uses Discord admin impersonation with <strong className="text-yellow-400">typosquatting</strong> to steal Bitcoin, Ethereum, and USDT. 
             This site documents the fraud with blockchain evidence across multiple chains.
           </p>
-          <div className="card inline-block p-4 rounded-lg">
-            <p className="text-gray-400 text-sm">Fraudulent Crypto Scam Website</p>
-            <p className="text-red-400 font-mono text-lg">mirrorexp.com</p>
+          <div className="card inline-block p-3 sm:p-4 rounded-lg">
+            <p className="text-gray-400 text-xs sm:text-sm">Fraudulent Crypto Scam Website</p>
+            <p className="text-red-400 font-mono text-base sm:text-lg break-all">mirrorexp.com</p>
           </div>
         </div>
       </section>
@@ -96,40 +106,40 @@ export default function MirrorExpPage() {
       </section>
 
       {/* Typosquatting Alert */}
-      <section className="py-8 px-4 border-b border-gray-800 bg-yellow-950/30">
+      <section className="py-6 sm:py-8 px-4 border-b border-gray-800 bg-yellow-950/30">
         <div className="max-w-4xl mx-auto">
-          <div className="card p-6 rounded-xl border-2 border-yellow-500 bg-yellow-900/20">
-            <div className="flex items-center gap-4 mb-4">
-              <div className="w-12 h-12 bg-yellow-600 rounded-full flex items-center justify-center flex-shrink-0">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <div className="card p-4 sm:p-6 rounded-xl border-2 border-yellow-500 bg-yellow-900/20">
+            <div className="flex items-center gap-3 sm:gap-4 mb-4">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-yellow-600 rounded-full flex items-center justify-center flex-shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 sm:h-6 sm:w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
                 </svg>
               </div>
               <div>
-                <h2 className="text-xl font-bold text-yellow-400">Typosquatting Attack Detected</h2>
-                <p className="text-gray-300 text-sm">The scammer uses a username nearly identical to a real admin</p>
+                <h2 className="text-lg sm:text-xl font-bold text-yellow-400">Typosquatting Attack Detected</h2>
+                <p className="text-gray-300 text-xs sm:text-sm">The scammer uses a username nearly identical to a real admin</p>
               </div>
             </div>
             
-            <div className="bg-black/40 rounded-lg p-6 text-center">
-              <p className="text-gray-400 mb-4 text-sm">Can you spot the difference?</p>
-              <div className="flex justify-center items-center gap-8 flex-wrap mb-4">
+            <div className="bg-black/40 rounded-lg p-4 sm:p-6 text-center">
+              <p className="text-gray-400 mb-4 text-xs sm:text-sm">Can you spot the difference?</p>
+              <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-8 mb-4">
                 <div>
                   <p className="text-xs text-gray-500 mb-1">REAL ADMIN USERNAME</p>
-                  <p className="text-2xl md:text-3xl font-mono font-bold text-green-400"><span className="text-green-300 underline decoration-4">.</span>atraveller</p>
+                  <p className="text-xl sm:text-2xl md:text-3xl font-mono font-bold text-green-400"><span className="text-green-300 underline decoration-4">.</span>atraveller</p>
                 </div>
-                <div className="text-3xl text-gray-600">vs</div>
+                <div className="text-2xl sm:text-3xl text-gray-600">vs</div>
                 <div>
                   <p className="text-xs text-gray-500 mb-1">SCAMMER USERNAME</p>
-                  <p className="text-2xl md:text-3xl font-mono font-bold text-red-400"><span className="text-red-300 underline decoration-4">_</span>atraveller</p>
+                  <p className="text-xl sm:text-2xl md:text-3xl font-mono font-bold text-red-400"><span className="text-red-300 underline decoration-4">_</span>atraveller</p>
                 </div>
               </div>
-              <p className="text-yellow-300 text-sm">
+              <p className="text-yellow-300 text-xs sm:text-sm">
                 The scammer changed just <strong>ONE character</strong>: a period <code className="bg-green-900/50 px-1 rounded">.</code> became an underscore <code className="bg-red-900/50 px-1 rounded">_</code>
               </p>
             </div>
             
-            <p className="text-gray-400 text-sm mt-4 text-center">
+            <p className="text-gray-400 text-xs sm:text-sm mt-4 text-center">
               <strong className="text-yellow-300">Always verify usernames character-by-character</strong> before trusting anyone with your money.
             </p>
           </div>
@@ -137,81 +147,81 @@ export default function MirrorExpPage() {
       </section>
 
       {/* Quick Facts */}
-      <section className="py-12 px-4 border-b border-gray-800">
+      <section className="py-8 sm:py-12 px-4 border-b border-gray-800">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl font-bold text-center mb-8">How This Scam Works</h2>
-          <div className="grid md:grid-cols-4 gap-6">
-            <div className="card p-6 rounded-xl">
-              <div className="text-3xl mb-4">1</div>
-              <h3 className="text-lg font-semibold mb-2 text-red-400">Typosquatting</h3>
-              <p className="text-gray-400">Scammer creates a Discord username nearly identical to a real admin, changing just one letter.</p>
+          <h2 className="text-xl sm:text-2xl font-bold text-center mb-6 sm:mb-8">How This Scam Works</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6">
+            <div className="card p-4 sm:p-6 rounded-xl">
+              <div className="text-2xl sm:text-3xl mb-3 sm:mb-4">1</div>
+              <h3 className="text-sm sm:text-lg font-semibold mb-2 text-red-400">Typosquatting</h3>
+              <p className="text-gray-400 text-xs sm:text-base">Scammer creates a Discord username nearly identical to a real admin, changing just one letter.</p>
             </div>
-            <div className="card p-6 rounded-xl">
-              <div className="text-3xl mb-4">2</div>
-              <h3 className="text-lg font-semibold mb-2 text-orange-400">Impersonation</h3>
-              <p className="text-gray-400">Using the fake account, they DM victims pretending to be the trusted admin.</p>
+            <div className="card p-4 sm:p-6 rounded-xl">
+              <div className="text-2xl sm:text-3xl mb-3 sm:mb-4">2</div>
+              <h3 className="text-sm sm:text-lg font-semibold mb-2 text-orange-400">Impersonation</h3>
+              <p className="text-gray-400 text-xs sm:text-base">Using the fake account, they DM victims pretending to be the trusted admin.</p>
             </div>
-            <div className="card p-6 rounded-xl">
-              <div className="text-3xl mb-4">3</div>
-              <h3 className="text-lg font-semibold mb-2 text-yellow-400">Fake Platform</h3>
-              <p className="text-gray-400">Victims are directed to MirrorExp.com, a fake trading platform, to deposit crypto.</p>
+            <div className="card p-4 sm:p-6 rounded-xl">
+              <div className="text-2xl sm:text-3xl mb-3 sm:mb-4">3</div>
+              <h3 className="text-sm sm:text-lg font-semibold mb-2 text-yellow-400">Fake Platform</h3>
+              <p className="text-gray-400 text-xs sm:text-base">Victims are directed to MirrorExp.com, a fake trading platform, to deposit crypto.</p>
             </div>
-            <div className="card p-6 rounded-xl">
-              <div className="text-3xl mb-4">4</div>
-              <h3 className="text-lg font-semibold mb-2 text-green-400">Rapid Cash-Out</h3>
-              <p className="text-gray-400">Deposits are moved to personal wallets within minutes, then to exchanges for cash-out.</p>
+            <div className="card p-4 sm:p-6 rounded-xl">
+              <div className="text-2xl sm:text-3xl mb-3 sm:mb-4">4</div>
+              <h3 className="text-sm sm:text-lg font-semibold mb-2 text-green-400">Rapid Cash-Out</h3>
+              <p className="text-gray-400 text-xs sm:text-base">Deposits are moved to personal wallets within minutes, then to exchanges for cash-out.</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Total Victim Losses */}
-      <section className="py-12 px-4 border-b border-gray-800 bg-gradient-to-b from-red-950/40 to-transparent">
+      <section className="py-8 sm:py-12 px-4 border-b border-gray-800 bg-gradient-to-b from-red-950/40 to-transparent">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl font-bold text-center mb-2">Total Documented Victim Losses</h2>
-          <p className="text-center text-gray-400 mb-8">Based on blockchain transaction analysis of known scam wallets</p>
+          <h2 className="text-xl sm:text-2xl font-bold text-center mb-2">Total Documented Victim Losses</h2>
+          <p className="text-center text-gray-400 mb-6 sm:mb-8 text-sm sm:text-base">Based on blockchain transaction analysis of known scam wallets</p>
           
-          <div className="card p-8 rounded-2xl border-2 border-red-600 bg-red-950/20 text-center mb-8">
-            <p className="text-gray-400 text-sm uppercase tracking-wider mb-2">Confirmed Stolen Amount</p>
-            <p className="text-5xl md:text-7xl font-black text-red-500 mb-2">$22,000+</p>
-            <p className="text-gray-400">USD equivalent across Bitcoin, Ethereum, USDT &amp; USDC</p>
+          <div className="card p-5 sm:p-8 rounded-2xl border-2 border-red-600 bg-red-950/20 text-center mb-6 sm:mb-8">
+            <p className="text-gray-400 text-xs sm:text-sm uppercase tracking-wider mb-2">Confirmed Stolen Amount</p>
+            <p className="text-4xl sm:text-5xl md:text-7xl font-black text-red-500 mb-2">$30,000+</p>
+            <p className="text-gray-400 text-sm sm:text-base">USD equivalent across Bitcoin, Ethereum, USDT &amp; USDC</p>
           </div>
 
           {/* Bitcoin Wallet */}
-          <h3 className="text-lg font-semibold text-orange-400 mb-3 flex items-center gap-2">
-            <span className="w-3 h-3 bg-orange-400 rounded-full"></span>
+          <h3 className="text-base sm:text-lg font-semibold text-orange-400 mb-3 flex items-center gap-2">
+            <span className="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-orange-400 rounded-full flex-shrink-0"></span>
             Bitcoin — $21,853
           </h3>
-          <div className="grid md:grid-cols-2 gap-4 mb-6">
-            <div className="card p-5 rounded-xl text-center border border-orange-700/50">
-              <p className="text-2xl font-bold text-orange-400 mb-1">$21,853</p>
-              <p className="text-gray-400 text-sm">Primary Scam Wallet</p>
-              <p className="text-gray-500 text-xs mt-1">4 transactions tracked</p>
+          <div className="grid grid-cols-2 gap-3 sm:gap-4 mb-6">
+            <div className="card p-3 sm:p-5 rounded-xl text-center border border-orange-700/50">
+              <p className="text-lg sm:text-2xl font-bold text-orange-400 mb-1">$21,853</p>
+              <p className="text-gray-400 text-xs sm:text-sm">Primary Scam Wallet</p>
+              <p className="text-gray-500 text-xs mt-1 hidden sm:block">4 transactions tracked</p>
             </div>
-            <div className="card p-5 rounded-xl text-center border border-purple-700/50">
-              <p className="text-2xl font-bold text-purple-400 mb-1">$2.1M+</p>
-              <p className="text-gray-400 text-sm">Exchange Consolidation Pool</p>
-              <p className="text-gray-500 text-xs mt-1">65 input addresses</p>
+            <div className="card p-3 sm:p-5 rounded-xl text-center border border-purple-700/50">
+              <p className="text-lg sm:text-2xl font-bold text-purple-400 mb-1">$2.1M+</p>
+              <p className="text-gray-400 text-xs sm:text-sm">Exchange Pool</p>
+              <p className="text-gray-500 text-xs mt-1 hidden sm:block">65 input addresses</p>
             </div>
           </div>
 
           {/* Ethereum/Stablecoins */}
-          <h3 className="text-lg font-semibold text-blue-400 mb-3 flex items-center gap-2">
-            <span className="w-3 h-3 bg-blue-400 rounded-full"></span>
+          <h3 className="text-base sm:text-lg font-semibold text-blue-400 mb-3 flex items-center gap-2">
+            <span className="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-blue-400 rounded-full flex-shrink-0"></span>
             Ethereum &amp; Stablecoins — $500+
           </h3>
-          <div className="grid md:grid-cols-3 gap-4 mb-6">
-            <div className="card p-4 rounded-xl text-center border border-blue-700/50">
-              <p className="text-xl font-bold text-blue-400 mb-1">~$75</p>
-              <p className="text-gray-400 text-sm">ETH Wallet</p>
+          <div className="grid grid-cols-3 gap-2 sm:gap-4 mb-6">
+            <div className="card p-3 sm:p-4 rounded-xl text-center border border-blue-700/50">
+              <p className="text-base sm:text-xl font-bold text-blue-400 mb-1">~$75</p>
+              <p className="text-gray-400 text-xs sm:text-sm">ETH</p>
             </div>
-            <div className="card p-4 rounded-xl text-center border border-green-700/50">
-              <p className="text-xl font-bold text-green-400 mb-1">Est. $200+</p>
-              <p className="text-gray-400 text-sm">USDT (ERC-20)</p>
+            <div className="card p-3 sm:p-4 rounded-xl text-center border border-green-700/50">
+              <p className="text-base sm:text-xl font-bold text-green-400 mb-1">$200+</p>
+              <p className="text-gray-400 text-xs sm:text-sm">USDT</p>
             </div>
-            <div className="card p-4 rounded-xl text-center border border-cyan-700/50">
-              <p className="text-xl font-bold text-cyan-400 mb-1">Est. $200+</p>
-              <p className="text-gray-400 text-sm">USDC (ERC-20)</p>
+            <div className="card p-3 sm:p-4 rounded-xl text-center border border-cyan-700/50">
+              <p className="text-base sm:text-xl font-bold text-cyan-400 mb-1">$200+</p>
+              <p className="text-gray-400 text-xs sm:text-sm">USDC</p>
             </div>
           </div>
 
@@ -225,51 +235,63 @@ export default function MirrorExpPage() {
       </section>
 
       {/* Scam Wallet Addresses */}
-      <section className="py-12 px-4 border-b border-gray-800 bg-gray-900/30">
+      <section className="py-8 sm:py-12 px-4 border-b border-gray-800 bg-gray-900/30">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl font-bold text-center mb-2">Known Scam Wallet Addresses</h2>
-          <p className="text-center text-gray-400 mb-8">Do NOT send cryptocurrency to any of these addresses</p>
+          <h2 className="text-xl sm:text-2xl font-bold text-center mb-2">Known Scam Wallet Addresses</h2>
+          <p className="text-center text-gray-400 mb-6 sm:mb-8 text-sm sm:text-base">Do NOT send cryptocurrency to any of these addresses</p>
           
-          <div className="space-y-4">
-            <div className="card p-4 rounded-lg border-l-4 border-orange-500">
-              <div className="flex items-center justify-between flex-wrap gap-2">
-                <span className="text-orange-400 font-semibold">Bitcoin (Primary Deposit)</span>
-                <code className="text-sm bg-black/50 px-3 py-1 rounded break-all">bc1qy28j32l0ntncyuqczzeau2k9yslh76djy0nh5v</code>
+          <div className="space-y-3 sm:space-y-4">
+            <div className="card p-3 sm:p-4 rounded-lg border-l-4 border-orange-500">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                <span className="text-orange-400 font-semibold text-sm sm:text-base">Bitcoin (Primary Deposit)</span>
+                <div className="overflow-x-auto">
+                  <code className="text-xs sm:text-sm bg-black/50 px-2 sm:px-3 py-1 rounded whitespace-nowrap">bc1qy28j32l0ntncyuqczzeau2k9yslh76djy0nh5v</code>
+                </div>
               </div>
-              <p className="text-gray-500 text-xs mt-2">Current balance: 0.13 BTC (~$9,450) | Total received: $21,853</p>
+              <p className="text-gray-500 text-xs mt-2">Balance: 0.13 BTC (~$9,450) | Total: $21,853</p>
             </div>
-            <div className="card p-4 rounded-lg border-l-4 border-orange-400">
-              <div className="flex items-center justify-between flex-wrap gap-2">
-                <span className="text-orange-300 font-semibold">Bitcoin (Staging #1)</span>
-                <code className="text-sm bg-black/50 px-3 py-1 rounded break-all">bc1qqtjrzvrft6rz794x0qr70zvm9r6kz5y4zu5u0x</code>
+            <div className="card p-3 sm:p-4 rounded-lg border-l-4 border-orange-400">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                <span className="text-orange-300 font-semibold text-sm sm:text-base">Bitcoin (Staging #1)</span>
+                <div className="overflow-x-auto">
+                  <code className="text-xs sm:text-sm bg-black/50 px-2 sm:px-3 py-1 rounded whitespace-nowrap">bc1qqtjrzvrft6rz794x0qr70zvm9r6kz5y4zu5u0x</code>
+                </div>
               </div>
               <p className="text-gray-500 text-xs mt-2">Emptied to exchange | Received: 0.05 BTC ($3,628)</p>
             </div>
-            <div className="card p-4 rounded-lg border-l-4 border-orange-300">
-              <div className="flex items-center justify-between flex-wrap gap-2">
-                <span className="text-orange-200 font-semibold">Bitcoin (Staging #2)</span>
-                <code className="text-sm bg-black/50 px-3 py-1 rounded break-all">bc1q6z9f0gcl7d0j2jsc02jxcxv4n2ydjnqqr5v6ug</code>
+            <div className="card p-3 sm:p-4 rounded-lg border-l-4 border-orange-300">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                <span className="text-orange-200 font-semibold text-sm sm:text-base">Bitcoin (Staging #2)</span>
+                <div className="overflow-x-auto">
+                  <code className="text-xs sm:text-sm bg-black/50 px-2 sm:px-3 py-1 rounded whitespace-nowrap">bc1q6z9f0gcl7d0j2jsc02jxcxv4n2ydjnqqr5v6ug</code>
+                </div>
               </div>
               <p className="text-gray-500 text-xs mt-2">Emptied to exchange | Received: 0.06 BTC ($4,391)</p>
             </div>
-            <div className="card p-4 rounded-lg border-l-4 border-purple-500">
-              <div className="flex items-center justify-between flex-wrap gap-2">
-                <span className="text-purple-400 font-semibold">Bitcoin (Exchange Pool)</span>
-                <code className="text-sm bg-black/50 px-3 py-1 rounded break-all">bc1qdfl3dfnwwvlqa5jpckh0ccwpjczh5y566c4g76</code>
+            <div className="card p-3 sm:p-4 rounded-lg border-l-4 border-purple-500">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                <span className="text-purple-400 font-semibold text-sm sm:text-base">Bitcoin (Exchange Pool)</span>
+                <div className="overflow-x-auto">
+                  <code className="text-xs sm:text-sm bg-black/50 px-2 sm:px-3 py-1 rounded whitespace-nowrap">bc1qdfl3dfnwwvlqa5jpckh0ccwpjczh5y566c4g76</code>
+                </div>
               </div>
-              <p className="text-gray-500 text-xs mt-2">Final cash-out destination | Received: 29.43 BTC ($2.1M) from 65 sources</p>
+              <p className="text-gray-500 text-xs mt-2">Cash-out | 29.43 BTC ($2.1M) from 65 sources</p>
             </div>
-            <div className="card p-4 rounded-lg border-l-4 border-blue-500">
-              <div className="flex items-center justify-between flex-wrap gap-2">
-                <span className="text-blue-400 font-semibold">Ethereum / USDC (ERC-20)</span>
-                <code className="text-sm bg-black/50 px-3 py-1 rounded break-all">0xE28425B27d555f870d3CaCAC4Bf7F549c768022F</code>
+            <div className="card p-3 sm:p-4 rounded-lg border-l-4 border-blue-500">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                <span className="text-blue-400 font-semibold text-sm sm:text-base">Ethereum / USDC (ERC-20)</span>
+                <div className="overflow-x-auto">
+                  <code className="text-xs sm:text-sm bg-black/50 px-2 sm:px-3 py-1 rounded whitespace-nowrap">0xE28425B27d555f870d3CaCAC4Bf7F549c768022F</code>
+                </div>
               </div>
               <p className="text-gray-500 text-xs mt-2">Same address used for ETH and USDC deposits</p>
             </div>
-            <div className="card p-4 rounded-lg border-l-4 border-green-500">
-              <div className="flex items-center justify-between flex-wrap gap-2">
-                <span className="text-green-400 font-semibold">USDT (ERC-20)</span>
-                <code className="text-sm bg-black/50 px-3 py-1 rounded break-all">0xF4eE6d12f95f401BF6b0aB488Ec18E43bfdbeAFC</code>
+            <div className="card p-3 sm:p-4 rounded-lg border-l-4 border-green-500">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                <span className="text-green-400 font-semibold text-sm sm:text-base">USDT (ERC-20)</span>
+                <div className="overflow-x-auto">
+                  <code className="text-xs sm:text-sm bg-black/50 px-2 sm:px-3 py-1 rounded whitespace-nowrap">0xF4eE6d12f95f401BF6b0aB488Ec18E43bfdbeAFC</code>
+                </div>
               </div>
               <p className="text-gray-500 text-xs mt-2">Active since August 2025 | 6+ months of operation</p>
             </div>
@@ -635,32 +657,32 @@ export default function MirrorExpPage() {
       </section>
 
       {/* Impersonation Evidence */}
-      <section className="py-12 px-4 border-b border-gray-800">
+      <section className="py-8 sm:py-12 px-4 border-b border-gray-800">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl font-bold text-center mb-2">Impersonation Evidence</h2>
-          <p className="text-center text-gray-400 mb-8">Side-by-side comparison of real admin vs scammer account</p>
+          <h2 className="text-xl sm:text-2xl font-bold text-center mb-2">Impersonation Evidence</h2>
+          <p className="text-center text-gray-400 mb-6 sm:mb-8 text-sm sm:text-base">Side-by-side comparison of real admin vs scammer account</p>
           
           {/* Username Comparison */}
-          <div className="card p-6 rounded-xl mb-8 text-center bg-black/30">
-            <p className="text-gray-400 mb-4">Spot the difference in the usernames:</p>
-            <div className="flex justify-center items-center gap-8 flex-wrap">
+          <div className="card p-4 sm:p-6 rounded-xl mb-6 sm:mb-8 text-center bg-black/30">
+            <p className="text-gray-400 mb-4 text-sm sm:text-base">Spot the difference in the usernames:</p>
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-8">
               <div>
                 <p className="text-xs text-gray-500 mb-1">REAL ADMIN</p>
-                <p className="text-3xl font-mono font-bold text-green-400"><span className="text-green-300 underline decoration-4">.</span>atraveller</p>
+                <p className="text-2xl sm:text-3xl font-mono font-bold text-green-400"><span className="text-green-300 underline decoration-4">.</span>atraveller</p>
               </div>
-              <div className="text-4xl text-gray-600">vs</div>
+              <div className="text-2xl sm:text-4xl text-gray-600">vs</div>
               <div>
                 <p className="text-xs text-gray-500 mb-1">SCAMMER</p>
-                <p className="text-3xl font-mono font-bold text-red-400"><span className="text-red-300 underline decoration-4">_</span>atraveller</p>
+                <p className="text-2xl sm:text-3xl font-mono font-bold text-red-400"><span className="text-red-300 underline decoration-4">_</span>atraveller</p>
               </div>
             </div>
-            <p className="text-yellow-400 mt-4 text-sm">The scammer changed just ONE character: <code className="bg-green-900/50 px-2 py-0.5 rounded">.</code> → <code className="bg-red-900/50 px-2 py-0.5 rounded">_</code></p>
+            <p className="text-yellow-400 mt-4 text-xs sm:text-sm">The scammer changed just ONE character: <code className="bg-green-900/50 px-2 py-0.5 rounded">.</code> → <code className="bg-red-900/50 px-2 py-0.5 rounded">_</code></p>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-6 mb-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mb-6 sm:mb-8">
             <div className="card rounded-xl overflow-hidden border-2 border-green-600">
-              <div className="bg-green-900/30 p-3 text-center">
-                <span className="text-green-400 font-bold uppercase text-sm">.atraveller (Real Admin)</span>
+              <div className="bg-green-900/30 p-2 sm:p-3 text-center">
+                <span className="text-green-400 font-bold uppercase text-xs sm:text-sm">.atraveller (Real Admin)</span>
               </div>
               <img 
                 src="/evidence/mirrorexp/real admin.jpg" 
@@ -671,8 +693,8 @@ export default function MirrorExpPage() {
             </div>
             
             <div className="card rounded-xl overflow-hidden border-2 border-red-600">
-              <div className="bg-red-900/30 p-3 text-center">
-                <span className="text-red-400 font-bold uppercase text-sm">_atraveller (Scammer)</span>
+              <div className="bg-red-900/30 p-2 sm:p-3 text-center">
+                <span className="text-red-400 font-bold uppercase text-xs sm:text-sm">_atraveller (Scammer)</span>
               </div>
               <img 
                 src="/evidence/mirrorexp/fake admin.jpg" 
@@ -685,8 +707,8 @@ export default function MirrorExpPage() {
           
           <p className="text-center text-gray-500 text-xs mb-4">Click images to expand</p>
           
-          <div className="card p-4 rounded-xl bg-yellow-900/20 border border-yellow-700">
-            <p className="text-yellow-400 text-center text-sm">
+          <div className="card p-3 sm:p-4 rounded-xl bg-yellow-900/20 border border-yellow-700">
+            <p className="text-yellow-400 text-center text-xs sm:text-sm">
               <strong>Warning:</strong> The scammer uses &quot;typosquatting&quot; - creating a username that looks almost identical to the real admin by changing just one character. A period <code className="bg-black/30 px-1 rounded">.</code> looks very similar to an underscore <code className="bg-black/30 px-1 rounded">_</code> at a glance. Always verify usernames character by character!
             </p>
           </div>
@@ -694,13 +716,13 @@ export default function MirrorExpPage() {
       </section>
 
       {/* Platform Evidence Gallery */}
-      <section className="py-12 px-4 border-b border-gray-800 bg-gray-900/30">
+      <section className="py-8 sm:py-12 px-4 border-b border-gray-800 bg-gray-900/30">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl font-bold text-center mb-2">Fake Platform Evidence</h2>
-          <p className="text-center text-gray-400 mb-2">Screenshots of the fraudulent MirrorExp trading platform</p>
-          <p className="text-center text-gray-500 text-xs mb-8">Click any image to expand</p>
+          <h2 className="text-xl sm:text-2xl font-bold text-center mb-2">Fake Platform Evidence</h2>
+          <p className="text-center text-gray-400 mb-2 text-sm sm:text-base">Screenshots of the fraudulent MirrorExp trading platform</p>
+          <p className="text-center text-gray-500 text-xs mb-6 sm:mb-8">Click any image to expand</p>
           
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-4">
             <div className="card evidence-card rounded-lg overflow-hidden cursor-zoom-in" onClick={() => openLightbox('/evidence/mirrorexp/scam site screenshot evidence.jpg')}>
               <img src="/evidence/mirrorexp/scam site screenshot evidence.jpg" alt="MirrorExp scam website homepage - fake crypto trading platform" className="w-full evidence-img" />
               <div className="caption">
