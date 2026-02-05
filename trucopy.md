@@ -188,18 +188,24 @@ ETH moved via **"On Chain Swap"** to the ETH Swap Destination wallet listed abov
 
 **Evidence value:** More sophisticated than direct transfer — indicates awareness of chain analysis tools.
 
-### 5. Discord Account Metadata
+### 5. Discord Typosquatting Attack
+
+The scammer used **typosquatting** — creating a username nearly identical to the real admin:
 
 | Attribute | Fake Account | Real Account |
 |-----------|--------------|--------------|
 | Username | `_salma_ogs` | `salmaogs` |
+| Difference | Added 2 underscores | Original |
 | Member Since | **Jul 20, 2025** | Jun 12, 2020 |
 | Mutual Servers | 0 | 1 |
 | Account Age | ~6 months | ~5.5 years |
 
+**Typosquatting technique:** `salmaogs` → `_salma_ogs` (added underscores before and after "salma")
+
 **Evidence value:** 
 - Discord account creation (Jul 2025) provides **timestamp for operation start**
 - Discord can be subpoenaed for IP addresses, email, payment methods, session logs
+- Same typosquatting technique used across MirrorExp and OxyCapitals scams
 
 ### 6. Cross-Scam Pattern — Possible Same Operator
 

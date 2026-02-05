@@ -78,7 +78,7 @@ export default function TruCopyPage() {
             <span className="text-red-500">SCAM</span>
           </h1>
           <p className="text-base sm:text-xl text-gray-300 mb-6 sm:mb-8 max-w-2xl mx-auto px-2" itemProp="description">
-            TruCopy.org is a cryptocurrency phishing scam that uses Discord impersonation to steal Bitcoin, Solana, Ethereum, and other cryptocurrencies. 
+            TruCopy.org is a cryptocurrency phishing scam that uses Discord impersonation with <strong className="text-yellow-400">typosquatting</strong> to steal Bitcoin, Solana, Ethereum, and other cryptocurrencies. 
             This site documents the fraud with blockchain evidence across <strong className="text-yellow-400">8 different blockchains</strong>.
           </p>
           <div className="card inline-block p-3 sm:p-4 rounded-lg">
@@ -146,6 +146,47 @@ export default function TruCopyPage() {
         </div>
       </section>
 
+      {/* Typosquatting Alert */}
+      <section className="py-6 sm:py-8 px-4 border-b border-gray-800 bg-yellow-950/30">
+        <div className="max-w-4xl mx-auto">
+          <div className="card p-4 sm:p-6 rounded-xl border-2 border-yellow-500 bg-yellow-900/20">
+            <div className="flex items-center gap-3 sm:gap-4 mb-4">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-yellow-600 rounded-full flex items-center justify-center flex-shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 sm:h-6 sm:w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                </svg>
+              </div>
+              <div>
+                <h2 className="text-lg sm:text-xl font-bold text-yellow-400">Typosquatting Attack Detected</h2>
+                <p className="text-gray-300 text-xs sm:text-sm">The scammer uses a username nearly identical to a real admin</p>
+              </div>
+            </div>
+            
+            <div className="bg-black/40 rounded-lg p-4 sm:p-6 text-center">
+              <p className="text-gray-400 mb-4 text-xs sm:text-sm">Can you spot the difference?</p>
+              <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-8 mb-4">
+                <div>
+                  <p className="text-xs text-gray-500 mb-1">REAL ADMIN USERNAME</p>
+                  <p className="text-xl sm:text-2xl md:text-3xl font-mono font-bold text-green-400">salmaogs</p>
+                </div>
+                <div className="text-2xl sm:text-3xl text-gray-600">vs</div>
+                <div>
+                  <p className="text-xs text-gray-500 mb-1">SCAMMER USERNAME</p>
+                  <p className="text-xl sm:text-2xl md:text-3xl font-mono font-bold text-red-400"><span className="text-red-300 underline decoration-4">_</span>salma<span className="text-red-300 underline decoration-4">_</span>ogs</p>
+                </div>
+              </div>
+              <p className="text-yellow-300 text-xs sm:text-sm">
+                The scammer added <strong>TWO underscores</strong>: <code className="bg-green-900/50 px-1 rounded">salmaogs</code> became <code className="bg-red-900/50 px-1 rounded">_salma_ogs</code>
+              </p>
+            </div>
+            
+            <p className="text-gray-400 text-xs sm:text-sm mt-4 text-center">
+              <strong className="text-yellow-300">Always verify usernames character-by-character</strong> before trusting anyone with your money.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Quick Facts */}
       <section className="py-8 sm:py-12 px-4 border-b border-gray-800">
         <div className="max-w-6xl mx-auto">
@@ -153,8 +194,8 @@ export default function TruCopyPage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6">
             <div className="card p-4 sm:p-6 rounded-xl">
               <div className="text-2xl sm:text-3xl mb-3 sm:mb-4">1</div>
-              <h3 className="text-sm sm:text-lg font-semibold mb-2 text-red-400">Discord Impersonation</h3>
-              <p className="text-gray-400 text-xs sm:text-base">Scammer impersonates a trusted Discord admin or crypto influencer.</p>
+              <h3 className="text-sm sm:text-lg font-semibold mb-2 text-red-400">Typosquatting</h3>
+              <p className="text-gray-400 text-xs sm:text-base">Scammer creates a Discord username nearly identical to a real admin, adding underscores.</p>
             </div>
             <div className="card p-4 sm:p-6 rounded-xl">
               <div className="text-2xl sm:text-3xl mb-3 sm:mb-4">2</div>
