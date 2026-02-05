@@ -41,11 +41,17 @@ export const metadata: Metadata = {
     'mirrorexp fraud',
     'bridgestocks scam',
     'bridgestocks.com scam',
+    'everrextrade scam',
+    'everrextrade.com scam',
+    'everrex trade scam',
+    'is everrextrade legit',
     // Scammer usernames
     'sajmaogs scam',
     'sajmaogs discord',
     '_atraveller scam',
     'atraveller discord scam',
+    'salmaogs_pm scam',
+    'salmaogs_pm discord',
     // General crypto scam keywords
     'crypto scam',
     'cryptocurrency scam',
@@ -212,6 +218,7 @@ const jsonLd = {
         { '@type': 'ListItem', position: 2, name: 'OxyCapitals Scam', item: 'https://dirtycrypto.org/oxycapitals' },
         { '@type': 'ListItem', position: 3, name: 'MirrorExp Scam', item: 'https://dirtycrypto.org/mirrorexp' },
         { '@type': 'ListItem', position: 4, name: 'TruCopy Scam', item: 'https://dirtycrypto.org/trucopy' },
+        { '@type': 'ListItem', position: 5, name: 'EverrexTrade Scam', item: 'https://dirtycrypto.org/everrextrade' },
       ],
     },
     {
@@ -238,7 +245,7 @@ const jsonLd = {
       '@id': 'https://dirtycrypto.org/#scamlist',
       name: 'Exposed Cryptocurrency Scams',
       description: 'List of cryptocurrency scams documented with blockchain evidence',
-      numberOfItems: 3,
+      numberOfItems: 4,
       itemListElement: [
         {
           '@type': 'ListItem',
@@ -260,6 +267,13 @@ const jsonLd = {
           name: 'TruCopy Scam',
           description: 'Multi-chain crypto scam stealing $30,869+ across Bitcoin, Solana & Ethereum via Discord impersonation',
           url: 'https://dirtycrypto.org/trucopy',
+        },
+        {
+          '@type': 'ListItem',
+          position: 4,
+          name: 'EverrexTrade Scam',
+          description: 'Fake forex/stocks trading platform promoted via Discord impersonation with typosquatting username salmaogs_pm. Investigation ongoing.',
+          url: 'https://dirtycrypto.org/everrextrade',
         },
       ],
     },

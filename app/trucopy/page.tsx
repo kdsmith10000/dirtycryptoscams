@@ -192,7 +192,7 @@ export default function TruCopyPage() {
             <div className="bg-gray-800/50 px-4 py-3 border-b border-gray-700">
               <h3 className="font-semibold text-white">Theft Summary by Blockchain</h3>
             </div>
-            <div className="overflow-x-auto">
+            <div className="">
               <table className="w-full text-sm">
                 <thead className="bg-gray-800/30">
                   <tr>
@@ -444,8 +444,8 @@ export default function TruCopyPage() {
             <div className="card p-3 sm:p-4 rounded-lg border-l-4 border-orange-500">
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
                 <span className="text-orange-400 font-semibold text-sm sm:text-base">Bitcoin (BTC)</span>
-                <div className="overflow-x-auto">
-                  <code className="text-xs sm:text-sm bg-black/50 px-2 sm:px-3 py-1 rounded whitespace-nowrap">bc1qkh2g6dz0s5am5tjwc9wjylyj9qdalgq3vwmgtf</code>
+                <div className="">
+                  <code className="text-xs sm:text-sm bg-black/50 px-2 sm:px-3 py-1 rounded break-all">bc1qkh2g6dz0s5am5tjwc9wjylyj9qdalgq3vwmgtf</code>
                 </div>
               </div>
               <p className="text-gray-500 text-xs mt-2">Total stolen: <span className="text-red-400 font-semibold">$25,031.80</span> | 4 transactions | 100% cashed out</p>
@@ -454,8 +454,8 @@ export default function TruCopyPage() {
             <div className="card p-3 sm:p-4 rounded-lg border-l-4 border-purple-500">
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
                 <span className="text-purple-400 font-semibold text-sm sm:text-base">Solana (SOL)</span>
-                <div className="overflow-x-auto">
-                  <code className="text-xs sm:text-sm bg-black/50 px-2 sm:px-3 py-1 rounded whitespace-nowrap">Cgrr9RgazhDtigGSu3GAYDbCUV3b1KqPPmuhuUqaoxWJ</code>
+                <div className="">
+                  <code className="text-xs sm:text-sm bg-black/50 px-2 sm:px-3 py-1 rounded break-all">Cgrr9RgazhDtigGSu3GAYDbCUV3b1KqPPmuhuUqaoxWJ</code>
                 </div>
               </div>
               <p className="text-gray-500 text-xs mt-2">Total stolen: <span className="text-red-400 font-semibold">$5,833.09</span> | 5 transactions | 100% cashed out</p>
@@ -464,8 +464,8 @@ export default function TruCopyPage() {
             <div className="card p-3 sm:p-4 rounded-lg border-l-4 border-blue-500">
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
                 <span className="text-blue-400 font-semibold text-sm sm:text-base">Ethereum (ETH/USDT)</span>
-                <div className="overflow-x-auto">
-                  <code className="text-xs sm:text-sm bg-black/50 px-2 sm:px-3 py-1 rounded whitespace-nowrap">0x3fb847c3fb6e8bc02b18e7af663a1eaa06e42529</code>
+                <div className="">
+                  <code className="text-xs sm:text-sm bg-black/50 px-2 sm:px-3 py-1 rounded break-all">0x3fb847c3fb6e8bc02b18e7af663a1eaa06e42529</code>
                 </div>
               </div>
               <p className="text-gray-500 text-xs mt-2">Total stolen: <span className="text-red-400 font-semibold">$5.01</span> | 3 transactions | Partially swapped</p>
@@ -475,10 +475,10 @@ export default function TruCopyPage() {
               <div className="flex flex-col gap-2">
                 <span className="text-gray-400 font-semibold text-sm sm:text-base">Other Chains (No Activity Yet)</span>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
-                  <div><span className="text-gray-500">BCH:</span> <code className="bg-black/30 px-1 rounded">qpacqjaveqpe04rjeqwvhrvqv3hlf6zx7gecghke0s</code></div>
-                  <div><span className="text-gray-500">TRC20:</span> <code className="bg-black/30 px-1 rounded">THGF14Xbju5nj2PZBW4yzCyLZCSj7ftZhw</code></div>
-                  <div><span className="text-gray-500">LTC:</span> <code className="bg-black/30 px-1 rounded">Lhice6C2VmNo9FwgGfjPo7spr9T7Yo9NwC</code></div>
-                  <div><span className="text-gray-500">DOGE:</span> <code className="bg-black/30 px-1 rounded">DE3BCqMmFNMs1VqGTcLCJVFPe2qCoPewij</code></div>
+                  <div><span className="text-gray-500">BCH:</span> <code className="bg-black/30 px-1 rounded break-all">qpacqjaveqpe04rjeqwvhrvqv3hlf6zx7gecghke0s</code></div>
+                  <div><span className="text-gray-500">TRC20:</span> <code className="bg-black/30 px-1 rounded break-all">THGF14Xbju5nj2PZBW4yzCyLZCSj7ftZhw</code></div>
+                  <div><span className="text-gray-500">LTC:</span> <code className="bg-black/30 px-1 rounded break-all">Lhice6C2VmNo9FwgGfjPo7spr9T7Yo9NwC</code></div>
+                  <div><span className="text-gray-500">DOGE:</span> <code className="bg-black/30 px-1 rounded break-all">DE3BCqMmFNMs1VqGTcLCJVFPe2qCoPewij</code></div>
                 </div>
               </div>
             </div>

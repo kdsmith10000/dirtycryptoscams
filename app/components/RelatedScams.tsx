@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 
-type ScamName = 'oxycapitals' | 'mirrorexp' | 'trucopy'
+type ScamName = 'oxycapitals' | 'mirrorexp' | 'trucopy' | 'everrextrade'
 
 interface RelatedScamsProps {
   exclude: ScamName
@@ -42,6 +42,17 @@ const scamData: Record<ScamName, { name: string; color: string; bgColor: string;
     btnHover: 'hover:bg-purple-700',
     href: '/trucopy',
     amount: '$30,000+ stolen (8 chains)',
+  },
+  everrextrade: {
+    name: 'EverrexTrade',
+    color: 'text-yellow-400',
+    bgColor: 'bg-yellow-950/20',
+    hoverBg: 'hover:bg-yellow-950/30',
+    borderColor: 'border-yellow-600',
+    btnBg: 'bg-yellow-600',
+    btnHover: 'hover:bg-yellow-700',
+    href: '/everrextrade',
+    amount: 'Under Investigation',
   },
 }
 

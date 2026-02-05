@@ -83,33 +83,10 @@ body {
 
 /* Mobile-specific utilities */
 
-/* Wallet address handling - allow horizontal scroll on mobile */
+/* Wallet address handling - break long addresses to wrap */
 .wallet-address {
   word-break: break-all;
   overflow-wrap: anywhere;
-}
-
-@media (max-width: 640px) {
-  .wallet-address-scroll {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    white-space: nowrap;
-    padding-bottom: 4px;
-  }
-  
-  .wallet-address-scroll::-webkit-scrollbar {
-    height: 4px;
-  }
-  
-  .wallet-address-scroll::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 2px;
-  }
-  
-  .wallet-address-scroll::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.3);
-    border-radius: 2px;
-  }
 }
 
 /* Improved touch targets */

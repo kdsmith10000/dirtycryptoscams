@@ -204,8 +204,8 @@ export default function MirrorExpPage() {
             <div className="card p-3 sm:p-4 rounded-lg border-l-4 border-orange-500">
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
                 <span className="text-orange-400 font-semibold text-sm sm:text-base">Bitcoin (Primary Deposit)</span>
-                <div className="overflow-x-auto">
-                  <code className="text-xs sm:text-sm bg-black/50 px-2 sm:px-3 py-1 rounded whitespace-nowrap">bc1qy28j32l0ntncyuqczzeau2k9yslh76djy0nh5v</code>
+                <div className="">
+                  <code className="text-xs sm:text-sm bg-black/50 px-2 sm:px-3 py-1 rounded break-all">bc1qy28j32l0ntncyuqczzeau2k9yslh76djy0nh5v</code>
                 </div>
               </div>
               <p className="text-gray-500 text-xs mt-2">Balance: 0.13 BTC (~$9,450) | Total: $21,853</p>
@@ -213,8 +213,8 @@ export default function MirrorExpPage() {
             <div className="card p-3 sm:p-4 rounded-lg border-l-4 border-orange-400">
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
                 <span className="text-orange-300 font-semibold text-sm sm:text-base">Bitcoin (Staging #1)</span>
-                <div className="overflow-x-auto">
-                  <code className="text-xs sm:text-sm bg-black/50 px-2 sm:px-3 py-1 rounded whitespace-nowrap">bc1qqtjrzvrft6rz794x0qr70zvm9r6kz5y4zu5u0x</code>
+                <div className="">
+                  <code className="text-xs sm:text-sm bg-black/50 px-2 sm:px-3 py-1 rounded break-all">bc1qqtjrzvrft6rz794x0qr70zvm9r6kz5y4zu5u0x</code>
                 </div>
               </div>
               <p className="text-gray-500 text-xs mt-2">Emptied to exchange | Received: 0.05 BTC ($3,628)</p>
@@ -222,8 +222,8 @@ export default function MirrorExpPage() {
             <div className="card p-3 sm:p-4 rounded-lg border-l-4 border-orange-300">
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
                 <span className="text-orange-200 font-semibold text-sm sm:text-base">Bitcoin (Staging #2)</span>
-                <div className="overflow-x-auto">
-                  <code className="text-xs sm:text-sm bg-black/50 px-2 sm:px-3 py-1 rounded whitespace-nowrap">bc1q6z9f0gcl7d0j2jsc02jxcxv4n2ydjnqqr5v6ug</code>
+                <div className="">
+                  <code className="text-xs sm:text-sm bg-black/50 px-2 sm:px-3 py-1 rounded break-all">bc1q6z9f0gcl7d0j2jsc02jxcxv4n2ydjnqqr5v6ug</code>
                 </div>
               </div>
               <p className="text-gray-500 text-xs mt-2">Emptied to exchange | Received: 0.06 BTC ($4,391)</p>
@@ -231,8 +231,8 @@ export default function MirrorExpPage() {
             <div className="card p-3 sm:p-4 rounded-lg border-l-4 border-purple-500">
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
                 <span className="text-purple-400 font-semibold text-sm sm:text-base">Bitcoin (Exchange Pool)</span>
-                <div className="overflow-x-auto">
-                  <code className="text-xs sm:text-sm bg-black/50 px-2 sm:px-3 py-1 rounded whitespace-nowrap">bc1qdfl3dfnwwvlqa5jpckh0ccwpjczh5y566c4g76</code>
+                <div className="">
+                  <code className="text-xs sm:text-sm bg-black/50 px-2 sm:px-3 py-1 rounded break-all">bc1qdfl3dfnwwvlqa5jpckh0ccwpjczh5y566c4g76</code>
                 </div>
               </div>
               <p className="text-gray-500 text-xs mt-2">Cash-out | 29.43 BTC ($2.1M) from 65 sources</p>
@@ -240,8 +240,8 @@ export default function MirrorExpPage() {
             <div className="card p-3 sm:p-4 rounded-lg border-l-4 border-blue-500">
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
                 <span className="text-blue-400 font-semibold text-sm sm:text-base">Ethereum / USDC (ERC-20)</span>
-                <div className="overflow-x-auto">
-                  <code className="text-xs sm:text-sm bg-black/50 px-2 sm:px-3 py-1 rounded whitespace-nowrap">0xE28425B27d555f870d3CaCAC4Bf7F549c768022F</code>
+                <div className="">
+                  <code className="text-xs sm:text-sm bg-black/50 px-2 sm:px-3 py-1 rounded break-all">0xE28425B27d555f870d3CaCAC4Bf7F549c768022F</code>
                 </div>
               </div>
               <p className="text-gray-500 text-xs mt-2">Same address used for ETH and USDC deposits</p>
@@ -249,8 +249,8 @@ export default function MirrorExpPage() {
             <div className="card p-3 sm:p-4 rounded-lg border-l-4 border-green-500">
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
                 <span className="text-green-400 font-semibold text-sm sm:text-base">USDT (ERC-20)</span>
-                <div className="overflow-x-auto">
-                  <code className="text-xs sm:text-sm bg-black/50 px-2 sm:px-3 py-1 rounded whitespace-nowrap">0xF4eE6d12f95f401BF6b0aB488Ec18E43bfdbeAFC</code>
+                <div className="">
+                  <code className="text-xs sm:text-sm bg-black/50 px-2 sm:px-3 py-1 rounded break-all">0xF4eE6d12f95f401BF6b0aB488Ec18E43bfdbeAFC</code>
                 </div>
               </div>
               <p className="text-gray-500 text-xs mt-2">Active since August 2025 | 6+ months of operation</p>

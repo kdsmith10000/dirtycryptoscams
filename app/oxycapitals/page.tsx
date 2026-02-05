@@ -173,8 +173,8 @@ export default function OxyCapitalsPage() {
           {/* SegWit Routing Wallet */}
           <div className="card p-3 sm:p-4 rounded-xl mb-6 bg-orange-950/20 border border-orange-700/30">
             <h4 className="text-orange-300 font-semibold text-xs sm:text-sm mb-2">SegWit Routing Wallet</h4>
-            <div className="overflow-x-auto mb-2">
-              <code className="text-xs bg-black/50 px-2 py-1 rounded whitespace-nowrap">bc1qz5xlayxpa3dk4u8vduwvx0r4f3v2sf0eejpd46</code>
+            <div className="mb-2">
+              <code className="text-xs bg-black/50 px-2 py-1 rounded break-all">bc1qz5xlayxpa3dk4u8vduwvx0r4f3v2sf0eejpd46</code>
             </div>
             <p className="text-gray-500 text-xs">
               Intermediate wallet receiving $868 from victims, forwarding to Personal &amp; ByBit wallets. 
@@ -191,8 +191,8 @@ export default function OxyCapitalsPage() {
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-4">
               <div className="min-w-0">
                 <p className="text-gray-400 text-xs sm:text-sm mb-1">Wallet</p>
-                <div className="overflow-x-auto">
-                  <code className="text-xs text-blue-300 bg-black/50 px-2 py-1 rounded whitespace-nowrap">0x5f9ce0dA56c867D1BD06185D6d21744daC83cb09</code>
+                <div className="">
+                  <code className="text-xs text-blue-300 bg-black/50 px-2 py-1 rounded break-all">0x5f9ce0dA56c867D1BD06185D6d21744daC83cb09</code>
                 </div>
               </div>
               <div className="text-left sm:text-right flex-shrink-0">
@@ -211,8 +211,8 @@ export default function OxyCapitalsPage() {
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-4">
               <div className="min-w-0">
                 <p className="text-gray-400 text-xs sm:text-sm mb-1">Wallet</p>
-                <div className="overflow-x-auto">
-                  <code className="text-xs text-red-300 bg-black/50 px-2 py-1 rounded whitespace-nowrap">TCgcYUD74LoeMoKRb7X6WcYPVD3VgZccZR</code>
+                <div className="">
+                  <code className="text-xs text-red-300 bg-black/50 px-2 py-1 rounded break-all">TCgcYUD74LoeMoKRb7X6WcYPVD3VgZccZR</code>
                 </div>
               </div>
               <div className="text-left sm:text-right flex-shrink-0">
@@ -248,48 +248,48 @@ export default function OxyCapitalsPage() {
             <div className="card p-3 sm:p-4 rounded-lg">
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
                 <span className="text-orange-400 font-semibold text-sm sm:text-base">Bitcoin (Collection)</span>
-                <div className="overflow-x-auto">
-                  <code className="text-xs sm:text-sm bg-black/50 px-2 sm:px-3 py-1 rounded whitespace-nowrap">1NTXSjeydYLhWuXS8cVWx57VqyRFqz4gaC</code>
+                <div className="">
+                  <code className="text-xs sm:text-sm bg-black/50 px-2 sm:px-3 py-1 rounded break-all">1NTXSjeydYLhWuXS8cVWx57VqyRFqz4gaC</code>
                 </div>
               </div>
             </div>
             <div className="card p-3 sm:p-4 rounded-lg">
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
                 <span className="text-orange-400 font-semibold text-sm sm:text-base">Bitcoin (Personal)</span>
-                <div className="overflow-x-auto">
-                  <code className="text-xs sm:text-sm bg-black/50 px-2 sm:px-3 py-1 rounded whitespace-nowrap">1GC4fSsmgJMCtMh643WBCi5pBnTpqqCXP2</code>
+                <div className="">
+                  <code className="text-xs sm:text-sm bg-black/50 px-2 sm:px-3 py-1 rounded break-all">1GC4fSsmgJMCtMh643WBCi5pBnTpqqCXP2</code>
                 </div>
               </div>
             </div>
             <div className="card p-3 sm:p-4 rounded-lg">
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
                 <span className="text-blue-400 font-semibold text-sm sm:text-base">Ethereum</span>
-                <div className="overflow-x-auto">
-                  <code className="text-xs sm:text-sm bg-black/50 px-2 sm:px-3 py-1 rounded whitespace-nowrap">0x5f9ce0dA56c867D1BD06185D6d21744daC83cb09</code>
+                <div className="">
+                  <code className="text-xs sm:text-sm bg-black/50 px-2 sm:px-3 py-1 rounded break-all">0x5f9ce0dA56c867D1BD06185D6d21744daC83cb09</code>
                 </div>
               </div>
             </div>
             <div className="card p-3 sm:p-4 rounded-lg">
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
                 <span className="text-green-400 font-semibold text-sm sm:text-base">USDT (Tron)</span>
-                <div className="overflow-x-auto">
-                  <code className="text-xs sm:text-sm bg-black/50 px-2 sm:px-3 py-1 rounded whitespace-nowrap">TCgcYUD74LoeMoKRb7X6WcYPVD3VgZccZR</code>
+                <div className="">
+                  <code className="text-xs sm:text-sm bg-black/50 px-2 sm:px-3 py-1 rounded break-all">TCgcYUD74LoeMoKRb7X6WcYPVD3VgZccZR</code>
                 </div>
               </div>
             </div>
             <div className="card p-3 sm:p-4 rounded-lg">
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
                 <span className="text-orange-400 font-semibold text-sm sm:text-base">Bitcoin (ByBit)</span>
-                <div className="overflow-x-auto">
-                  <code className="text-xs sm:text-sm bg-black/50 px-2 sm:px-3 py-1 rounded whitespace-nowrap">192UAp4TEGApNdxPbSN5veQZ8ynyixjqvB</code>
+                <div className="">
+                  <code className="text-xs sm:text-sm bg-black/50 px-2 sm:px-3 py-1 rounded break-all">192UAp4TEGApNdxPbSN5veQZ8ynyixjqvB</code>
                 </div>
               </div>
             </div>
             <div className="card p-3 sm:p-4 rounded-lg">
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
                 <span className="text-orange-400 font-semibold text-sm sm:text-base">Bitcoin (SegWit)</span>
-                <div className="overflow-x-auto">
-                  <code className="text-xs sm:text-sm bg-black/50 px-2 sm:px-3 py-1 rounded whitespace-nowrap">bc1qz5xlayxpa3dk4u8vduwvx0r4f3v2sf0eejpd46</code>
+                <div className="">
+                  <code className="text-xs sm:text-sm bg-black/50 px-2 sm:px-3 py-1 rounded break-all">bc1qz5xlayxpa3dk4u8vduwvx0r4f3v2sf0eejpd46</code>
                 </div>
               </div>
             </div>
