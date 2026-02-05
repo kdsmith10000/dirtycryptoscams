@@ -170,6 +170,14 @@ export default function AffluenceAuraPage() {
                 <p className="text-gray-500 text-xs">+1 406-330-0697 (Montana area code) — embedded in the scam site</p>
               </div>
             </div>
+
+            <div className="card evidence-card rounded-lg overflow-hidden cursor-zoom-in md:col-span-2" onClick={() => openLightbox('/evidence/affluenceaura/fake deposit accepts any value.jpg')} role="button" tabIndex={0} onKeyDown={(e) => handleKeyDown(e, '/evidence/affluenceaura/fake deposit accepts any value.jpg')}>
+              <img src="/evidence/affluenceaura/fake deposit accepts any value.jpg" alt="AffluenceAura fake deposit page accepting nonsense values like 696969LOL — clearly not a real financial platform" className="w-full evidence-img" loading="lazy" />
+              <div className="caption p-3">
+                <h4 className="font-semibold text-red-400 text-sm">Fake Deposit Portal — Accepts Any Value</h4>
+                <p className="text-gray-500 text-xs">The deposit box accepts nonsense inputs like &quot;696969LOL&quot; — letters, words, anything. A real financial platform would validate numeric input. This proves the site is purely a front to steal deposits.</p>
+              </div>
+            </div>
           </div>
 
           {/* Platform Red Flags */}
@@ -203,6 +211,10 @@ export default function AffluenceAuraPage() {
               <div className="flex items-start gap-2">
                 <span className="text-red-400 mt-0.5 flex-shrink-0">✗</span>
                 <span className="text-gray-300">Claims to be &quot;POWERING THE ELITE ECONOMY&quot; — meaningless slogan</span>
+              </div>
+              <div className="flex items-start gap-2">
+                <span className="text-red-400 mt-0.5 flex-shrink-0">✗</span>
+                <span className="text-gray-300">Deposit portal accepts any value including letters and words (e.g. &quot;696969LOL&quot;) — no real validation</span>
               </div>
               <div className="flex items-start gap-2">
                 <span className="text-red-400 mt-0.5 flex-shrink-0">✗</span>
