@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     default: 'Dirty Crypto - Exposing Crypto Scams Through Blockchain Analysis',
     template: '%s | Dirty Crypto',
   },
-  description: 'Dirty Crypto investigates cryptocurrency fraud through blockchain analysis, exposing scams and helping victims get justice. OxyCapitals, MirrorExp, and other crypto frauds documented with wallet addresses, transaction tracing, and evidence for law enforcement. $62,400+ in documented losses.',
+  description: 'Dirty Crypto investigates cryptocurrency fraud through blockchain analysis, exposing scams and helping victims get justice. OxyCapitals, MirrorExp, TruCopy and other crypto frauds documented with wallet addresses, transaction tracing, and evidence for law enforcement. $114,800+ in documented losses.',
   keywords: [
     // Brand/Domain keywords
     'dirty crypto',
@@ -124,7 +124,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Dirty Crypto - Exposing Crypto Scams Through Blockchain Analysis',
-    description: 'We investigate cryptocurrency fraud by tracing stolen funds across blockchains. $62,400+ documented losses from OxyCapitals & MirrorExp scams. Fighting for justice for scam victims.',
+    description: 'We investigate cryptocurrency fraud by tracing stolen funds across blockchains. $114,800+ documented losses from OxyCapitals, MirrorExp & TruCopy scams. Fighting for justice for scam victims.',
     type: 'website',
     locale: 'en_US',
     url: baseUrl,
@@ -141,7 +141,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Dirty Crypto - Exposing Crypto Scams Through Blockchain Analysis',
-    description: 'Investigating cryptocurrency fraud through blockchain analysis. $62,400+ in documented losses. Fighting for justice.',
+    description: 'Investigating cryptocurrency fraud through blockchain analysis. $114,800+ in documented losses. Fighting for justice.',
     images: [`${baseUrl}/evidence/scam homepage.jpg`],
     creator: '@dirtycrypto',
   },
@@ -195,7 +195,7 @@ const jsonLd = {
       '@id': 'https://dirtycrypto.org/#webpage',
       url: 'https://dirtycrypto.org',
       name: 'Dirty Crypto - Exposing Crypto Scams Through Blockchain Analysis',
-      description: 'We investigate cryptocurrency fraud by tracing stolen funds across blockchains. OxyCapitals, MirrorExp, and other scams documented with $62,400+ in losses.',
+      description: 'We investigate cryptocurrency fraud by tracing stolen funds across blockchains. OxyCapitals, MirrorExp, TruCopy and other scams documented with $114,800+ in losses.',
       isPartOf: { '@id': 'https://dirtycrypto.org/#website' },
       about: {
         '@type': 'Thing',
@@ -211,13 +211,14 @@ const jsonLd = {
         { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://dirtycrypto.org' },
         { '@type': 'ListItem', position: 2, name: 'OxyCapitals Scam', item: 'https://dirtycrypto.org/oxycapitals' },
         { '@type': 'ListItem', position: 3, name: 'MirrorExp Scam', item: 'https://dirtycrypto.org/mirrorexp' },
+        { '@type': 'ListItem', position: 4, name: 'TruCopy Scam', item: 'https://dirtycrypto.org/trucopy' },
       ],
     },
     {
       '@type': 'Article',
       '@id': 'https://dirtycrypto.org/#article',
-      headline: 'SCAM ALERT: OxyCapitals & MirrorExp Cryptocurrency Fraud Exposed - $62,400+ Stolen',
-      description: 'Complete investigation exposing the OxyCapitals and MirrorExp cryptocurrency scams, including blockchain transaction analysis, wallet addresses, typosquatting tactics, and money laundering evidence.',
+      headline: 'SCAM ALERT: OxyCapitals, MirrorExp & TruCopy Cryptocurrency Fraud Exposed - $114,800+ Stolen',
+      description: 'Complete investigation exposing the OxyCapitals, MirrorExp, and TruCopy cryptocurrency scams, including blockchain transaction analysis, wallet addresses, typosquatting tactics, and money laundering evidence.',
       image: 'https://dirtycrypto.org/evidence/scam homepage.jpg',
       author: { '@id': 'https://dirtycrypto.org/#organization' },
       publisher: { '@id': 'https://dirtycrypto.org/#organization' },
@@ -237,21 +238,28 @@ const jsonLd = {
       '@id': 'https://dirtycrypto.org/#scamlist',
       name: 'Exposed Cryptocurrency Scams',
       description: 'List of cryptocurrency scams documented with blockchain evidence',
-      numberOfItems: 2,
+      numberOfItems: 3,
       itemListElement: [
         {
           '@type': 'ListItem',
           position: 1,
           name: 'OxyCapitals Scam',
-          description: 'Fake crypto trading platform stealing $40,400+ via Discord impersonation',
+          description: 'Fake crypto trading platform stealing $54,000+ via Discord impersonation',
           url: 'https://dirtycrypto.org/oxycapitals',
         },
         {
           '@type': 'ListItem',
           position: 2,
           name: 'MirrorExp Scam',
-          description: 'Typosquatting crypto scam stealing $22,000+ via fake admin impersonation',
+          description: 'Typosquatting crypto scam stealing $30,000+ via fake admin impersonation',
           url: 'https://dirtycrypto.org/mirrorexp',
+        },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: 'TruCopy Scam',
+          description: 'Multi-chain crypto scam stealing $30,869+ across Bitcoin, Solana & Ethereum via Discord impersonation',
+          url: 'https://dirtycrypto.org/trucopy',
         },
       ],
     },
@@ -264,7 +272,7 @@ const jsonLd = {
           name: 'Is OxyCapitals a scam?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Yes, OxyCapitals (oxycapitalsltd.com) is a confirmed cryptocurrency scam that has stolen over $40,400. They impersonate legitimate Discord admins using typosquatting (changing one letter in usernames like "salmaogs" to "sajmaogs") to trick victims into depositing Bitcoin and other cryptocurrencies. We have documented blockchain evidence showing stolen funds being cashed out through exchanges.',
+            text: 'Yes, OxyCapitals (oxycapitalsltd.com) is a confirmed cryptocurrency scam that has stolen over $54,000. They impersonate legitimate Discord admins using typosquatting (changing one letter in usernames like "salmaogs" to "sajmaogs") to trick victims into depositing Bitcoin and other cryptocurrencies. We have documented blockchain evidence showing stolen funds being cashed out through exchanges.',
           },
         },
         {
@@ -272,7 +280,7 @@ const jsonLd = {
           name: 'Is MirrorExp a scam?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Yes, MirrorExp (mirrorexp.com) is a confirmed cryptocurrency scam that has stolen over $22,000. They use typosquatting to impersonate Discord admins (changing ".atraveller" to "_atraveller") to direct victims to their fake trading platform. Funds are rapidly moved through staging wallets to exchanges within minutes of deposit.',
+            text: 'Yes, MirrorExp (mirrorexp.com) is a confirmed cryptocurrency scam that has stolen over $30,000. They use typosquatting to impersonate Discord admins (changing ".atraveller" to "_atraveller") to direct victims to their fake trading platform. Funds are rapidly moved through staging wallets to exchanges within minutes of deposit.',
           },
         },
         {
@@ -328,7 +336,7 @@ const jsonLd = {
           name: 'How much money has been stolen by these crypto scams?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Based on blockchain analysis: OxyCapitals has stolen $40,400+ across Bitcoin, Ethereum, and Tron. MirrorExp has stolen $22,000+ primarily in Bitcoin. Combined documented losses exceed $62,400. Actual losses are likely higher as many victims do not report and some transactions may not be captured in our analysis.',
+            text: 'Based on blockchain analysis: OxyCapitals has stolen $54,000+ across Bitcoin, Ethereum, and Tron. MirrorExp has stolen $30,000+ primarily in Bitcoin. TruCopy has stolen $30,869+ across Bitcoin, Solana, and Ethereum. Combined documented losses exceed $114,800. Actual losses are likely higher as many victims do not report and some transactions may not be captured in our analysis.',
           },
         },
         {

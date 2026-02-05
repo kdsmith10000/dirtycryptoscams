@@ -2,6 +2,11 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import Lightbox from '../components/Lightbox'
+import InvestigationNav from '../components/InvestigationNav'
+import WhatToDo from '../components/WhatToDo'
+import RelatedScams from '../components/RelatedScams'
+import InvestigationFooter from '../components/InvestigationFooter'
 
 export default function OxyCapitalsPage() {
   const [lightboxImage, setLightboxImage] = useState<string | null>(null)
@@ -9,63 +14,17 @@ export default function OxyCapitalsPage() {
   const openLightbox = (src: string) => setLightboxImage(src)
   const closeLightbox = () => setLightboxImage(null)
 
+  const handleKeyDown = (e: React.KeyboardEvent, src: string) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault()
+      openLightbox(src)
+    }
+  }
+
   return (
     <main className="min-h-screen" itemScope itemType="https://schema.org/Article">
-      {/* Lightbox Modal */}
-      {lightboxImage && (
-        <div 
-          className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-4 cursor-zoom-out"
-          onClick={closeLightbox}
-        >
-          <button 
-            className="absolute top-4 right-4 text-white text-4xl font-light hover:text-gray-300 z-50"
-            onClick={closeLightbox}
-          >
-            &times;
-          </button>
-          <img 
-            src={lightboxImage} 
-            alt="Expanded view" 
-            className="max-w-full max-h-full object-contain"
-            onClick={(e) => e.stopPropagation()}
-          />
-        </div>
-      )}
-
-      {/* Navigation */}
-      <nav className="bg-gradient-to-r from-red-950 to-purple-950 border-b border-red-800 sticky top-0 z-40 backdrop-blur-sm">
-        <div className="max-w-6xl mx-auto px-3 sm:px-4 py-2 sm:py-3 flex items-center justify-between gap-2">
-          <Link href="/" className="text-gray-400 hover:text-white text-xs sm:text-sm flex items-center gap-1 sm:gap-2 flex-shrink-0">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-            </svg>
-            <span className="hidden sm:inline">Back to Dirty Crypto</span>
-            <span className="sm:hidden">Back</span>
-          </Link>
-          
-          {/* Total Loss Counter - Desktop */}
-          <div className="hidden md:flex items-center gap-2 bg-black/40 px-4 py-2 rounded-lg border border-red-700/50">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-            <div className="text-center">
-              <p className="text-gray-400 text-xs uppercase tracking-wider leading-none">Total Documented Losses</p>
-              <p className="text-red-500 font-black text-lg leading-tight">$54,000+</p>
-            </div>
-          </div>
-
-          {/* Mobile Loss Counter */}
-          <div className="flex md:hidden items-center gap-1.5 bg-black/40 px-2 py-1.5 rounded-lg border border-red-700/50">
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-red-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-            <p className="text-red-500 font-black text-sm leading-tight">$54K+</p>
-          </div>
-
-          <span className="text-red-500 font-bold text-xs sm:text-sm uppercase tracking-wider whitespace-nowrap hidden sm:inline">Scam Exposure Network</span>
-          <span className="text-red-500 font-bold text-xs uppercase tracking-wider sm:hidden">Scam Alert</span>
-        </div>
-      </nav>
+      <Lightbox imageSrc={lightboxImage} onClose={closeLightbox} />
+      <InvestigationNav totalLoss="$54,000+" totalLossShort="$54K+" />
 
       {/* Hero Warning Section */}
       <section className="relative py-10 sm:py-16 px-4 text-center border-b border-red-900/50 bg-gradient-to-b from-red-950/30 to-transparent">
@@ -448,125 +407,7 @@ export default function OxyCapitalsPage() {
         </div>
       </section>
 
-      {/* Related Scam Operations */}
-      <section className="py-12 px-4 border-b border-gray-800">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl font-bold text-center mb-2">Related Scam Operations</h2>
-          <p className="text-center text-gray-400 mb-8">Similar scams using the same methodology have been documented</p>
-          
-          <div className="grid md:grid-cols-2 gap-6 mb-6">
-            {/* MirrorExp */}
-            <div className="card p-6 rounded-xl border-2 border-red-600 bg-red-950/20">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center flex-shrink-0">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-red-400">MirrorExp</h3>
-                  <p className="text-gray-400 text-sm">$30,000+ stolen</p>
-                </div>
-              </div>
-              
-              <div className="text-center">
-                <Link 
-                  href="/mirrorexp"
-                  className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-semibold px-4 py-2 rounded-lg transition-colors text-sm"
-                >
-                  View Investigation
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                  </svg>
-                </Link>
-              </div>
-            </div>
-
-            {/* TruCopy */}
-            <div className="card p-6 rounded-xl border-2 border-purple-600 bg-purple-950/20">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center flex-shrink-0">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-purple-400">TruCopy</h3>
-                  <p className="text-gray-400 text-sm">$30,000+ stolen (8 chains)</p>
-                </div>
-              </div>
-              
-              <div className="text-center">
-                <Link 
-                  href="/trucopy"
-                  className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white font-semibold px-4 py-2 rounded-lg transition-colors text-sm"
-                >
-                  View Investigation
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                  </svg>
-                </Link>
-              </div>
-            </div>
-          </div>
-
-          {/* BridgeStocks */}
-          <div className="card p-6 rounded-xl border-2 border-orange-600 bg-orange-950/20">
-            <div className="flex items-center gap-4 mb-4">
-              <div className="w-12 h-12 bg-orange-600 rounded-full flex items-center justify-center flex-shrink-0">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-                </svg>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-orange-400">BridgeStocks.com</h3>
-                <p className="text-gray-400 text-sm">Previous scam domain by the same operators</p>
-              </div>
-              <div className="ml-auto">
-                <span className="px-3 py-1 bg-green-600/30 text-green-400 text-xs font-semibold rounded-full border border-green-600">
-                  TAKEN DOWN
-                </span>
-              </div>
-            </div>
-            
-            <div className="bg-black/30 rounded-lg p-4 mb-4">
-              <div className="grid md:grid-cols-2 gap-4 text-sm">
-                <div>
-                  <span className="text-gray-500">Domain:</span>
-                  <p className="text-red-400 font-mono line-through">www.bridgestocks.com</p>
-                </div>
-                <div>
-                  <span className="text-gray-500">Status:</span>
-                  <p className="text-green-400 font-semibold">Removed from Internet</p>
-                </div>
-                <div>
-                  <span className="text-gray-500">Discord Username:</span>
-                  <p className="text-red-400 font-mono">sajmaogs</p>
-                  <p className="text-gray-500 text-xs">(Same impersonation account)</p>
-                </div>
-                <div>
-                  <span className="text-gray-500">Scam Type:</span>
-                  <p className="text-yellow-400">Identical fake trading platform</p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="text-center">
-              <p className="text-gray-400 text-sm">
-                This demonstrates a <strong className="text-orange-300">pattern of behavior</strong> — when one scam domain is exposed or taken down, 
-                these operators create new domains to continue their fraud. The same Discord username and impersonation tactics were used.
-              </p>
-            </div>
-          </div>
-
-          <div className="mt-6 card p-4 rounded-xl bg-yellow-950/20 border border-yellow-700/50">
-            <p className="text-yellow-400 text-sm text-center">
-              <strong>Warning:</strong> If you encounter other domains promoted by the username &quot;sajmaogs&quot; or similar impersonation accounts, 
-              they are likely operated by the same scammers. Report them immediately.
-            </p>
-          </div>
-        </div>
-      </section>
+      <RelatedScams exclude="oxycapitals" showBridgeStocks={true} />
 
       {/* Impersonation Comparison */}
       <section className="py-8 sm:py-12 px-4 border-b border-gray-800">
@@ -600,6 +441,7 @@ export default function OxyCapitalsPage() {
                 src="/evidence/real discord admin.jpg" 
                 alt="Real Discord admin salmaogs profile - legitimate crypto community moderator" 
                 className="w-full evidence-img cursor-zoom-in" 
+                loading="lazy"
                 onClick={() => openLightbox('/evidence/real discord admin.jpg')}
               />
             </div>
@@ -612,6 +454,7 @@ export default function OxyCapitalsPage() {
                 src="/evidence/fake account impersonating discord admin.jpg" 
                 alt="Fake Discord account sajmaogs impersonating admin - crypto scammer typosquatting profile" 
                 className="w-full evidence-img cursor-zoom-in" 
+                loading="lazy"
                 onClick={() => openLightbox('/evidence/fake account impersonating discord admin.jpg')}
               />
             </div>
@@ -635,32 +478,32 @@ export default function OxyCapitalsPage() {
           <p className="text-center text-gray-500 text-xs mb-6 sm:mb-8">Click any image to expand</p>
           
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-3">
-            <div className="card evidence-card rounded-lg overflow-hidden cursor-zoom-in" onClick={() => openLightbox('/evidence/scammer conversation.jpg')}>
-              <img src="/evidence/scammer conversation.jpg" alt="OxyCapitals scammer Discord DM conversation - crypto phishing message evidence" className="w-full evidence-img" />
+            <div className="card evidence-card rounded-lg overflow-hidden cursor-zoom-in" role="button" tabIndex={0} onClick={() => openLightbox('/evidence/scammer conversation.jpg')} onKeyDown={(e) => handleKeyDown(e, '/evidence/scammer conversation.jpg')}>
+              <img src="/evidence/scammer conversation.jpg" alt="OxyCapitals scammer Discord DM conversation - crypto phishing message evidence" className="w-full evidence-img" loading="lazy" />
               <div className="caption"><span className="text-gray-500 text-xs">1</span></div>
             </div>
-            <div className="card evidence-card rounded-lg overflow-hidden cursor-zoom-in" onClick={() => openLightbox('/evidence/scammer conversation 2.jpg')}>
-              <img src="/evidence/scammer conversation 2.jpg" alt="Cryptocurrency scam conversation - fraudster asking for Bitcoin deposit" className="w-full evidence-img" />
+            <div className="card evidence-card rounded-lg overflow-hidden cursor-zoom-in" role="button" tabIndex={0} onClick={() => openLightbox('/evidence/scammer conversation 2.jpg')} onKeyDown={(e) => handleKeyDown(e, '/evidence/scammer conversation 2.jpg')}>
+              <img src="/evidence/scammer conversation 2.jpg" alt="Cryptocurrency scam conversation - fraudster asking for Bitcoin deposit" className="w-full evidence-img" loading="lazy" />
               <div className="caption"><span className="text-gray-500 text-xs">2</span></div>
             </div>
-            <div className="card evidence-card rounded-lg overflow-hidden cursor-zoom-in" onClick={() => openLightbox('/evidence/scammer conversation 3.jpg')}>
-              <img src="/evidence/scammer conversation 3.jpg" alt="Discord impersonation scam messages - fake admin requesting crypto payment" className="w-full evidence-img" />
+            <div className="card evidence-card rounded-lg overflow-hidden cursor-zoom-in" role="button" tabIndex={0} onClick={() => openLightbox('/evidence/scammer conversation 3.jpg')} onKeyDown={(e) => handleKeyDown(e, '/evidence/scammer conversation 3.jpg')}>
+              <img src="/evidence/scammer conversation 3.jpg" alt="Discord impersonation scam messages - fake admin requesting crypto payment" className="w-full evidence-img" loading="lazy" />
               <div className="caption"><span className="text-gray-500 text-xs">3</span></div>
             </div>
-            <div className="card evidence-card rounded-lg overflow-hidden cursor-zoom-in" onClick={() => openLightbox('/evidence/scammer conversation 4.jpg')}>
-              <img src="/evidence/scammer conversation 4.jpg" alt="OxyCapitalsLtd scam chat evidence - fraudulent investment scheme messages" className="w-full evidence-img" />
+            <div className="card evidence-card rounded-lg overflow-hidden cursor-zoom-in" role="button" tabIndex={0} onClick={() => openLightbox('/evidence/scammer conversation 4.jpg')} onKeyDown={(e) => handleKeyDown(e, '/evidence/scammer conversation 4.jpg')}>
+              <img src="/evidence/scammer conversation 4.jpg" alt="OxyCapitalsLtd scam chat evidence - fraudulent investment scheme messages" className="w-full evidence-img" loading="lazy" />
               <div className="caption"><span className="text-gray-500 text-xs">4</span></div>
             </div>
-            <div className="card evidence-card rounded-lg overflow-hidden cursor-zoom-in" onClick={() => openLightbox('/evidence/scammer conversation 5.jpg')}>
-              <img src="/evidence/scammer conversation 5.jpg" alt="Crypto scammer social engineering tactics - phishing conversation screenshot" className="w-full evidence-img" />
+            <div className="card evidence-card rounded-lg overflow-hidden cursor-zoom-in" role="button" tabIndex={0} onClick={() => openLightbox('/evidence/scammer conversation 5.jpg')} onKeyDown={(e) => handleKeyDown(e, '/evidence/scammer conversation 5.jpg')}>
+              <img src="/evidence/scammer conversation 5.jpg" alt="Crypto scammer social engineering tactics - phishing conversation screenshot" className="w-full evidence-img" loading="lazy" />
               <div className="caption"><span className="text-gray-500 text-xs">5</span></div>
             </div>
-            <div className="card evidence-card rounded-lg overflow-hidden cursor-zoom-in" onClick={() => openLightbox('/evidence/scammer conversation 6.jpg')}>
-              <img src="/evidence/scammer conversation 6.jpg" alt="Bitcoin theft scam conversation - OxyCapitals fraud evidence" className="w-full evidence-img" />
+            <div className="card evidence-card rounded-lg overflow-hidden cursor-zoom-in" role="button" tabIndex={0} onClick={() => openLightbox('/evidence/scammer conversation 6.jpg')} onKeyDown={(e) => handleKeyDown(e, '/evidence/scammer conversation 6.jpg')}>
+              <img src="/evidence/scammer conversation 6.jpg" alt="Bitcoin theft scam conversation - OxyCapitals fraud evidence" className="w-full evidence-img" loading="lazy" />
               <div className="caption"><span className="text-gray-500 text-xs">6</span></div>
             </div>
-            <div className="card evidence-card rounded-lg overflow-hidden cursor-zoom-in" onClick={() => openLightbox('/evidence/scammer conversation 7.jpg')}>
-              <img src="/evidence/scammer conversation 7.jpg" alt="Cryptocurrency investment scam chat - impersonation fraud proof" className="w-full evidence-img" />
+            <div className="card evidence-card rounded-lg overflow-hidden cursor-zoom-in" role="button" tabIndex={0} onClick={() => openLightbox('/evidence/scammer conversation 7.jpg')} onKeyDown={(e) => handleKeyDown(e, '/evidence/scammer conversation 7.jpg')}>
+              <img src="/evidence/scammer conversation 7.jpg" alt="Cryptocurrency investment scam chat - impersonation fraud proof" className="w-full evidence-img" loading="lazy" />
               <div className="caption"><span className="text-gray-500 text-xs">7</span></div>
             </div>
           </div>
@@ -675,43 +518,43 @@ export default function OxyCapitalsPage() {
           <p className="text-center text-gray-500 text-xs mb-6 sm:mb-8">Click any image to expand</p>
           
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-4">
-            <div className="card evidence-card rounded-lg overflow-hidden cursor-zoom-in" onClick={() => openLightbox('/evidence/scam homepage.jpg')}>
-              <img src="/evidence/scam homepage.jpg" alt="OxyCapitals scam website homepage - fake crypto trading platform screenshot" className="w-full evidence-img" />
+            <div className="card evidence-card rounded-lg overflow-hidden cursor-zoom-in" role="button" tabIndex={0} onClick={() => openLightbox('/evidence/scam homepage.jpg')} onKeyDown={(e) => handleKeyDown(e, '/evidence/scam homepage.jpg')}>
+              <img src="/evidence/scam homepage.jpg" alt="OxyCapitals scam website homepage - fake crypto trading platform screenshot" className="w-full evidence-img" loading="lazy" />
               <div className="caption">
                 <h4 className="font-semibold text-red-400 text-sm">Scam Homepage</h4>
               </div>
             </div>
             
-            <div className="card evidence-card rounded-lg overflow-hidden cursor-zoom-in" onClick={() => openLightbox('/evidence/deposit page.jpg')}>
-              <img src="/evidence/deposit page.jpg" alt="OxyCapitalsLtd fraudulent deposit page requesting Bitcoin" className="w-full evidence-img" />
+            <div className="card evidence-card rounded-lg overflow-hidden cursor-zoom-in" role="button" tabIndex={0} onClick={() => openLightbox('/evidence/deposit page.jpg')} onKeyDown={(e) => handleKeyDown(e, '/evidence/deposit page.jpg')}>
+              <img src="/evidence/deposit page.jpg" alt="OxyCapitalsLtd fraudulent deposit page requesting Bitcoin" className="w-full evidence-img" loading="lazy" />
               <div className="caption">
                 <h4 className="font-semibold text-red-400 text-sm">Deposit Page</h4>
               </div>
             </div>
             
-            <div className="card evidence-card rounded-lg overflow-hidden cursor-zoom-in" onClick={() => openLightbox('/evidence/btc address scam page.jpg')}>
-              <img src="/evidence/btc address scam page.jpg" alt="OxyCapitals scam Bitcoin wallet address for stealing cryptocurrency" className="w-full evidence-img" />
+            <div className="card evidence-card rounded-lg overflow-hidden cursor-zoom-in" role="button" tabIndex={0} onClick={() => openLightbox('/evidence/btc address scam page.jpg')} onKeyDown={(e) => handleKeyDown(e, '/evidence/btc address scam page.jpg')}>
+              <img src="/evidence/btc address scam page.jpg" alt="OxyCapitals scam Bitcoin wallet address for stealing cryptocurrency" className="w-full evidence-img" loading="lazy" />
               <div className="caption">
                 <h4 className="font-semibold text-red-400 text-sm">BTC Address Display</h4>
               </div>
             </div>
             
-            <div className="card evidence-card rounded-lg overflow-hidden cursor-zoom-in" onClick={() => openLightbox('/evidence/scammers personal wallet.jpg')}>
-              <img src="/evidence/scammers personal wallet.jpg" alt="Crypto scammer personal Bitcoin wallet with stolen funds" className="w-full evidence-img" />
+            <div className="card evidence-card rounded-lg overflow-hidden cursor-zoom-in" role="button" tabIndex={0} onClick={() => openLightbox('/evidence/scammers personal wallet.jpg')} onKeyDown={(e) => handleKeyDown(e, '/evidence/scammers personal wallet.jpg')}>
+              <img src="/evidence/scammers personal wallet.jpg" alt="Crypto scammer personal Bitcoin wallet with stolen funds" className="w-full evidence-img" loading="lazy" />
               <div className="caption">
                 <h4 className="font-semibold text-red-400 text-sm">Scammer&apos;s Wallet</h4>
               </div>
             </div>
             
-            <div className="card evidence-card rounded-lg overflow-hidden cursor-zoom-in" onClick={() => openLightbox('/evidence/dns.jpg')}>
-              <img src="/evidence/dns.jpg" alt="DNS records proving oxycapitalsltd.com is a fraudulent domain" className="w-full evidence-img" />
+            <div className="card evidence-card rounded-lg overflow-hidden cursor-zoom-in" role="button" tabIndex={0} onClick={() => openLightbox('/evidence/dns.jpg')} onKeyDown={(e) => handleKeyDown(e, '/evidence/dns.jpg')}>
+              <img src="/evidence/dns.jpg" alt="DNS records proving oxycapitalsltd.com is a fraudulent domain" className="w-full evidence-img" loading="lazy" />
               <div className="caption">
                 <h4 className="font-semibold text-red-400 text-sm">DNS Records</h4>
               </div>
             </div>
             
-            <div className="card evidence-card rounded-lg overflow-hidden cursor-zoom-in" onClick={() => openLightbox('/evidence/1.jpg')}>
-              <img src="/evidence/1.jpg" alt="Additional evidence of OxyCapitals cryptocurrency fraud" className="w-full evidence-img" />
+            <div className="card evidence-card rounded-lg overflow-hidden cursor-zoom-in" role="button" tabIndex={0} onClick={() => openLightbox('/evidence/1.jpg')} onKeyDown={(e) => handleKeyDown(e, '/evidence/1.jpg')}>
+              <img src="/evidence/1.jpg" alt="Additional evidence of OxyCapitals cryptocurrency fraud" className="w-full evidence-img" loading="lazy" />
               <div className="caption">
                 <h4 className="font-semibold text-red-400 text-sm">Additional Evidence</h4>
               </div>
@@ -719,20 +562,20 @@ export default function OxyCapitalsPage() {
           </div>
 
           <div className="mt-4 sm:mt-6 grid grid-cols-3 gap-2 sm:gap-4">
-            <div className="card evidence-card rounded-lg overflow-hidden cursor-zoom-in" onClick={() => openLightbox('/evidence/rdap.jpg')}>
-              <img src="/evidence/rdap.jpg" alt="RDAP Record 1" className="w-full evidence-img" />
+            <div className="card evidence-card rounded-lg overflow-hidden cursor-zoom-in" role="button" tabIndex={0} onClick={() => openLightbox('/evidence/rdap.jpg')} onKeyDown={(e) => handleKeyDown(e, '/evidence/rdap.jpg')}>
+              <img src="/evidence/rdap.jpg" alt="RDAP Record 1" className="w-full evidence-img" loading="lazy" />
               <div className="caption">
                 <span className="text-gray-500 text-xs">RDAP 1</span>
               </div>
             </div>
-            <div className="card evidence-card rounded-lg overflow-hidden cursor-zoom-in" onClick={() => openLightbox('/evidence/rdap2.jpg')}>
-              <img src="/evidence/rdap2.jpg" alt="RDAP Record 2" className="w-full evidence-img" />
+            <div className="card evidence-card rounded-lg overflow-hidden cursor-zoom-in" role="button" tabIndex={0} onClick={() => openLightbox('/evidence/rdap2.jpg')} onKeyDown={(e) => handleKeyDown(e, '/evidence/rdap2.jpg')}>
+              <img src="/evidence/rdap2.jpg" alt="RDAP Record 2" className="w-full evidence-img" loading="lazy" />
               <div className="caption">
                 <span className="text-gray-500 text-xs">RDAP 2</span>
               </div>
             </div>
-            <div className="card evidence-card rounded-lg overflow-hidden cursor-zoom-in" onClick={() => openLightbox('/evidence/rdap3.jpg')}>
-              <img src="/evidence/rdap3.jpg" alt="RDAP Record 3" className="w-full evidence-img" />
+            <div className="card evidence-card rounded-lg overflow-hidden cursor-zoom-in" role="button" tabIndex={0} onClick={() => openLightbox('/evidence/rdap3.jpg')} onKeyDown={(e) => handleKeyDown(e, '/evidence/rdap3.jpg')}>
+              <img src="/evidence/rdap3.jpg" alt="RDAP Record 3" className="w-full evidence-img" loading="lazy" />
               <div className="caption">
                 <span className="text-gray-500 text-xs">RDAP 3</span>
               </div>
@@ -927,49 +770,18 @@ export default function OxyCapitalsPage() {
         </div>
       </section>
 
-      {/* What To Do */}
-      <section className="py-12 px-4 border-b border-gray-800 bg-gray-900/30">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl font-bold text-center mb-8">What To Do If You&apos;ve Been Scammed</h2>
-          
-          <div className="space-y-4">
-            <div className="card p-6 rounded-xl">
-              <h3 className="text-lg font-semibold mb-2 text-blue-400">1. Report to Authorities</h3>
-              <ul className="text-gray-400 space-y-2">
-                <li>• <strong>FBI IC3:</strong> <a href="https://ic3.gov" className="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">ic3.gov</a> (Internet Crime Complaint Center)</li>
-                <li>• <strong>FTC:</strong> <a href="https://reportfraud.ftc.gov" className="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">reportfraud.ftc.gov</a></li>
-                <li>• Local law enforcement</li>
-              </ul>
-            </div>
-            
-            <div className="card p-6 rounded-xl">
-              <h3 className="text-lg font-semibold mb-2 text-blue-400">2. Report to the Exchange</h3>
-              <p className="text-gray-400">The scammer cashes out through a major exchange. Report the wallet addresses to Binance, Coinbase, or other exchanges&apos; fraud departments.</p>
-            </div>
-            
-            <div className="card p-6 rounded-xl">
-              <h3 className="text-lg font-semibold mb-2 text-blue-400">3. Report to Domain Registrar & Hosting</h3>
-              <p className="text-gray-400 mb-3">Report the scam website to get it taken down:</p>
-              <ul className="text-gray-400 space-y-2">
-                <li>• <strong>Namecheap Abuse:</strong> <a href="https://www.namecheap.com/support/knowledgebase/article.aspx/9196/5/how-to-report-abuse/" className="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">Report abuse to Namecheap</a></li>
-                <li>• <strong>Email:</strong> <a href="mailto:abuse@namecheap.com" className="text-blue-400 hover:underline">abuse@namecheap.com</a></li>
-                <li>• <strong>WHOIS Lookup:</strong> Use <a href="https://www.whois.com/whois/oxycapitalsltd.com" className="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">WHOIS</a> to find registrar and hosting info for any scam domain</li>
-              </ul>
-              <p className="text-gray-500 text-sm mt-3">Include the scam domain, wallet addresses, and any evidence of fraud in your report.</p>
-            </div>
-            
-            <div className="card p-6 rounded-xl">
-              <h3 className="text-lg font-semibold mb-2 text-blue-400">4. Document Everything</h3>
-              <p className="text-gray-400">Save all messages, transaction records, and screenshots. This evidence is crucial for any investigation.</p>
-            </div>
-            
-            <div className="card p-6 rounded-xl">
-              <h3 className="text-lg font-semibold mb-2 text-blue-400">5. Warn Others</h3>
-              <p className="text-gray-400">Share this page to help prevent others from falling victim to this scam.</p>
-            </div>
-          </div>
+      <WhatToDo extraSteps={
+        <div className="card p-6 rounded-xl">
+          <h3 className="text-lg font-semibold mb-2 text-blue-400">3. Report to Domain Registrar &amp; Hosting</h3>
+          <p className="text-gray-400 mb-3">Report the scam website to get it taken down:</p>
+          <ul className="text-gray-400 space-y-2">
+            <li>• <strong>Namecheap Abuse:</strong> <a href="https://www.namecheap.com/support/knowledgebase/article.aspx/9196/5/how-to-report-abuse/" className="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">Report abuse to Namecheap</a></li>
+            <li>• <strong>Email:</strong> <a href="mailto:abuse@namecheap.com" className="text-blue-400 hover:underline">abuse@namecheap.com</a></li>
+            <li>• <strong>WHOIS Lookup:</strong> Use <a href="https://www.whois.com/whois/oxycapitalsltd.com" className="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">WHOIS</a> to find registrar and hosting info for any scam domain</li>
+          </ul>
+          <p className="text-gray-500 text-sm mt-3">Include the scam domain, wallet addresses, and any evidence of fraud in your report.</p>
         </div>
-      </section>
+      } />
 
       {/* SEO Content Section */}
       <section className="py-12 px-4 border-b border-gray-800">
@@ -1047,34 +859,10 @@ export default function OxyCapitalsPage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-6 sm:py-8 px-4 text-center text-gray-500">
-        <p className="mb-2 text-sm sm:text-base">This site was created to expose cryptocurrency fraud and protect potential victims.</p>
-        <p className="text-xs sm:text-sm">All information is based on publicly available blockchain data and documented evidence.</p>
-        <p className="text-xs sm:text-sm mt-4" itemProp="dateModified">Last updated: February 2026</p>
-        <div className="mt-4 sm:mt-6 flex justify-center gap-4">
-          <Link href="/" className="text-blue-400 hover:underline text-sm">
-            ← Back to Dirty Crypto
-          </Link>
-          <span className="text-gray-700">|</span>
-          <Link href="/mirrorexp" className="text-orange-400 hover:underline text-sm">
-            MirrorExp Investigation
-          </Link>
-          <span className="text-gray-700">|</span>
-          <Link href="/trucopy" className="text-purple-400 hover:underline text-sm">
-            TruCopy Investigation
-          </Link>
-        </div>
-        <nav className="mt-4 sm:mt-6 text-xs text-gray-600 flex flex-wrap justify-center gap-2 sm:gap-4">
-          <span>Crypto Scam Alert</span>
-          <span className="hidden sm:inline">•</span>
-          <span>Phishing Warning</span>
-          <span className="hidden sm:inline">•</span>
-          <span>Impersonation Fraud</span>
-          <span className="hidden sm:inline">•</span>
-          <span>Bitcoin Scam Awareness</span>
-        </nav>
-      </footer>
+      <InvestigationFooter
+        currentPage="oxycapitals"
+        tags={['Crypto Scam Alert', 'Phishing Warning', 'Impersonation Fraud', 'Bitcoin Scam Awareness']}
+      />
     </main>
   )
 }
