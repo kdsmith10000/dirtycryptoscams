@@ -50,7 +50,7 @@ export default function MirrorExpPage() {
             </svg>
             <div className="text-center">
               <p className="text-gray-400 text-xs uppercase tracking-wider leading-none">Total Documented Losses</p>
-              <p className="text-red-500 font-black text-lg leading-tight">$84,000+</p>
+              <p className="text-red-500 font-black text-lg leading-tight">$30,000+</p>
             </div>
           </div>
 
@@ -59,7 +59,7 @@ export default function MirrorExpPage() {
             <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-red-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
-            <p className="text-red-500 font-black text-sm leading-tight">$84K+</p>
+            <p className="text-red-500 font-black text-sm leading-tight">$30K+</p>
           </div>
 
           <span className="text-red-500 font-bold text-xs sm:text-sm uppercase tracking-wider whitespace-nowrap hidden sm:inline">Scam Exposure Network</span>
@@ -819,7 +819,7 @@ export default function MirrorExpPage() {
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-purple-400">TruCopy</h3>
-                  <p className="text-gray-400 text-sm">$25,000+ stolen (8 chains)</p>
+                  <p className="text-gray-400 text-sm">$30,000+ stolen (8 chains)</p>
                 </div>
               </div>
               
