@@ -20,7 +20,7 @@ export default function Home() {
               </svg>
               <div className="text-center">
                 <p className="text-gray-400 text-xs uppercase tracking-wider leading-none">Total Losses</p>
-                <p className="text-red-500 font-black text-lg leading-tight">$114,800+</p>
+                <p className="text-red-500 font-black text-lg leading-tight">$150,200+</p>
               </div>
             </div>
             {/* Victim Counter */}
@@ -53,7 +53,7 @@ export default function Home() {
             </svg>
             <div className="text-center">
               <p className="text-gray-400 text-xs uppercase tracking-wider leading-none">Losses</p>
-              <p className="text-red-500 font-black text-lg leading-tight">$114.8K+</p>
+              <p className="text-red-500 font-black text-lg leading-tight">$150.2K+</p>
             </div>
           </div>
           {/* Victim Counter */}
@@ -148,11 +148,11 @@ export default function Home() {
 
           <div className="grid grid-cols-3 gap-3 sm:gap-6">
             <div className="card p-4 sm:p-6 rounded-xl text-center">
-              <div className="text-2xl sm:text-4xl font-black text-red-500 mb-1 sm:mb-2">$114.8K+</div>
+              <div className="text-2xl sm:text-4xl font-black text-red-500 mb-1 sm:mb-2">$150.2K+</div>
               <p className="text-gray-400 text-xs sm:text-base">Documented stolen funds</p>
             </div>
             <div className="card p-4 sm:p-6 rounded-xl text-center">
-              <div className="text-2xl sm:text-4xl font-black text-orange-500 mb-1 sm:mb-2">5</div>
+              <div className="text-2xl sm:text-4xl font-black text-orange-500 mb-1 sm:mb-2">6</div>
               <p className="text-gray-400 text-xs sm:text-base">Scam operations exposed</p>
             </div>
             <div className="card p-4 sm:p-6 rounded-xl text-center">
@@ -360,6 +360,56 @@ export default function Home() {
                 <div className="flex items-center justify-between gap-2">
                   <p className="text-gray-500 text-xs sm:text-sm">Multi-chain fraud across BTC, ETH, SOL + more</p>
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-purple-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
+                </div>
+              </div>
+            </Link>
+
+            {/* BridgeStocks Card */}
+            <Link href="/bridgestocks" className="block">
+              <div className="card p-4 sm:p-6 rounded-xl border-2 border-cyan-600 bg-cyan-950/20 hover:bg-cyan-950/30 transition-colors h-full">
+                <div className="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
+                  <div className="w-11 h-11 sm:w-14 sm:h-14 bg-cyan-600 rounded-full flex items-center justify-center flex-shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 sm:h-7 sm:w-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                    </svg>
+                  </div>
+                  <div className="min-w-0 flex-1">
+                    <h3 className="text-xl sm:text-2xl font-bold text-cyan-400">BridgeStocks</h3>
+                    <p className="text-gray-400 text-xs sm:text-sm truncate">bridgestocks.com</p>
+                  </div>
+                  <div className="flex-shrink-0">
+                    <span className="px-2 sm:px-3 py-1 bg-green-600/30 text-green-400 text-xs font-semibold rounded-full border border-green-600">
+                      TAKEN DOWN
+                    </span>
+                  </div>
+                </div>
+                
+                <div className="bg-black/30 rounded-lg p-3 sm:p-4 mb-3 sm:mb-4">
+                  <div className="grid grid-cols-2 gap-3 sm:gap-4 text-xs sm:text-sm">
+                    <div>
+                      <span className="text-gray-500">Total Stolen:</span>
+                      <p className="text-red-400 font-bold text-base sm:text-lg">$35,389</p>
+                    </div>
+                    <div>
+                      <span className="text-gray-500">Chains:</span>
+                      <p className="text-gray-300">BTC only</p>
+                    </div>
+                    <div>
+                      <span className="text-gray-500">Method:</span>
+                      <p className="text-yellow-400">Discord Impersonation</p>
+                    </div>
+                    <div>
+                      <span className="text-gray-500">Transactions:</span>
+                      <p className="text-gray-300">79 traced</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="flex items-center justify-between gap-2">
+                  <p className="text-gray-500 text-xs sm:text-sm">Site taken down after Chainabuse report</p>
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-cyan-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                   </svg>
                 </div>
@@ -595,6 +645,10 @@ export default function Home() {
             <span className="text-gray-700 hidden sm:inline">|</span>
             <Link href="/trucopy" className="text-purple-400 hover:text-purple-300 text-sm">
               TruCopy Investigation
+            </Link>
+            <span className="text-gray-700 hidden sm:inline">|</span>
+            <Link href="/bridgestocks" className="text-cyan-400 hover:text-cyan-300 text-sm">
+              BridgeStocks Investigation
             </Link>
             <span className="text-gray-700 hidden sm:inline">|</span>
             <Link href="/everrextrade" className="text-yellow-400 hover:text-yellow-300 text-sm">

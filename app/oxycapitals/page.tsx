@@ -407,7 +407,7 @@ export default function OxyCapitalsPage() {
         </div>
       </section>
 
-      <RelatedScams exclude="oxycapitals" showBridgeStocks={true} />
+      <RelatedScams exclude="oxycapitals" />
 
       {/* Impersonation Comparison */}
       <section className="py-8 sm:py-12 px-4 border-b border-gray-800">
