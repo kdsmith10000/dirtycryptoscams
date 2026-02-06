@@ -158,7 +158,7 @@ export const metadata: Metadata = {
     siteName: 'Dirty Crypto',
     images: [
       {
-        url: `${baseUrl}/evidence/scam%20homepage.jpg`,
+        url: `${baseUrl}/og-homepage.png`,
         width: 1200,
         height: 630,
         alt: 'Dirty Crypto - Exposing Cryptocurrency Fraud Through Blockchain Analysis - $150,200+ in documented losses',
@@ -169,7 +169,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Dirty Crypto - Exposing Crypto Scams Through Blockchain Analysis',
     description: 'Investigating cryptocurrency fraud through blockchain analysis. $150,200+ in documented losses across 6 scam operations. Fighting for justice.',
-    images: [`${baseUrl}/evidence/scam%20homepage.jpg`],
+    images: [`${baseUrl}/og-homepage.png`],
     creator: '@dirtycrypto',
   },
   alternates: {
@@ -248,7 +248,7 @@ const jsonLd = {
       '@id': 'https://dirtycrypto.org/#article',
       headline: 'SCAM ALERT: OxyCapitals, MirrorExp, TruCopy, BridgeStocks & More Cryptocurrency Fraud Exposed - $150,200+ Stolen',
       description: 'Complete investigation exposing 6 cryptocurrency scam operations, including blockchain transaction analysis, wallet addresses, typosquatting tactics, Discord impersonation, and money laundering evidence.',
-      image: 'https://dirtycrypto.org/evidence/scam%20homepage.jpg',
+      image: 'https://dirtycrypto.org/og-homepage.png',
       author: { '@id': 'https://dirtycrypto.org/#organization' },
       publisher: { '@id': 'https://dirtycrypto.org/#organization' },
       datePublished: '2026-02-01',
