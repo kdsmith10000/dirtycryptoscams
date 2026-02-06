@@ -633,7 +633,7 @@ export default function BridgeStocksPage() {
               </div>
               <div className="p-3 bg-black/30 rounded">
                 <p className="text-green-400 font-bold text-lg">&#10003;</p>
-                <p className="text-gray-400 text-xs">Fake deposit page</p>
+                <p className="text-gray-400 text-xs">Typosquatting (l&#8594;1, o&#8594;0)</p>
               </div>
             </div>
             <p className="text-center text-green-300 text-sm">
@@ -1113,15 +1113,7 @@ export default function BridgeStocksPage() {
           <p className="text-center text-gray-400 mb-2 text-sm sm:text-base">Documented proof of the fake BridgeStocks platform</p>
           <p className="text-center text-gray-500 text-xs mb-6 sm:mb-8">Click any image to expand</p>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="card evidence-card rounded-lg overflow-hidden cursor-zoom-in" onClick={() => openLightbox('/evidence/bridgestocks/fake-deposit-page.jpg')} role="button" tabIndex={0} onKeyDown={(e) => handleKeyDown(e, '/evidence/bridgestocks/fake-deposit-page.jpg')}>
-              <img src="/evidence/bridgestocks/fake-deposit-page.jpg" alt="BridgeStocks fake deposit page accepts any value including LOL - clearly fake" className="w-full evidence-img" loading="lazy" />
-              <div className="caption p-3">
-                <h4 className="font-semibold text-red-400 text-sm">Fake Deposit Page</h4>
-                <p className="text-gray-500 text-xs">Accepts ANY value including &quot;LOL&quot; — LOL is not a number, proving the platform is completely fake</p>
-              </div>
-            </div>
-            
+          <div className="max-w-2xl mx-auto">
             <div className="card evidence-card rounded-lg overflow-hidden cursor-zoom-in" onClick={() => openLightbox('/evidence/bridgestocks/chainabuse-report.jpg')} role="button" tabIndex={0} onKeyDown={(e) => handleKeyDown(e, '/evidence/bridgestocks/chainabuse-report.jpg')}>
               <img src="/evidence/bridgestocks/chainabuse-report.jpg" alt="Chainabuse report filed against BridgeStocks.com on November 7 2025" className="w-full evidence-img" loading="lazy" />
               <div className="caption p-3">
@@ -1129,12 +1121,6 @@ export default function BridgeStocksPage() {
                 <p className="text-gray-500 text-xs">Official report filed — led to the site being taken down within days</p>
               </div>
             </div>
-          </div>
-
-          <div className="mt-6 card p-4 rounded-xl bg-yellow-900/20 border border-yellow-700">
-            <p className="text-yellow-400 text-center text-sm">
-              <strong>Key Evidence:</strong> The deposit page accepted &quot;LOL&quot; as a deposit amount. A legitimate trading platform would validate numeric input. This proves the site was a non-functional facade designed solely to collect wallet addresses.
-            </p>
           </div>
         </div>
       </section>
