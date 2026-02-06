@@ -99,6 +99,48 @@ export default function BridgeStocksPage() {
         </div>
       </section>
 
+      {/* Typosquatting Alert */}
+      <section className="py-6 sm:py-8 px-4 border-b border-gray-800 bg-yellow-950/30">
+        <div className="max-w-4xl mx-auto">
+          <div className="card p-4 sm:p-6 rounded-xl border-2 border-yellow-500 bg-yellow-900/20">
+            <div className="flex items-center gap-3 sm:gap-4 mb-4">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-yellow-600 rounded-full flex items-center justify-center flex-shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 sm:h-6 sm:w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                </svg>
+              </div>
+              <div>
+                <h2 className="text-lg sm:text-xl font-bold text-yellow-400">Typosquatting Attack Detected</h2>
+                <p className="text-gray-300 text-xs sm:text-sm">The scammer uses a username nearly identical to a real admin</p>
+              </div>
+            </div>
+            
+            <div className="bg-black/40 rounded-lg p-4 sm:p-6 text-center">
+              <p className="text-gray-400 mb-4 text-xs sm:text-sm">Can you spot the difference?</p>
+              <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-8 mb-4">
+                <div>
+                  <p className="text-xs text-gray-500 mb-1">REAL ADMIN USERNAME</p>
+                  <p className="text-xl sm:text-2xl md:text-3xl font-mono font-bold text-green-400">sa<span className="text-green-300 underline decoration-4">l</span>ma<span className="text-green-300 underline decoration-4">o</span>gs</p>
+                </div>
+                <div className="text-2xl sm:text-3xl text-gray-600">vs</div>
+                <div>
+                  <p className="text-xs text-gray-500 mb-1">SCAMMER USERNAME</p>
+                  <p className="text-xl sm:text-2xl md:text-3xl font-mono font-bold text-red-400">sa<span className="text-red-300 underline decoration-4">1</span>ma<span className="text-red-300 underline decoration-4">0</span>gs</p>
+                </div>
+              </div>
+              <p className="text-yellow-300 text-xs sm:text-sm">
+                The scammer replaced <strong>TWO characters</strong>: the letter <code className="bg-green-900/50 px-1 rounded">l</code> became the number <code className="bg-red-900/50 px-1 rounded">1</code>, and the letter <code className="bg-green-900/50 px-1 rounded">o</code> became the number <code className="bg-red-900/50 px-1 rounded">0</code>
+              </p>
+            </div>
+            
+            <p className="text-gray-400 text-xs sm:text-sm mt-4 text-center">
+              <strong className="text-yellow-300">Always verify usernames character-by-character</strong> before trusting anyone with your money. 
+              The lowercase letter &quot;l&quot; and the number &quot;1&quot; are nearly indistinguishable in many fonts, and &quot;o&quot; vs &quot;0&quot; is equally deceptive.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* WHOIS Domain Intelligence */}
       <section className="py-8 sm:py-12 px-4 border-b border-gray-800 bg-gradient-to-b from-red-950/20 to-transparent">
         <div className="max-w-4xl mx-auto">
@@ -944,11 +986,131 @@ export default function BridgeStocksPage() {
         </div>
       </section>
 
+      {/* Discord Impersonation Evidence */}
+      <section className="py-8 sm:py-12 px-4 border-b border-gray-800 bg-gradient-to-b from-red-950/30 to-transparent">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-xl sm:text-2xl font-bold text-center mb-2">Discord Impersonation Evidence</h2>
+          <p className="text-center text-gray-400 mb-6 sm:mb-8 text-sm sm:text-base">Side-by-side comparison of the fake scammer account vs the real admin</p>
+          
+          {/* Username Comparison */}
+          <div className="card p-4 sm:p-6 rounded-xl mb-6 sm:mb-8 text-center bg-black/30">
+            <p className="text-gray-400 mb-4 text-sm sm:text-base">Spot the difference in the usernames:</p>
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-8">
+              <div>
+                <p className="text-xs text-gray-500 mb-1">REAL ADMIN</p>
+                <p className="text-2xl sm:text-3xl font-mono font-bold text-green-400">sa<span className="text-green-300 underline decoration-4">l</span>ma<span className="text-green-300 underline decoration-4">o</span>gs</p>
+              </div>
+              <div className="text-2xl sm:text-4xl text-gray-600">vs</div>
+              <div>
+                <p className="text-xs text-gray-500 mb-1">SCAMMER</p>
+                <p className="text-2xl sm:text-3xl font-mono font-bold text-red-400">sa<span className="text-red-300 underline decoration-4">1</span>ma<span className="text-red-300 underline decoration-4">0</span>gs</p>
+              </div>
+            </div>
+            <p className="text-yellow-400 mt-4 text-xs sm:text-sm">The scammer swapped TWO characters: <code className="bg-green-900/50 px-2 py-0.5 rounded">l</code> &#8594; <code className="bg-red-900/50 px-2 py-0.5 rounded">1</code> and <code className="bg-green-900/50 px-2 py-0.5 rounded">o</code> &#8594; <code className="bg-red-900/50 px-2 py-0.5 rounded">0</code></p>
+          </div>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mb-6 sm:mb-8">
+            {/* Fake Account */}
+            <div className="card rounded-xl overflow-hidden border-2 border-red-600">
+              <div className="bg-red-600 px-4 py-2 text-center">
+                <span className="font-bold text-white uppercase tracking-wider text-sm">Fake Scammer Account</span>
+              </div>
+              <div className="cursor-zoom-in" onClick={() => openLightbox('/evidence/bridgestocks/fake-admin.jpg')} role="button" tabIndex={0} onKeyDown={(e) => handleKeyDown(e, '/evidence/bridgestocks/fake-admin.jpg')}>
+                <img src="/evidence/bridgestocks/fake-admin.jpg" alt="Fake Discord account impersonating admin - username sa1ma0gs with number 1 replacing letter l and number 0 replacing letter o" className="w-full" loading="lazy" />
+              </div>
+              <div className="p-4 bg-red-950/30">
+                <div className="space-y-2 text-sm">
+                  <div className="flex justify-between">
+                    <span className="text-gray-400">Username:</span>
+                    <code className="text-red-400 bg-black/30 px-2 rounded">sa1ma0gs</code>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-400">Technique:</span>
+                    <span className="text-red-400 font-semibold">l&#8594;1 and o&#8594;0 substitution</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Real Account */}
+            <div className="card rounded-xl overflow-hidden border-2 border-green-600">
+              <div className="bg-green-600 px-4 py-2 text-center">
+                <span className="font-bold text-white uppercase tracking-wider text-sm">Real Admin Account</span>
+              </div>
+              <div className="cursor-zoom-in" onClick={() => openLightbox('/evidence/bridgestocks/real-admin.png')} role="button" tabIndex={0} onKeyDown={(e) => handleKeyDown(e, '/evidence/bridgestocks/real-admin.png')}>
+                <img src="/evidence/bridgestocks/real-admin.png" alt="Real Discord admin account salmaogs - legitimate community moderator" className="w-full" loading="lazy" />
+              </div>
+              <div className="p-4 bg-green-950/30">
+                <div className="space-y-2 text-sm">
+                  <div className="flex justify-between">
+                    <span className="text-gray-400">Username:</span>
+                    <code className="text-green-400 bg-black/30 px-2 rounded">salmaogs</code>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-400">Status:</span>
+                    <span className="text-green-400 font-semibold">Legitimate Admin</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <p className="text-center text-gray-500 text-xs mb-4">Click images to expand</p>
+          
+          <div className="card p-3 sm:p-4 rounded-xl bg-yellow-900/20 border border-yellow-700">
+            <p className="text-yellow-400 text-center text-xs sm:text-sm">
+              <strong>Warning:</strong> The scammer uses &quot;typosquatting&quot; — creating a username that looks almost identical to the real admin 
+              by replacing the letter <code className="bg-black/30 px-1 rounded">l</code> with the number <code className="bg-black/30 px-1 rounded">1</code> and 
+              the letter <code className="bg-black/30 px-1 rounded">o</code> with the number <code className="bg-black/30 px-1 rounded">0</code>. 
+              In most fonts, these characters are virtually indistinguishable. Always verify usernames character by character!
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Scammer Conversations */}
+      <section className="py-8 sm:py-12 px-4 border-b border-gray-800">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-xl sm:text-2xl font-bold text-center mb-2">Scammer Conversation Evidence</h2>
+          <p className="text-center text-gray-400 mb-2 text-sm sm:text-base">Actual messages from the scammer attempting to steal money</p>
+          <p className="text-center text-gray-500 text-xs mb-6 sm:mb-8">Click any image to expand</p>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            <div className="card evidence-card rounded-lg overflow-hidden cursor-zoom-in" onClick={() => openLightbox('/evidence/bridgestocks/convo.jpg')} role="button" tabIndex={0} onKeyDown={(e) => handleKeyDown(e, '/evidence/bridgestocks/convo.jpg')}>
+              <img src="/evidence/bridgestocks/convo.jpg" alt="BridgeStocks scammer Discord conversation 1" className="w-full evidence-img" loading="lazy" />
+              <div className="caption p-2">
+                <span className="text-gray-500 text-xs">Conversation 1</span>
+              </div>
+            </div>
+            
+            <div className="card evidence-card rounded-lg overflow-hidden cursor-zoom-in" onClick={() => openLightbox('/evidence/bridgestocks/convo1.jpg')} role="button" tabIndex={0} onKeyDown={(e) => handleKeyDown(e, '/evidence/bridgestocks/convo1.jpg')}>
+              <img src="/evidence/bridgestocks/convo1.jpg" alt="BridgeStocks scammer Discord conversation 2" className="w-full evidence-img" loading="lazy" />
+              <div className="caption p-2">
+                <span className="text-gray-500 text-xs">Conversation 2</span>
+              </div>
+            </div>
+            
+            <div className="card evidence-card rounded-lg overflow-hidden cursor-zoom-in" onClick={() => openLightbox('/evidence/bridgestocks/convo2.jpg')} role="button" tabIndex={0} onKeyDown={(e) => handleKeyDown(e, '/evidence/bridgestocks/convo2.jpg')}>
+              <img src="/evidence/bridgestocks/convo2.jpg" alt="BridgeStocks scammer Discord conversation 3" className="w-full evidence-img" loading="lazy" />
+              <div className="caption p-2">
+                <span className="text-gray-500 text-xs">Conversation 3</span>
+              </div>
+            </div>
+          </div>
+          
+          <div className="mt-6 card p-4 rounded-xl bg-yellow-900/20 border border-yellow-700">
+            <p className="text-yellow-400 text-center text-sm">
+              <strong>Warning:</strong> These messages show the scammer impersonating a trusted Discord admin. Never trust unsolicited investment opportunities, even from accounts that appear legitimate.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Evidence Gallery */}
       <section className="py-8 sm:py-12 px-4 border-b border-gray-800 bg-gray-900/30">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-xl sm:text-2xl font-bold text-center mb-2">Evidence Screenshots</h2>
-          <p className="text-center text-gray-400 mb-2 text-sm sm:text-base">Documented proof of the BridgeStocks scam</p>
+          <h2 className="text-xl sm:text-2xl font-bold text-center mb-2">Platform Evidence</h2>
+          <p className="text-center text-gray-400 mb-2 text-sm sm:text-base">Documented proof of the fake BridgeStocks platform</p>
           <p className="text-center text-gray-500 text-xs mb-6 sm:mb-8">Click any image to expand</p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
