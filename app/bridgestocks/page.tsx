@@ -1075,25 +1075,18 @@ export default function BridgeStocksPage() {
           <p className="text-center text-gray-400 mb-2 text-sm sm:text-base">Actual messages from the scammer attempting to steal money</p>
           <p className="text-center text-gray-500 text-xs mb-6 sm:mb-8">Click any image to expand</p>
           
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-            <div className="card evidence-card rounded-lg overflow-hidden cursor-zoom-in" onClick={() => openLightbox('/evidence/bridgestocks/convo.jpg')} role="button" tabIndex={0} onKeyDown={(e) => handleKeyDown(e, '/evidence/bridgestocks/convo.jpg')}>
-              <img src="/evidence/bridgestocks/convo.jpg" alt="BridgeStocks scammer Discord conversation 1" className="w-full evidence-img" loading="lazy" />
-              <div className="caption p-2">
-                <span className="text-gray-500 text-xs">Conversation 1</span>
-              </div>
-            </div>
-            
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div className="card evidence-card rounded-lg overflow-hidden cursor-zoom-in" onClick={() => openLightbox('/evidence/bridgestocks/convo1.jpg')} role="button" tabIndex={0} onKeyDown={(e) => handleKeyDown(e, '/evidence/bridgestocks/convo1.jpg')}>
-              <img src="/evidence/bridgestocks/convo1.jpg" alt="BridgeStocks scammer Discord conversation 2" className="w-full evidence-img" loading="lazy" />
+              <img src="/evidence/bridgestocks/convo1.jpg" alt="BridgeStocks scammer initial Discord conversation impersonating admin" className="w-full evidence-img" loading="lazy" />
               <div className="caption p-2">
-                <span className="text-gray-500 text-xs">Conversation 2</span>
+                <span className="text-gray-500 text-xs">Initial Conversation</span>
               </div>
             </div>
             
-            <div className="card evidence-card rounded-lg overflow-hidden cursor-zoom-in" onClick={() => openLightbox('/evidence/bridgestocks/convo2.jpg')} role="button" tabIndex={0} onKeyDown={(e) => handleKeyDown(e, '/evidence/bridgestocks/convo2.jpg')}>
-              <img src="/evidence/bridgestocks/convo2.jpg" alt="BridgeStocks scammer Discord conversation 3" className="w-full evidence-img" loading="lazy" />
+            <div className="card evidence-card rounded-lg overflow-hidden cursor-zoom-in" onClick={() => openLightbox('/evidence/bridgestocks/convo.jpg')} role="button" tabIndex={0} onKeyDown={(e) => handleKeyDown(e, '/evidence/bridgestocks/convo.jpg')}>
+              <img src="/evidence/bridgestocks/convo.jpg" alt="BridgeStocks scammer sending phishing link to fake trading platform" className="w-full evidence-img" loading="lazy" />
               <div className="caption p-2">
-                <span className="text-gray-500 text-xs">Conversation 3</span>
+                <span className="text-gray-500 text-xs">Phishing Link</span>
               </div>
             </div>
           </div>
